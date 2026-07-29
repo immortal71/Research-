@@ -1,0 +1,99 @@
+{
+  "main_calibration": {
+    "n_clusters": 55,
+    "n_true_positive_clusters": 8,
+    "n_negative_clusters": 47,
+    "roc_auc": 1.0,
+    "pr_auc": 1.0,
+    "bh_alpha": 0.05,
+    "n_called_significant": 9,
+    "true_positives_called": 8,
+    "false_positives_called": 1,
+    "empirical_fdr": 0.1111111111111111,
+    "power_by_structure_axis_alone": 1.0,
+    "false_call_breakdown_by_decoy_kind": {
+      "plain_null": {
+        "false_called": 1,
+        "total": 20
+      },
+      "coding_decoy": {
+        "false_called": 0,
+        "total": 19
+      },
+      "structured_coding_decoy": {
+        "false_called": 0,
+        "total": 8
+      }
+    }
+  },
+  "power_vs_depth": [
+    {
+      "replicate_range": [
+        1,
+        1
+      ],
+      "n_clusters": 36,
+      "n_true_positive_clusters": 9,
+      "n_negative_clusters": 27,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0000000000000002,
+      "bh_alpha": 0.05,
+      "n_called_significant": 7,
+      "true_positives_called": 7,
+      "false_positives_called": 0,
+      "empirical_fdr": 0.0,
+      "power_by_structure_axis_alone": 0.7777777777777778
+    },
+    {
+      "replicate_range": [
+        1,
+        2
+      ],
+      "n_clusters": 37,
+      "n_true_positive_clusters": 12,
+      "n_negative_clusters": 25,
+      "roc_auc": 0.9833333333333334,
+      "pr_auc": 0.9754901960784316,
+      "bh_alpha": 0.05,
+      "n_called_significant": 7,
+      "true_positives_called": 7,
+      "false_positives_called": 0,
+      "empirical_fdr": 0.0,
+      "power_by_structure_axis_alone": 0.5833333333333334
+    },
+    {
+      "replicate_range": [
+        2,
+        3
+      ],
+      "n_clusters": 37,
+      "n_true_positive_clusters": 9,
+      "n_negative_clusters": 28,
+      "roc_auc": 0.9007936507936507,
+      "pr_auc": 0.9183006535947713,
+      "bh_alpha": 0.05,
+      "n_called_significant": 7,
+      "true_positives_called": 7,
+      "false_positives_called": 0,
+      "empirical_fdr": 0.0,
+      "power_by_structure_axis_alone": 0.7777777777777778
+    },
+    {
+      "replicate_range": [
+        3,
+        5
+      ],
+      "n_clusters": 36,
+      "n_true_positive_clusters": 8,
+      "n_negative_clusters": 28,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "bh_alpha": 0.05,
+      "n_called_significant": 7,
+      "true_positives_called": 7,
+      "false_positives_called": 0,
+      "empirical_fdr": 0.0,
+      "power_by_structure_axis_alone": 0.875
+    }
+  ]
+}

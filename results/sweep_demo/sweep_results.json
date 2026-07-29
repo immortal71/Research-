@@ -1,0 +1,1209 @@
+{
+  "n_input_contigs": 79,
+  "n_length_filtered": 79,
+  "n_clusters": 70,
+  "n_nonsingleton_clusters": 9,
+  "alpha": 0.05,
+  "n_significant": 4,
+  "hits": [
+    {
+      "cluster_id": "cluster_57",
+      "representative_id": "POS000_rep0_sense",
+      "cluster_size": 2,
+      "member_ids": [
+        "POS000_rep0_sense",
+        "POS000_rep0_antisense"
+      ],
+      "length": 138,
+      "structure_z": 13.041045560590739,
+      "orphan_score": 0.6964183035663607,
+      "has_sas": true,
+      "is_circular": false,
+      "combined_score": 11.082022826038221,
+      "p_value": 3.573508047318208e-39,
+      "q_value": 2.5014556331227457e-37,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_61",
+      "representative_id": "POS002_rep0_sense",
+      "cluster_size": 2,
+      "member_ids": [
+        "POS002_rep0_sense",
+        "POS002_rep0_antisense"
+      ],
+      "length": 128,
+      "structure_z": 7.670847661831955,
+      "orphan_score": 0.7998424770875763,
+      "has_sas": true,
+      "is_circular": false,
+      "combined_score": 8.135469795201114,
+      "p_value": 8.54316900707809e-15,
+      "q_value": 2.9901091524773317e-13,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_62",
+      "representative_id": "POS001_rep0_antisense",
+      "cluster_size": 2,
+      "member_ids": [
+        "POS001_rep0_antisense",
+        "POS001_rep0_sense"
+      ],
+      "length": 128,
+      "structure_z": 6.7671672482298835,
+      "orphan_score": 0.7434802158273381,
+      "has_sas": true,
+      "is_circular": false,
+      "combined_score": 7.031254966253647,
+      "p_value": 6.5664118327580425e-12,
+      "q_value": 1.5321627609768766e-10,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_21",
+      "representative_id": "NULL005",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL005"
+      ],
+      "length": 264,
+      "structure_z": 3.04463220164071,
+      "orphan_score": 0.7628330578834591,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 2.3225460925080315,
+      "p_value": 0.0011648250854368286,
+      "q_value": 0.0203844389951445,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_48",
+      "representative_id": "STRCODE002",
+      "cluster_size": 1,
+      "member_ids": [
+        "STRCODE002"
+      ],
+      "length": 179,
+      "structure_z": 3.6162621068769827,
+      "orphan_score": 0.4435871674478713,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.6041274647386319,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_29",
+      "representative_id": "STRCODE004",
+      "cluster_size": 1,
+      "member_ids": [
+        "STRCODE004"
+      ],
+      "length": 233,
+      "structure_z": 3.4579244122199295,
+      "orphan_score": 0.3762739310339516,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.3011268118042594,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_20",
+      "representative_id": "CODE019",
+      "cluster_size": 2,
+      "member_ids": [
+        "CODE019",
+        "NULL015"
+      ],
+      "length": 270,
+      "structure_z": -2.309196152738283,
+      "orphan_score": 0.306930117012726,
+      "has_sas": true,
+      "is_circular": false,
+      "combined_score": 1.2912381546347023,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_7",
+      "representative_id": "NULL008",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL008"
+      ],
+      "length": 332,
+      "structure_z": 1.73927714220537,
+      "orphan_score": 0.6844865678664032,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.1905118416366398,
+      "p_value": 0.04099301297567822,
+      "q_value": 0.5436379842778745,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_50",
+      "representative_id": "STRCODE001",
+      "cluster_size": 1,
+      "member_ids": [
+        "STRCODE001"
+      ],
+      "length": 176,
+      "structure_z": 2.673743987872556,
+      "orphan_score": 0.41631334493645267,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.113115303094954,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_27",
+      "representative_id": "CODE012",
+      "cluster_size": 2,
+      "member_ids": [
+        "CODE012",
+        "STRCODE000"
+      ],
+      "length": 246,
+      "structure_z": -2.6290639200623787,
+      "orphan_score": 0.343342069649339,
+      "has_sas": true,
+      "is_circular": false,
+      "combined_score": 1.0973317524453785,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_38",
+      "representative_id": "STRCODE005",
+      "cluster_size": 1,
+      "member_ids": [
+        "STRCODE005"
+      ],
+      "length": 206,
+      "structure_z": 2.719329037434394,
+      "orphan_score": 0.40316705167762473,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.0963438705637778,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_11",
+      "representative_id": "NULL013",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL013"
+      ],
+      "length": 324,
+      "structure_z": 1.6787792039971532,
+      "orphan_score": 0.6310199270069456,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.059343130767062,
+      "p_value": 0.046597541509532096,
+      "q_value": 0.5436379842778745,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_3",
+      "representative_id": "NULL034",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL034"
+      ],
+      "length": 361,
+      "structure_z": 1.398114851509903,
+      "orphan_score": 0.7567262465375111,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.0579902038114384,
+      "p_value": 0.08103929036935642,
+      "q_value": 0.7090937907318686,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_2",
+      "representative_id": "NULL036",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL036"
+      ],
+      "length": 380,
+      "structure_z": 1.461546930169316,
+      "orphan_score": 0.6209575191609431,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.9075585558952306,
+      "p_value": 0.07193270313040596,
+      "q_value": 0.7090937907318686,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_65",
+      "representative_id": "CODE000",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE000"
+      ],
+      "length": 120,
+      "structure_z": 2.4823309864426033,
+      "orphan_score": 0.3522504532870892,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.8744022151829943,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_34",
+      "representative_id": "STRCODE003",
+      "cluster_size": 1,
+      "member_ids": [
+        "STRCODE003"
+      ],
+      "length": 224,
+      "structure_z": 2.163361699406656,
+      "orphan_score": 0.39844686444371796,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.8619846857862151,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_14",
+      "representative_id": "NULL030",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL030"
+      ],
+      "length": 318,
+      "structure_z": 1.185299367344811,
+      "orphan_score": 0.6338017094270667,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.7512447652059618,
+      "p_value": 0.11794955177789512,
+      "q_value": 0.917385402716962,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_60",
+      "representative_id": "CODE016",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE016"
+      ],
+      "length": 132,
+      "structure_z": 1.735516243443172,
+      "orphan_score": 0.3683078658436952,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.6392042837596216,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_30",
+      "representative_id": "STRCODE007",
+      "cluster_size": 2,
+      "member_ids": [
+        "STRCODE007",
+        "CODE022"
+      ],
+      "length": 230,
+      "structure_z": 1.7084006589870335,
+      "orphan_score": 0.37044302448058714,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.6328651071397848,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_58",
+      "representative_id": "STRCODE006",
+      "cluster_size": 1,
+      "member_ids": [
+        "STRCODE006"
+      ],
+      "length": 137,
+      "structure_z": 1.2012275434521187,
+      "orphan_score": 0.47611835952914217,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.5719264874096441,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_19",
+      "representative_id": "CODE005",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE005"
+      ],
+      "length": 276,
+      "structure_z": 1.6636678409317225,
+      "orphan_score": 0.3365445619088868,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.5598983646882701,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_59",
+      "representative_id": "NULL021",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL021"
+      ],
+      "length": 135,
+      "structure_z": 0.7807275980484597,
+      "orphan_score": 0.6820720485022383,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.532512472123145,
+      "p_value": 0.21748136259165807,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_32",
+      "representative_id": "NULL026",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL026"
+      ],
+      "length": 228,
+      "structure_z": 1.0558471027676957,
+      "orphan_score": 0.44800344154754046,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.4730231357879273,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_0",
+      "representative_id": "NULL001",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL001"
+      ],
+      "length": 399,
+      "structure_z": 0.9077509707847495,
+      "orphan_score": 0.4912711551794533,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.44595186803269404,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_15",
+      "representative_id": "NULL019",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL019"
+      ],
+      "length": 314,
+      "structure_z": 0.6849893269240266,
+      "orphan_score": 0.5782666123972381,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.39610645760862107,
+      "p_value": 0.2466753280075546,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_47",
+      "representative_id": "CODE023",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE023"
+      ],
+      "length": 180,
+      "structure_z": 1.160196599828852,
+      "orphan_score": 0.330928386786191,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.383941989136186,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_31",
+      "representative_id": "CODE007",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE007"
+      ],
+      "length": 228,
+      "structure_z": 1.0605003908727462,
+      "orphan_score": 0.32380253700938827,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.3433927170640431,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_24",
+      "representative_id": "NULL035",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL035"
+      ],
+      "length": 261,
+      "structure_z": 0.5111766138392334,
+      "orphan_score": 0.6715720741325,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.34329193880404196,
+      "p_value": 0.30461369635826246,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_8",
+      "representative_id": "NULL038",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL038"
+      ],
+      "length": 330,
+      "structure_z": 0.4980734321750546,
+      "orphan_score": 0.6729414077390052,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.3351742366052792,
+      "p_value": 0.3092161428288529,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_53",
+      "representative_id": "NULL027",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL027"
+      ],
+      "length": 161,
+      "structure_z": 0.5049002248910187,
+      "orphan_score": 0.6517886041027696,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.3290882127928915,
+      "p_value": 0.306814458081209,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_67",
+      "representative_id": "CODE024",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE024"
+      ],
+      "length": 114,
+      "structure_z": 0.933121469517584,
+      "orphan_score": 0.3519309897728325,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.32839436234560326,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_36",
+      "representative_id": "CODE018",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE018"
+      ],
+      "length": 222,
+      "structure_z": 0.7608791714357288,
+      "orphan_score": 0.35975129607606326,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.27372726808128456,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_6",
+      "representative_id": "NULL002",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL002"
+      ],
+      "length": 350,
+      "structure_z": 0.4375291914310632,
+      "orphan_score": 0.6009613839946264,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.2629381484204616,
+      "p_value": 0.33086380527131737,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_46",
+      "representative_id": "NULL014",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL014"
+      ],
+      "length": 183,
+      "structure_z": 0.3161893320484151,
+      "orphan_score": 0.5943555883175864,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.18792889646938044,
+      "p_value": 0.37592940225049754,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_43",
+      "representative_id": "CODE002",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE002"
+      ],
+      "length": 192,
+      "structure_z": 0.6059799936585624,
+      "orphan_score": 0.3055597077022728,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.18516306973573546,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_45",
+      "representative_id": "CODE006",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE006"
+      ],
+      "length": 189,
+      "structure_z": 0.5320221950062176,
+      "orphan_score": 0.32564151474703695,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.17324851346086817,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_44",
+      "representative_id": "CODE017",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE017"
+      ],
+      "length": 189,
+      "structure_z": 0.48794943759367804,
+      "orphan_score": 0.3401012951884379,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.16595223571207976,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_66",
+      "representative_id": "CODE003",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE003"
+      ],
+      "length": 114,
+      "structure_z": 0.45126657360429506,
+      "orphan_score": 0.3621462548857118,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.16342449958590285,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_4",
+      "representative_id": "NULL007",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL007"
+      ],
+      "length": 360,
+      "structure_z": 0.2393615868099577,
+      "orphan_score": 0.6650031410186308,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.15917620706782554,
+      "p_value": 0.4054126068039099,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_52",
+      "representative_id": "CODE021",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE021"
+      ],
+      "length": 162,
+      "structure_z": 0.3365725439148685,
+      "orphan_score": 0.3684171027406139,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.12399908149115389,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_69",
+      "representative_id": "CODE014",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE014"
+      ],
+      "length": 102,
+      "structure_z": 0.3249112154607756,
+      "orphan_score": 0.3625736134306056,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.11780423343374347,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_37",
+      "representative_id": "NULL025",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL025"
+      ],
+      "length": 210,
+      "structure_z": 0.17826582296757465,
+      "orphan_score": 0.5198731856378915,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.09267562127651345,
+      "p_value": 0.4292571090952766,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_25",
+      "representative_id": "NULL004",
+      "cluster_size": 2,
+      "member_ids": [
+        "NULL004",
+        "CODE011"
+      ],
+      "length": 253,
+      "structure_z": 0.12829692813509064,
+      "orphan_score": 0.535301300552119,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.06867751248755577,
+      "p_value": 0.44895699800512834,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_49",
+      "representative_id": "NULL020",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL020"
+      ],
+      "length": 178,
+      "structure_z": 0.04395237489811539,
+      "orphan_score": 0.6250355949762576,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.027471798795063083,
+      "p_value": 0.48247118323830224,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_22",
+      "representative_id": "NULL023",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL023"
+      ],
+      "length": 261,
+      "structure_z": 0.00507778928715538,
+      "orphan_score": 0.5705043275462984,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.0028969007626903783,
+      "p_value": 0.49797426386763255,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_1",
+      "representative_id": "NULL028",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL028"
+      ],
+      "length": 387,
+      "structure_z": -0.04214612070637499,
+      "orphan_score": 0.6410744880377499,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.027018802754616555,
+      "p_value": 0.5168088930972535,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_18",
+      "representative_id": "CODE009",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE009"
+      ],
+      "length": 276,
+      "structure_z": -0.21115759624522754,
+      "orphan_score": 0.3185972592421519,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.06727423143189039,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_40",
+      "representative_id": "NULL017",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL017"
+      ],
+      "length": 204,
+      "structure_z": -0.18048168389149727,
+      "orphan_score": 0.5358248320100932,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.09670656795206027,
+      "p_value": 0.5716127837894095,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_28",
+      "representative_id": "CODE015",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE015"
+      ],
+      "length": 237,
+      "structure_z": -0.39092695726162746,
+      "orphan_score": 0.3165805551921109,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.12375987316944864,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_13",
+      "representative_id": "NULL037",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL037"
+      ],
+      "length": 319,
+      "structure_z": -0.23728102344809823,
+      "orphan_score": 0.6363417722226752,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.15099182697577299,
+      "p_value": 0.5937806085643327,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_16",
+      "representative_id": "NULL022",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL022"
+      ],
+      "length": 292,
+      "structure_z": -0.23063235140981161,
+      "orphan_score": 0.7376886655276873,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.17013487153901657,
+      "p_value": 0.5911997838587459,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_42",
+      "representative_id": "NULL032",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL032"
+      ],
+      "length": 201,
+      "structure_z": -0.2733224095088268,
+      "orphan_score": 0.7299301434924123,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.1995062655924698,
+      "p_value": 0.6076973046849848,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_51",
+      "representative_id": "NULL006",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL006"
+      ],
+      "length": 166,
+      "structure_z": -0.2945261921091766,
+      "orphan_score": 0.6791381759892645,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.20002398089008988,
+      "p_value": 0.6158220739505357,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_33",
+      "representative_id": "NULL016",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL016"
+      ],
+      "length": 225,
+      "structure_z": -0.30626880626730385,
+      "orphan_score": 0.7544938156340542,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.231077920250305,
+      "p_value": 0.6203000061255288,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_63",
+      "representative_id": "NULL012",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL012"
+      ],
+      "length": 126,
+      "structure_z": -0.3254533427516493,
+      "orphan_score": 0.8134948042321934,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.2647546033484659,
+      "p_value": 0.627581005397851,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_64",
+      "representative_id": "NULL024",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL024"
+      ],
+      "length": 122,
+      "structure_z": -0.3510897445087761,
+      "orphan_score": 0.7800040878751379,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.2738514359278831,
+      "p_value": 0.637239489229681,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_9",
+      "representative_id": "NULL018",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL018"
+      ],
+      "length": 328,
+      "structure_z": -0.4998798967607582,
+      "orphan_score": 0.579058613397657,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.2894597598836486,
+      "p_value": 0.6914201758183033,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_23",
+      "representative_id": "CODE010",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE010"
+      ],
+      "length": 261,
+      "structure_z": -0.9561461971986523,
+      "orphan_score": 0.34079852224348234,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.325853211054026,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_35",
+      "representative_id": "NULL010",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL010"
+      ],
+      "length": 222,
+      "structure_z": -0.638939089674446,
+      "orphan_score": 0.6049331306060537,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.3865154237833447,
+      "p_value": 0.7385687213553259,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_68",
+      "representative_id": "CODE013",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE013"
+      ],
+      "length": 108,
+      "structure_z": -1.0991597798870358,
+      "orphan_score": 0.35302302173891587,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.38802870686960306,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_10",
+      "representative_id": "NULL029",
+      "cluster_size": 2,
+      "member_ids": [
+        "NULL029",
+        "CODE004"
+      ],
+      "length": 326,
+      "structure_z": -0.5497007197756552,
+      "orphan_score": 0.7410947558230662,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.40738032069790286,
+      "p_value": 0.7087376684516744,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_26",
+      "representative_id": "CODE001",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE001"
+      ],
+      "length": 246,
+      "structure_z": -1.4031263848415547,
+      "orphan_score": 0.31413180801040963,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.44076662813738743,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_39",
+      "representative_id": "CODE008",
+      "cluster_size": 1,
+      "member_ids": [
+        "CODE008"
+      ],
+      "length": 204,
+      "structure_z": -1.4508836311650115,
+      "orphan_score": 0.319802345690693,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.46399598857080093,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_55",
+      "representative_id": "NULL011",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL011"
+      ],
+      "length": 142,
+      "structure_z": -1.0145683759318094,
+      "orphan_score": 0.5782905125885189,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.5867152661737072,
+      "p_value": 0.8448441898132842,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_17",
+      "representative_id": "NULL039",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL039"
+      ],
+      "length": 287,
+      "structure_z": -1.223430467834005,
+      "orphan_score": 0.5987451070616561,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.7325230064457634,
+      "p_value": 0.8894164242395948,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_56",
+      "representative_id": "NULL000",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL000"
+      ],
+      "length": 140,
+      "structure_z": -1.1665738543331208,
+      "orphan_score": 0.6533170445056133,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.7621425827104363,
+      "p_value": 0.8783087464412045,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_5",
+      "representative_id": "NULL033",
+      "cluster_size": 2,
+      "member_ids": [
+        "NULL033",
+        "CODE020"
+      ],
+      "length": 358,
+      "structure_z": -1.6429514104548688,
+      "orphan_score": 0.46888494382333296,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.7703551797955968,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_12",
+      "representative_id": "NULL009",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL009"
+      ],
+      "length": 321,
+      "structure_z": -1.4492659881307555,
+      "orphan_score": 0.5593797219445791,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.8106900054643177,
+      "p_value": 0.9263683422264398,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_41",
+      "representative_id": "NULL003",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL003"
+      ],
+      "length": 201,
+      "structure_z": -2.222879000689695,
+      "orphan_score": 0.46128093006124415,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -1.0253716928517513,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_54",
+      "representative_id": "NULL031",
+      "cluster_size": 1,
+      "member_ids": [
+        "NULL031"
+      ],
+      "length": 148,
+      "structure_z": -2.298127192174669,
+      "orphan_score": 0.7223775823078056,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -1.6601155649189632,
+      "p_value": 0.9892227244895673,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    }
+  ]
+}
