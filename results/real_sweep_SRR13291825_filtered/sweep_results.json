@@ -1,0 +1,203 @@
+{
+  "n_input_contigs": 26,
+  "n_length_filtered": 20,
+  "n_clusters": 10,
+  "n_nonsingleton_clusters": 1,
+  "alpha": 0.05,
+  "n_significant": 4,
+  "hits": [
+    {
+      "cluster_id": "cluster_2",
+      "representative_id": "k141_11 flag=1 multi=101.6773 len=454",
+      "cluster_size": 11,
+      "member_ids": [
+        "k141_11 flag=1 multi=101.6773 len=454",
+        "k141_24 flag=1 multi=25.0000 len=440",
+        "k141_13 flag=1 multi=2802.0000 len=430",
+        "k141_18 flag=1 multi=1541.5243 len=408",
+        "k141_16 flag=1 multi=652.0000 len=396",
+        "k141_15 flag=1 multi=1.0000 len=393",
+        "k141_8 flag=1 multi=1.0000 len=383",
+        "k141_17 flag=1 multi=1.0000 len=382",
+        "k141_9 flag=1 multi=232.0000 len=381",
+        "k141_14 flag=1 multi=24.0000 len=351",
+        "k141_22 flag=1 multi=1.0000 len=317"
+      ],
+      "length": 454,
+      "structure_z": 5.038584984179511,
+      "orphan_score": 0.5247382443158775,
+      "has_sas": true,
+      "is_circular": false,
+      "combined_score": 4.6439382384347,
+      "p_value": 2.3449308636480388e-07,
+      "q_value": 2.3449308636480387e-06,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_6",
+      "representative_id": "k141_25 flag=3 multi=25.1344 len=327",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_25 flag=3 multi=25.1344 len=327"
+      ],
+      "length": 327,
+      "structure_z": 1.8560789455930509,
+      "orphan_score": 0.5183644156831085,
+      "has_sas": false,
+      "is_circular": true,
+      "combined_score": 1.962125278094062,
+      "p_value": 0.03172115313838861,
+      "q_value": 0.06344230627677722,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_9",
+      "representative_id": "k141_3 flag=1 multi=2.0000 len=311",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_3 flag=1 multi=2.0000 len=311"
+      ],
+      "length": 311,
+      "structure_z": 3.115846391618733,
+      "orphan_score": 0.5760276443201494,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.7948136570275763,
+      "p_value": 0.0009170889435851508,
+      "q_value": 0.004585444717925754,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_4",
+      "representative_id": "k141_10 flag=1 multi=5.0000 len=422",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_10 flag=1 multi=5.0000 len=422"
+      ],
+      "length": 422,
+      "structure_z": 2.700091040356208,
+      "orphan_score": 0.5463552361860875,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.4752088780777548,
+      "p_value": 0.003466025194017527,
+      "q_value": 0.011553417313391759,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_5",
+      "representative_id": "k141_7 flag=1 multi=142.0000 len=354",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_7 flag=1 multi=142.0000 len=354"
+      ],
+      "length": 354,
+      "structure_z": 2.085194169228875,
+      "orphan_score": 0.6877305040067105,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.4340516369556282,
+      "p_value": 0.01852583948081841,
+      "q_value": 0.04631459870204603,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_7",
+      "representative_id": "k141_20 flag=1 multi=1.0000 len=322",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_20 flag=1 multi=1.0000 len=322"
+      ],
+      "length": 322,
+      "structure_z": 1.1786023675525543,
+      "orphan_score": 0.565567220264336,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.6665788648136635,
+      "p_value": 0.11927827422707948,
+      "q_value": 0.19879712371179914,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_8",
+      "representative_id": "k141_21 flag=1 multi=8.0000 len=319",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_21 flag=1 multi=8.0000 len=319"
+      ],
+      "length": 319,
+      "structure_z": -0.046984728975965014,
+      "orphan_score": 0.5281783816046193,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.024816318110656863,
+      "p_value": 0.5187373007007688,
+      "q_value": 0.7337313236073444,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_1",
+      "representative_id": "k141_4 flag=1 multi=4.0000 len=465",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_4 flag=1 multi=4.0000 len=465"
+      ],
+      "length": 465,
+      "structure_z": -0.21979619615401488,
+      "orphan_score": 0.696102214859549,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.15300061896051365,
+      "p_value": 0.5869850588858755,
+      "q_value": 0.7337313236073444,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_0",
+      "representative_id": "k141_23 flag=1 multi=5.0000 len=506",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_23 flag=1 multi=5.0000 len=506"
+      ],
+      "length": 506,
+      "structure_z": -1.061513659379988,
+      "orphan_score": 0.4737305270298863,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.502871425307505,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_3",
+      "representative_id": "k141_19 flag=1 multi=16.0000 len=440",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_19 flag=1 multi=16.0000 len=440"
+      ],
+      "length": 440,
+      "structure_z": -0.8720480615939759,
+      "orphan_score": 0.6199541361921669,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.5406298027435469,
+      "p_value": 0.8084089206556956,
+      "q_value": 0.898232134061884,
+      "significant_at_alpha": false
+    }
+  ],
+  "preprocess": {
+    "enabled": true,
+    "n_dropped_adapter": 6,
+    "n_dropped_homopolymer": 0,
+    "dropped_reasons": {
+      "k141_0 flag=1 multi=137.0000 len=379": "adapter:CAAGCAGAAGACGGCATACGAGAT",
+      "k141_1 flag=1 multi=64.0000 len=377": "adapter:CAAGCAGAAGACGGCATACGAGAT",
+      "k141_2 flag=1 multi=4.0000 len=329": "adapter:GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT(rc)",
+      "k141_5 flag=1 multi=101.6647 len=472": "adapter:CAAGCAGAAGACGGCATACGAGAT",
+      "k141_6 flag=1 multi=1.0000 len=330": "adapter:GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT(rc)",
+      "k141_12 flag=1 multi=2.0000 len=333": "adapter:GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT"
+    }
+  }
+}

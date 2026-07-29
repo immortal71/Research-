@@ -36,11 +36,19 @@ from rnasig.seqio import read_fasta
 from rnasig.cluster import cluster_sequences, non_singleton_clusters
 from rnasig.signature import score_cluster, benjamini_hochberg
 from rnasig.simulate import build_calibration_corpus
+from rnasig.preprocess import filter_contigs
 
 
-def run_sweep(records, outdir: Path, n_shuffles=100, id_threshold=0.7, alpha=0.05, max_len=1000, min_len=10):
+def run_sweep(records, outdir: Path, n_shuffles=100, id_threshold=0.7, alpha=0.05, max_len=1000, min_len=10, skip_preprocess=False):
     rng = random.Random(0)
     filtered = [r for r in records if min_len <= len(r) <= max_len]
+    if skip_preprocess:
+        pre_report = None
+    else:
+        filtered, pre_report = filter_contigs(filtered)
+        print(f"preprocess: {pre_report.n_input} -> {pre_report.n_kept} contigs "
+              f"({pre_report.n_dropped_adapter} adapter, "
+              f"{pre_report.n_dropped_homopolymer} homopolymer)")
     clusters = cluster_sequences(filtered, id_threshold=id_threshold)
 
     candidates = []
@@ -81,6 +89,12 @@ def run_sweep(records, outdir: Path, n_shuffles=100, id_threshold=0.7, alpha=0.0
         "alpha": alpha,
         "n_significant": sum(reject),
         "hits": hits,
+        "preprocess": {
+            "enabled": pre_report is not None,
+            "n_dropped_adapter": pre_report.n_dropped_adapter if pre_report else 0,
+            "n_dropped_homopolymer": pre_report.n_dropped_homopolymer if pre_report else 0,
+            "dropped_reasons": pre_report.dropped_reasons if pre_report else {},
+        },
     }
     (outdir / "sweep_results.json").write_text(json.dumps(summary, indent=2))
     return summary
@@ -94,6 +108,8 @@ def main():
     ap.add_argument("--n-shuffles", type=int, default=100)
     ap.add_argument("--id-threshold", type=float, default=0.7)
     ap.add_argument("--alpha", type=float, default=0.05)
+    ap.add_argument("--skip-preprocess", action="store_true",
+                    help="skip adapter/homopolymer contig filter (default: filter on -- see src/rnasig/preprocess.py)")
     args = ap.parse_args()
 
     outdir = Path(args.outdir)
@@ -125,7 +141,8 @@ def main():
         sys.exit(1)
 
     summary = run_sweep(
-        records, outdir, n_shuffles=args.n_shuffles, id_threshold=args.id_threshold, alpha=args.alpha
+        records, outdir, n_shuffles=args.n_shuffles, id_threshold=args.id_threshold,
+        alpha=args.alpha, skip_preprocess=args.skip_preprocess,
     )
     print(f"input contigs: {summary['n_input_contigs']} "
           f"(length-filtered: {summary['n_length_filtered']})")

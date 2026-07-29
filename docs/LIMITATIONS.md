@@ -9,7 +9,8 @@ trusting any headline number.
 |---|---|---|
 | 1. Reproduce | `SRR11060618_subset.fasta` | **Real** — VNom authors' own test set, 38 contigs assembled from a real human gut metatranscriptome SRA run, downloaded verbatim from https://github.com/Zheludev/VNom |
 | 2. Calibrate | synthetic labeled corpora | **Synthetic by design** — calibration requires dial-able ground truth (copy number, mutation rate, decoy type), which is exactly what a real sample cannot give you |
-| 3. Sweep | labeled synthetic "demo" corpus | **Synthetic, explicitly labeled as such in the script's own output** — see below for why |
+| 3. Sweep (demo) | labeled synthetic "demo" corpus | **Synthetic, explicitly labeled as such in the script's own output** — see below for the original network-blocked scoping |
+| 3. Sweep (real) | SRR13291825 assembly | **Real** — pulled fresh from AWS SRA Open Data mirror, assembled with MEGAHIT in-sandbox. See `results/phase3_real_sweep_report.md`. |
 | 4. Characterize | whatever Phase 3 flags | inherits Phase 3's provenance |
 
 ## Why Phase 3 did not run on real public metatranscriptome data
@@ -26,12 +27,15 @@ supplementary FASTA we were specifically looking for), `zenodo.org`,
 `datadryad.org`.
 
 **Reachable (confirmed 2xx/expected response):**
-`github.com`, `raw.githubusercontent.com`, bare cloud-storage roots
-(`s3.amazonaws.com`, `sra-pub-run-odp.s3.amazonaws.com`,
-`storage.googleapis.com` — reachable as hosts, but we do not have exact
-object keys for specific SRA runs without eutils/SRA metadata access,
-which is itself blocked), and PyPI/npm (used to install
-biopython/numpy/scipy/scikit-learn/ViennaRNA/pytest/matplotlib).
+`github.com`, `raw.githubusercontent.com`, PyPI/npm (used to install
+biopython/numpy/scipy/scikit-learn/ViennaRNA/pytest/matplotlib), AND —
+this turned out to matter more than I initially thought — the **AWS SRA
+Open Data mirrors**: `sra-pub-run-odp.s3.amazonaws.com`,
+`sra-pub-src-1.s3.amazonaws.com`, `sra-pub-metadata-us-east-1.s3.amazonaws.com`.
+The AWS mirror serves any SRA accession directly (URL pattern:
+`https://sra-pub-run-odp.s3.amazonaws.com/sra/<ACC>/<ACC>`), no NCBI
+eutils needed. This is what enabled the real Phase 3 sweep of
+SRR13291825; see `results/phase3_real_sweep_report.md`.
 
 Net effect: every standard public sequence-archive route (SRA, ENA, GenBank
 via eutils, PMC full text, journal supplementary data, Zenodo/OSF/Dryad/

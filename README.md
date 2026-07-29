@@ -22,7 +22,7 @@ Four scripts, one per phase.
 
 `scripts/phase2_calibrate.py` builds a synthetic labeled corpus (real positives, coding decoys, structured-coding decoys, plain nulls), scores everything, and reports ROC-AUC, empirical FDR at BH-corrected alpha=0.05, and a power-vs-depth curve. It also documents a real specificity gap that the first version had, and how it got fixed.
 
-`scripts/phase3_sweep.py` is the runner you point at real assembled contigs. In this repo it runs in `--demo` mode against a synthetic corpus, because this sandbox has no network route to SRA, ENA, EBI, or any of the usual archives. If you have contigs, just pass `--input <fasta>`.
+`scripts/phase3_sweep.py` is the runner you point at real assembled contigs. It ships with both a `--demo` mode (synthetic corpus, for smoke-testing the pipeline) and a real end-to-end run against SRR13291825 pulled fresh from the AWS SRA Open Data mirror, assembled with MEGAHIT in-sandbox. That real run found a legitimate signal (structure z=5, sense/antisense-paired, high-coverage RNA), and — importantly — also revealed a real methodology gap (adapter-dimer contigs mimic the signature perfectly) that Phase 2's synthetic calibration missed. That gap is now fixed (`src/rnasig/preprocess.py`, adapter/homopolymer filter, on by default) and covered by tests. See `results/phase3_real_sweep_report.md` for the full story.
 
 `scripts/phase4_characterize.py` is for anything that survives Phase 3: deeper look with more shuffles, a 6-frame ORF map, GC%, circularity resolution, and an SVG rendering of the predicted structure.
 
