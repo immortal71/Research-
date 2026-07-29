@@ -1,4 +1,4 @@
-# rnasig — a signature-based hunt for undescribed RNA biology
+# rnasig a signature-based hunt for undescribed RNA biology
 
 Sequence-homology search can only find things that resemble something
 already in a database. Zheludev et al. (2024) found **Obelisks** — a whole
