@@ -1,80 +1,78 @@
-# rnasig — a signature-based hunt for undescribed RNA biology
+# rnasig
 
-Sequence-homology search can only find things that resemble something
-already in a database. Zheludev et al. (2024) found **Obelisks** — a whole
-new class of ~1kb circular RNA replicon, hiding in public human gut
-metatranscriptomes — by searching for a *structural signature* instead:
-apparent circularity plus co-occurrence of sense and antisense strands of
-the same molecule in one sample. Their tool is
-[VNom](https://github.com/Zheludev/VNom).
+A pipeline for finding new RNA elements in public metatranscriptomes by hunting for a structural signature instead of relying on sequence homology.
 
-This repo follows the same four-phase playbook on a **second, different**
-signature, aimed at a part of the same design space obelisks don't occupy:
-stable RNA structure with low protein-coding potential, still co-occurring
-as sense/antisense pairs or circular contigs — "sequences whose predicted
-structure is stable but whose sequence matches nothing."
+## Why this exists
 
-**Read `docs/LIMITATIONS.md` first.** It states plainly which results here
-come from real data and which are synthetic, and exactly why (this sandbox
-has no route to NCBI/SRA/ENA/EBI/Zenodo/OSF/Dryad/figshare — confirmed by
-direct testing, not assumed). Nothing in this repo claims a new organism
-was found; it is a calibrated candidate-generation pipeline, run honestly
-on what data was actually reachable.
+In 2024, Zheludev et al. found Obelisks: a completely new class of ~1kb circular RNA replicon, sitting in public human gut sequencing data that had been public for years. They didn't have better data. They just stopped searching for what things looked like (homology) and started searching for how things behaved (a structural signature: apparent circularity plus both sense and antisense strands of the same molecule showing up in one sample). Their tool is [VNom](https://github.com/Zheludev/VNom).
 
-## The four phases
+This repo does two things.
 
-| Phase | Script | What it does | Data |
-|---|---|---|---|
-| 1. Reproduce | `scripts/phase1_reproduce.py` | Reimplements VNom's circularity + circular-permutation clustering + sense/antisense detection; runs it on VNom's own real test data | Real (SRR11060618, human gut) |
-| 2. Calibrate | `scripts/phase2_calibrate.py` | Defines the novel signature (see below) and measures its ROC-AUC, empirical FDR/power, and power-vs-depth curve against synthetic labeled positives + three flavors of matched decoys | Synthetic, labeled |
-| 3. Sweep | `scripts/phase3_sweep.py` | Runs the calibrated pipeline against any FASTA of assembled contigs | `--demo` (synthetic; see limitations) or `--input <real contigs>` |
-| 4. Characterize | `scripts/phase4_characterize.py` | Deep-dives a flagged candidate: refolded structure + z-score, 6-frame ORF map, circularity status, SVG structure plot | Whatever Phase 3 flags |
+First, it reimplements VNom's core signature from scratch (no `usearch`/`circuclust`/`MARS`, just Python + Biopython) and confirms it actually works by rerunning it on VNom's own test data.
 
-Full methodology: `docs/METHODS.md`. Results: `results/*.md` and
-`results/*.json`.
+Second, it defines a second, different signature: stable RNA structure combined with low protein-coding potential and dual-strand co-occurrence. Then it calibrates that signature against synthetic controls before letting it loose on anything.
 
-## The novel signature: SOS (Structure-stable, Orphan-sequence, Strand-symmetric)
+Obelisks themselves would score high on the "structured" and "dual-strand" parts of this second signature, but low on the "non-coding" part (Oblins are real proteins). So it aims at a nearby but distinct part of the same design space that nobody has systematically searched.
 
-Three orthogonal axes, combined into one score and calibrated with
-Benjamini-Hochberg FDR control:
+## What's in the box
 
-- **S1 — structure stability**: MFE (ViennaRNA) z-score vs. dinucleotide-
-  shuffled nulls of the same sequence (Altschul-Erikson shuffle).
-- **S2 — orphan/coding-potential**: low ORF coverage + low in-frame codon
-  bias (reference-free proxy — see caveat in `src/rnasig/orphan.py`).
-- **S3 — strand-symmetry**: sense+antisense co-occurrence and/or circular
-  terminal repeat.
+Four scripts, one per phase.
 
-Obelisks themselves would score high on S1 and S3, but low on S2 (Oblins
-are real proteins) — this signature deliberately hunts the complementary,
-non-coding-but-structured corner nobody has systematically screened for.
+`scripts/phase1_reproduce.py` runs the VNom-style pipeline against VNom's own real gut metatranscriptome test data. It finds 31 out of 38 contigs are circular, and those collapse into 4 sense/antisense-paired clusters. That's the sanity check that the reimplementation actually works.
+
+`scripts/phase2_calibrate.py` builds a synthetic labeled corpus (real positives, coding decoys, structured-coding decoys, plain nulls), scores everything, and reports ROC-AUC, empirical FDR at BH-corrected alpha=0.05, and a power-vs-depth curve. It also documents a real specificity gap that the first version had, and how it got fixed.
+
+`scripts/phase3_sweep.py` is the runner you point at real assembled contigs. In this repo it runs in `--demo` mode against a synthetic corpus, because this sandbox has no network route to SRA, ENA, EBI, or any of the usual archives. If you have contigs, just pass `--input <fasta>`.
+
+`scripts/phase4_characterize.py` is for anything that survives Phase 3: deeper look with more shuffles, a 6-frame ORF map, GC%, circularity resolution, and an SVG rendering of the predicted structure.
+
+Everything under `src/rnasig/` is the library. `tests/` has 20 pytest tests that run in a few seconds.
+
+## The signature itself
+
+Three axes. All three have to line up.
+
+Structure stability. Fold with ViennaRNA MFE. Compare against dinucleotide-shuffled versions of the same sequence (Altschul-Erikson shuffle, so mono- and dinucleotide composition are preserved exactly). Take the z-score.
+
+Orphan / non-coding. No BLAST in this sandbox, so "matches nothing known" gets operationalized reference-free as low ORF coverage plus low in-frame codon bias. Not a validated gene predictor, and I say so in the code.
+
+Strand symmetry. Sense and antisense contigs of the same molecule co-occur in the same sample, and/or the contig has a circular terminal repeat.
+
+Ranking uses all three. Significance testing gates on the orphan axis first, then applies BH-FDR on the structure z-score. Phase 2 v1 tested significance on structure alone and quietly let 5 of 8 structured-coding decoys through. Phase 2 v2 fixed that. Both runs are in `results/` so the fix is auditable, not just claimed.
 
 ## Setup
 
 ```
 pip install -e .
-pip install -r requirements.txt   # or just: pip install -r requirements.txt
+pip install -r requirements.txt
 pytest tests/ -q
 ```
 
-## Quick start
+Standard stack: biopython, numpy, scipy, pandas, scikit-learn, ViennaRNA, pytest, matplotlib.
+
+## Running it
 
 ```
 python scripts/phase1_reproduce.py
 python scripts/phase2_calibrate.py
 python scripts/phase3_sweep.py --demo --outdir results/sweep_demo
-python scripts/phase4_characterize.py --input <candidate.fasta> --outdir results/char_x
+python scripts/phase4_characterize.py --input candidate.fasta --outdir results/char_x
 ```
 
-## Repository layout
+Each phase drops its outputs in `results/`, one markdown report and one JSON.
+
+## Layout
 
 ```
-src/rnasig/        core library (seqio, circularity, cluster, structure, orphan, signature, simulate, nullmodel)
-scripts/           the four phase-runner scripts
-tests/             pytest unit tests (run: pytest tests/ -q)
-data/reference/    VNom's own source + real test data (verbatim, see PROVENANCE.md)
-data/motifs/       (no static files -- motifs are generated in code, see PROVENANCE.md)
-results/           actual output of every phase run in this session
-docs/METHODS.md          full methodology
-docs/LIMITATIONS.md      what's real, what's synthetic, and why -- read this
+src/rnasig/     library
+scripts/        the four phase runners
+tests/          pytest
+data/reference/ VNom's original code + test data, verbatim
+data/motifs/    empty on purpose; motifs are generated in code
+results/        actual outputs from running this session
+docs/           METHODS.md and LIMITATIONS.md
 ```
+
+## Before you trust the numbers
+
+`docs/LIMITATIONS.md` says plainly what came from real data (Phase 1) and what came from synthetic corpora (Phases 2 and 3), and why the network policy in this sandbox made a real Phase 3 sweep impossible. Nothing here claims a new organism was found. It's a candidate-generation pipeline, calibrated honestly, run on what data was actually reachable.
