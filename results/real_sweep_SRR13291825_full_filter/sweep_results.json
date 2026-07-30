@@ -1,0 +1,207 @@
+{
+  "n_input_contigs": 26,
+  "n_length_filtered": 8,
+  "n_clusters": 8,
+  "n_nonsingleton_clusters": 0,
+  "alpha": 0.05,
+  "n_significant": 2,
+  "hits": [
+    {
+      "cluster_id": "cluster_4",
+      "representative_id": "k141_25 flag=3 multi=25.1344 len=327",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_25 flag=3 multi=25.1344 len=327"
+      ],
+      "length": 327,
+      "structure_z": 1.669042907260973,
+      "orphan_score": 0.5183644156831085,
+      "has_sas": false,
+      "is_circular": true,
+      "combined_score": 1.8651724513723709,
+      "p_value": 0.047554438344876694,
+      "q_value": 0.1144824389464806,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_7",
+      "representative_id": "k141_3 flag=1 multi=2.0000 len=311",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_3 flag=1 multi=2.0000 len=311"
+      ],
+      "length": 311,
+      "structure_z": 2.8730368288267694,
+      "orphan_score": 0.5760276443201494,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.6549486365541164,
+      "p_value": 0.002032733600747119,
+      "q_value": 0.012917927008808845,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_3",
+      "representative_id": "k141_10 flag=1 multi=5.0000 len=422",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_10 flag=1 multi=5.0000 len=422"
+      ],
+      "length": 422,
+      "structure_z": 2.7235234245962148,
+      "orphan_score": 0.5463552361860875,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 1.4880112839036068,
+      "p_value": 0.0032294817522022113,
+      "q_value": 0.012917927008808845,
+      "significant_at_alpha": true
+    },
+    {
+      "cluster_id": "cluster_5",
+      "representative_id": "k141_20 flag=1 multi=1.0000 len=322",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_20 flag=1 multi=1.0000 len=322"
+      ],
+      "length": 322,
+      "structure_z": 1.5783621346476735,
+      "orphan_score": 0.565567220264336,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.8926698850631684,
+      "p_value": 0.0572412194732403,
+      "q_value": 0.1144824389464806,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_6",
+      "representative_id": "k141_21 flag=1 multi=8.0000 len=319",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_21 flag=1 multi=8.0000 len=319"
+      ],
+      "length": 319,
+      "structure_z": 0.1613203884005376,
+      "orphan_score": 0.5281783816046193,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": 0.08520594166522455,
+      "p_value": 0.4359205329742476,
+      "q_value": 0.6974728527587961,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_0",
+      "representative_id": "k141_23 flag=1 multi=5.0000 len=506",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_23 flag=1 multi=5.0000 len=506"
+      ],
+      "length": 506,
+      "structure_z": -0.9741232176725295,
+      "orphan_score": 0.4737305270298863,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.46147190530005605,
+      "p_value": 1.0,
+      "q_value": 1.0,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_1",
+      "representative_id": "k141_4 flag=1 multi=4.0000 len=465",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_4 flag=1 multi=4.0000 len=465"
+      ],
+      "length": 465,
+      "structure_z": -0.6823607494840233,
+      "orphan_score": 0.696102214859549,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.4749928290490505,
+      "p_value": 0.752494565816004,
+      "q_value": 0.9790914672943697,
+      "significant_at_alpha": false
+    },
+    {
+      "cluster_id": "cluster_2",
+      "representative_id": "k141_19 flag=1 multi=16.0000 len=440",
+      "cluster_size": 1,
+      "member_ids": [
+        "k141_19 flag=1 multi=16.0000 len=440"
+      ],
+      "length": 440,
+      "structure_z": -1.065632211308787,
+      "orphan_score": 0.6199541361921669,
+      "has_sas": false,
+      "is_circular": false,
+      "combined_score": -0.6606430970604877,
+      "p_value": 0.8567050338825735,
+      "q_value": 0.9790914672943697,
+      "significant_at_alpha": false
+    }
+  ],
+  "preprocess": {
+    "enabled": true,
+    "n_dropped_adapter": 6,
+    "n_dropped_homopolymer": 0,
+    "dropped_reasons": {
+      "k141_0 flag=1 multi=137.0000 len=379": "adapter:CAAGCAGAAGACGGCATACGAGAT",
+      "k141_1 flag=1 multi=64.0000 len=377": "adapter:CAAGCAGAAGACGGCATACGAGAT",
+      "k141_2 flag=1 multi=4.0000 len=329": "adapter:GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT(rc)",
+      "k141_5 flag=1 multi=101.6647 len=472": "adapter:CAAGCAGAAGACGGCATACGAGAT",
+      "k141_6 flag=1 multi=1.0000 len=330": "adapter:GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT(rc)",
+      "k141_12 flag=1 multi=2.0000 len=333": "adapter:GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT"
+    }
+  },
+  "ncrna_filter": {
+    "enabled": true,
+    "barrnap_available": true,
+    "trnascan_available": false,
+    "n_dropped": 12,
+    "dropped_by_id": {
+      "k141_14": [
+        "rRNA(bac)",
+        "rRNA(euk)"
+      ],
+      "k141_8": [
+        "rRNA(arc)",
+        "rRNA(bac)",
+        "rRNA(euk)"
+      ],
+      "k141_18": [
+        "rRNA(arc)",
+        "rRNA(euk)"
+      ],
+      "k141_11": [
+        "rRNA(euk)"
+      ],
+      "k141_13": [
+        "rRNA(euk)"
+      ],
+      "k141_15": [
+        "rRNA(euk)"
+      ],
+      "k141_16": [
+        "rRNA(euk)"
+      ],
+      "k141_17": [
+        "rRNA(euk)"
+      ],
+      "k141_22": [
+        "rRNA(euk)"
+      ],
+      "k141_24": [
+        "rRNA(euk)"
+      ],
+      "k141_7": [
+        "rRNA(euk)"
+      ],
+      "k141_9": [
+        "rRNA(euk)"
+      ]
+    }
+  }
+}
