@@ -2,8 +2,13 @@
 
 **Data:** `data/reference/vnom/SRR11060618_subset.fasta` — 38 real
 rnaSPAdes contigs, VNom's own test dataset, assembled from real SRA run
-SRR11060618 (human gut metatranscriptome). Downloaded verbatim from
-https://github.com/Zheludev/VNom.
+SRR11060618. Downloaded verbatim from https://github.com/Zheludev/VNom.
+
+**Correction:** this report originally called SRR11060618 a human gut
+metatranscriptome. It is *Prunus persica* (peach) stamen ssRNA-seq; see
+`data/reference/vnom/PROVENANCE.md`. The four candidates below have since
+been identified, and the top one is a real viroid:
+`results/phase5_identification_report.md`.
 
 **Pipeline:** `src/rnasig/circularity.py` + `src/rnasig/cluster.py`
 (independent reimplementation of VNom's CircleFinder + circUCLUST +
@@ -40,7 +45,7 @@ Full machine-readable output: `results/phase1_reproduction.json`.
 ## Interpretation
 
 This is the exact pattern the obelisks paper describes: circular,
-concatemer-prone contigs from a real gut metatranscriptome sample that
+concatemer-prone contigs from a real RNA-Seq sample that
 cluster into groups containing both sense and antisense representatives —
 evidence of an actively-transcribed-or-replicating agent rather than
 incidental fragments of host/microbial mRNA. Our from-scratch

@@ -1,5 +1,19 @@
 # k141_25 confirmation evidence
 
+> **Resolved, and not in this document's favour.** The two questions listed
+> below as *not established* have been answered. k141_25 encodes a bacterial
+> FAD-dependent oxidoreductase at 97% amino-acid identity to *Pseudolabrys*
+> and *Bradyrhizobium*, and the run it came from is an 18S rRNA amplicon
+> survey of soil DNA rather than a metatranscriptome. So the second
+> alternative this file could not exclude, a tandem-repeat DNA locus, is the
+> right one, with PCR concatemerization supplying the tandem structure. The
+> junction-read evidence below is real and was correctly interpreted as
+> *some* tandem arrangement; what it cannot distinguish is a biological
+> circle from a PCR concatemer, and the library type settles that. The
+> closing sentence calling this "a real, unclassified ~186 nt sequence
+> element" is withdrawn: it is classified. See
+> `results/phase5_identification_report.md`.
+
 Follow-up to the earlier `phase3_full_filter_report.md` "last-last step" —
 concrete evidence work on the one candidate that survived every filter
 (k141_25) and had a genuine obelisk-like feature (circular terminal

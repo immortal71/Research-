@@ -1,0 +1,141 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and
+Webb Miller (2000), "A greedy algorithm for aligning DNA
+sequences", J Comput Biol 2000; 7(1-2):203-14.
+
+
+Reference for database indexing: Aleksandr Morgulis, George
+Coulouris, Yan Raytselis, Thomas L. Madden, Richa Agarwala,
+Alejandro A. Schaffer (2008), "Database Indexing for
+Production MegaBLAST Searches", Bioinformatics 24:1757-1764.
+
+
+RID: 7W402A6H014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= primerC_read_len275
+
+Length=275
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+LC761262.1 Uncultured Trebouxiophyceae SA07 gene for 18S rRNA,...  503     7e-138  100%      
+LC761261.1 Uncultured Trebouxiophyceae SA06 gene for 18S rRNA,...  503     7e-138  100%      
+LC713024.1 Uncultured Trebouxia S17 gene for 18S rRNA, partial...  503     7e-138  100%      
+LC713020.1 Uncultured Trebouxia S13 gene for 18S rRNA, partial...  503     7e-138  100%      
+LC713022.1 Uncultured Trebouxia S15 gene for 18S rRNA, partial...  503     7e-138  100%      
+
+ALIGNMENTS
+>LC761262.1 Uncultured Trebouxiophyceae SA07 gene for 18S rRNA, partial sequence
+Length=1675
+
+ Score = 503 bits (272),  Expect = 7e-138
+ Identities = 274/275 (99%), Gaps = 0/275 (0%)
+ Strand=Plus/Minus
+
+Query  1    TGAAAACATCCTTGGCAAATGCTTTCGCAGAAGTTCGTCTTTCATAGATCCAAGAATTTC  60
+            |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||
+Sbjct  931  TGAAAACATCCTTGGCAAATGCTTTCGCAGAAGTTCGTCTTTCATAAATCCAAGAATTTC  872
+
+Query  61   ACCTCTGACAATGAAATACGAATGCCCCCGACTGTCCCTCTTAATCATTACTCCGGTCCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  871  ACCTCTGACAATGAAATACGAATGCCCCCGACTGTCCCTCTTAATCATTACTCCGGTCCC  812
+
+Query  121  ACAGACCAACGAGATAGGCCAGAGTCCTATCGTGTTATTCCATGCTAATGTATTCAGAGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  811  ACAGACCAACGAGATAGGCCAGAGTCCTATCGTGTTATTCCATGCTAATGTATTCAGAGC  752
+
+Query  181  GTAGGCCTGCTTTGAACACTCTAATTTACTCAAAGTAACCTCGCCGACACCGAGTCCCGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  751  GTAGGCCTGCTTTGAACACTCTAATTTACTCAAAGTAACCTCGCCGACACCGAGTCCCGA  692
+
+Query  241  GCAATTAAGCTCAGGAGCCCGTTTCCGGCAGCAAG  275
+            |||||||||||||||||||||||||||||||||||
+Sbjct  691  GCAATTAAGCTCAGGAGCCCGTTTCCGGCAGCAAG  657
+
+
+>LC761261.1 Uncultured Trebouxiophyceae SA06 gene for 18S rRNA, partial sequence
+Length=1689
+
+ Score = 503 bits (272),  Expect = 7e-138
+ Identities = 274/275 (99%), Gaps = 0/275 (0%)
+ Strand=Plus/Minus
+
+Query  1    TGAAAACATCCTTGGCAAATGCTTTCGCAGAAGTTCGTCTTTCATAGATCCAAGAATTTC  60
+            |||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||
+Sbjct  930  TGAAAACATCCTTGGCAAATGCTTTCGCAGAAGTTCGTCTTTCATAAATCCAAGAATTTC  871
+
+Query  61   ACCTCTGACAATGAAATACGAATGCCCCCGACTGTCCCTCTTAATCATTACTCCGGTCCC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  870  ACCTCTGACAATGAAATACGAATGCCCCCGACTGTCCCTCTTAATCATTACTCCGGTCCC  811
+
+Query  121  ACAGACCAACGAGATAGGCCAGAGTCCTATCGTGTTATTCCATGCTAATGTATTCAGAGC  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  810  ACAGACCAACGAGATAGGCCAGAGTCCTATCGTGTTATTCCATGCTAATGTATTCAGAGC  751
+
+Query  181  GTAGGCCTGCTTTGAACACTCTAATTTACTCAAAGTAACCTCGCCGACACCGAGTCCCGA  240
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  750  GTAGGCCTGCTTTGAACACTCTAATTTACTCAAAGTAACCTCGCCGACACCGAGTCCCGA  691
+
+Query  241  GCAATTAAGCTCAGGAGCCCGTTTCCGGCAGCAAG  275
+            |||||||||||||||||||||||||||||||||||
+Sbjct  690  GCAATTAAGCTCAGGAGCCCGTTTCCGGCAGCAAG  656
+
+
+Query= primerA_read_len273
+
+Length=273
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+ON555722.1 Nanorchestidae sp. isolate FP691 small subunit ribo...  178     4e-40  80%       
+L81937.1 Derocheilocaris typicus 18S ribosomal RNA gene, compl...  132     4e-26  91%       
+KY922106.1 Nanorchestes sp. AD1089 voucher UMMZ BMOC 07-0615-0...  126     2e-24  90%       
+JQ000139.1 Herodialges sp. AD945 18S ribosomal RNA gene, parti...  124     6e-24  89%       
+LR995396.1 Brachychthoniidae gen. sp. 3 AD1301 partial 18S rRN...  115     4e-21  87%       
+
+ALIGNMENTS
+>ON555722.1 Nanorchestidae sp. isolate FP691 small subunit ribosomal RNA 
+gene, partial sequence
+Length=1780
+
+ Score = 178 bits (96),  Expect = 4e-40
+ Identities = 222/279 (80%), Gaps = 23/279 (8%)
+ Strand=Plus/Plus
+
+Query  1    AGCTCCAATAGCGTATATTAAAGTTGTTGCGGGTAAAAAGCTCGTAGTTGGATCTCTTTG  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 
+Sbjct  520  AGCTCCAATAGCGTATATTAAAGTTGTTGCGGGTAAAAAGCTCGTAGTTGGATCTCTTTT  579
+
+Query  61   ACTTGTAGGTAGAATGTTGCTCTAAG-GGTGACATCT-CTGCTCTACAGTCT-TAT-TAC  116
+              | || ||  || ||   ||| ||| |||  ||  | | | ||  ||| ||  || |||
+Sbjct  580  G-TAGTTGGCGGACTG-GACTC-AAGTGGT-TCAGGTACCG-TC--CAG-CTGCATATAC  631
+
+Query  117  T-ATT--T-TCATAATCGAGATTGTGCCCTTAAACGGGTGCC-TTGT-AGATATGAAAGG  170
+            | |||  | || |  | | |   |||| ||||| |||||||| |  | | | | | || |
+Sbjct  632  TAATTACTGTCGT-TTAGTGGGGGTGCTCTTAACCGGGTGCCCTCATCACACA-GTAA-G  688
+
+Query  171  TTTACTTTGAAGAAATTAGAGTGCTCAAAGCAGGCAATCTCTGCAAGGAGAAATGCCAGA  230
+            |||||||||||||||||| ||||||||||||||||| | || |||| || ||| ||| ||
+Sbjct  689  TTTACTTTGAAGAAATTAAAGTGCTCAAAGCAGGCATTGTC-GCAA-GACAAAGGCCGGA  746
+
+Query  231  ATACTGTTGCATGGAATAATGGAATAGGACCTCGGTTCT  269
+            |||||||||||||||||||||||||||||||||||||||
+Sbjct  747  ATACTGTTGCATGGAATAATGGAATAGGACCTCGGTTCT  785
+
+
+
+[... remaining alignments truncated; full report regenerable with scripts/phase5_identify.py ...]

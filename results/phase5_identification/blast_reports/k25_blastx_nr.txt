@@ -1,0 +1,117 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTX 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W37D5TA014
+
+
+Database: All non-redundant GenBank CDS
+translations+PDB+SwissProt+PIR+PRF excluding environmental samples
+from WGS projects
+           1,129,032,111 sequences; 426,408,034,124 total letters
+Query= k141_25_monomer_186nt
+
+Length=186
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+HZP76702.1 FAD-binding protein [Pseudolabrys sp.]                  73.6    8e-13  97%       
+MHH8797386.1 hypothetical protein [Xanthobacteraceae bacterium]    73.2    9e-13  94%       
+HEV8464776.1 FAD-binding protein [Pseudolabrys sp.]                73.2    1e-12  97%       
+MGE5166007.1 FAD-dependent oxidoreductase [Sphingobacteriales ...  73.2    1e-12  97%       
+HEY6023433.1 FAD-binding protein [Pseudolabrys sp.]                72.4    2e-12  94%       
+HEY8441577.1 FAD-binding protein [Xanthobacteraceae bacterium]     71.2    5e-12  60%       
+HLX15684.1 FAD-binding protein [Bradyrhizobium sp.]                71.2    6e-12  94%       
+MGC1563225.1 FAD-binding protein [Bradyrhizobium sp.]              70.9    6e-12  87%       
+HET7190353.1 FAD-binding protein [Pseudolabrys sp.]                70.9    7e-12  91%       
+MHH8700750.1 FAD-dependent oxidoreductase [Pseudolabrys sp.]       70.9    7e-12  91%       
+HET7383238.1 FAD-binding protein [Pseudolabrys sp.]                70.9    8e-12  91%       
+MGZ5873807.1 FAD-binding protein [Bradyrhizobium sp.]              70.9    8e-12  91%       
+WP_325632806.1 FAD-dependent oxidoreductase [Bradyrhizobium sp.]   70.9    8e-12  91%       
+HWZ05515.1 FAD-binding protein [Bradyrhizobium sp.]                70.5    9e-12  87%       
+MHH9239403.1 FAD-dependent oxidoreductase [Bradyrhizobium sp.]     70.5    9e-12  87%       
+WP_325635286.1 FAD-dependent oxidoreductase [Bradyrhizobium sp.]   70.5    1e-11  91%       
+HTM75234.1 FAD-binding protein [Pseudolabrys sp.]                  70.1    1e-11  91%       
+HWI27754.1 FAD-binding protein [Allostellaceae bacterium]          70.1    1e-11  91%       
+HET9715083.1 FAD-binding protein [Pseudolabrys sp.]                70.1    1e-11  89%       
+MHH8676181.1 FAD-dependent oxidoreductase [Pseudolabrys sp.]       70.1    1e-11  94%       
+
+ALIGNMENTS
+>HZP76702.1 FAD-binding protein [Pseudolabrys sp.]
+Length=569
+
+ Score = 73.6 bits (179),  Expect = 8e-13, Method: Composition-based stats.
+ Identities = 34/35 (97%), Positives = 34/35 (97%), Gaps = 0/35 (0%)
+ Frame = -2
+
+Query  185  GIDVDTMTMRSSVPGLYVAGGVGGHSNGLIGLATY  81
+            GIDVDT TMRSSVPGLYVAGGVGGHSNGLIGLATY
+Sbjct  352  GIDVDTATMRSSVPGLYVAGGVGGHSNGLIGLATY  386
+
+
+ Score = 55.1 bits (131),  Expect = 2e-06, Method: Composition-based stats.
+ Identities = 23/28 (82%), Positives = 26/28 (93%), Gaps = 0/28 (0%)
+ Frame = -2
+
+Query  86   TYGKTFRQLGLQFPQQLVETAVTSHYRQ  3
+            TYGK +RQLGL FP+QLVETAVT+HYRQ
+Sbjct  323  TYGKAYRQLGLDFPRQLVETAVTAHYRQ  350
+
+
+>MHH8797386.1 hypothetical protein [Xanthobacteraceae bacterium]
+Length=354
+
+ Score = 73.2 bits (178),  Expect = 9e-13, Method: Composition-based stats.
+ Identities = 33/35 (94%), Positives = 34/35 (97%), Gaps = 0/35 (0%)
+ Frame = -2
+
+Query  185  GIDVDTMTMRSSVPGLYVAGGVGGHSNGLIGLATY  81
+            GIDVDT TMRSSVPGLYVAGG+GGHSNGLIGLATY
+Sbjct  137  GIDVDTKTMRSSVPGLYVAGGLGGHSNGLIGLATY  171
+
+
+ Score = 55.5 bits (132),  Expect = 2e-06, Method: Composition-based stats.
+ Identities = 26/47 (55%), Positives = 33/47 (70%), Gaps = 0/47 (0%)
+ Frame = -2
+
+Query  143  GLYVAGGVGGHSNGLIGLATYGKTFRQLGLQFPQQLVETAVTSHYRQ  3
+            G Y AG     +  +    +YGK+FRQLGL+FP+QLVE AVT+HYRQ
+Sbjct  89   GGYYAGFDHCDAREVDAYTSYGKSFRQLGLRFPEQLVEAAVTAHYRQ  135
+
+
+>HEV8464776.1 FAD-binding protein [Pseudolabrys sp.]
+Length=570
+
+ Score = 73.2 bits (178),  Expect = 1e-12, Method: Composition-based stats.
+ Identities = 34/35 (97%), Positives = 34/35 (97%), Gaps = 0/35 (0%)
+ Frame = -2
+
+Query  185  GIDVDTMTMRSSVPGLYVAGGVGGHSNGLIGLATY  81
+            GIDVDT TMRSSVPGLYVAGGVGGHSNGLIGLATY
+Sbjct  354  GIDVDTATMRSSVPGLYVAGGVGGHSNGLIGLATY  388
+
+
+ Score = 55.5 bits (132),  Expect = 2e-06, Method: Composition-based stats.
+ Identities = 24/28 (86%), Positives = 26/28 (93%), Gaps = 0/28 (0%)
+ Frame = -2
+
+Query  86   TYGKTFRQLGLQFPQQLVETAVTSHYRQ  3
+            TYGKT+RQLGL FP+ LVETAVTSHYRQ
+Sbjct  325  TYGKTYRQLGLDFPKTLVETAVTSHYRQ  352
+
+
+
+[... remaining alignments truncated; full report regenerable with scripts/phase5_identify.py ...]

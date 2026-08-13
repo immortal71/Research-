@@ -1,0 +1,97 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W3WVXYF016
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= primer_A_28.7pct
+
+Length=20
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+PX956866.1 Melomastia sp. T76329-8 strain MFLU:25-0341 small s...  37.4    16     100%      
+PP155473.1 Blastocystis sp. strain ST3 isolate YNYC3 small sub...  37.4    16     100%      
+PX904269.1 Cladosporium sphaerospermum isolate QEBSM6 small su...  37.4    16     100%      
+PQ408636.1 Cryptosporidium sp. rat genotype VI isolate 12 smal...  37.4    16     100%      
+PQ270049.1 Theileria annulata isolate aabc1 small subunit ribo...  37.4    16     100%      
+XR_009302186.1 PREDICTED: Phymastichus coffea small subunit ri...  37.4    16     100%      
+PX575817.1 Cephalodasys sp. 4 AC-2025a voucher W26 small subun...  37.4    16     100%      
+XR_011843407.1 PREDICTED: Antedon mediterranea small subunit r...  37.4    16     100%      
+
+ALIGNMENTS
+>PX956866.1 Melomastia sp. T76329-8 strain MFLU:25-0341 small subunit ribosomal 
+RNA gene, partial sequence
+Length=1042
+
+ Score = 37.4 bits (40),  Expect = 16
+ Identities = 20/20 (100%), Gaps = 0/20 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGCTCCAATAGCGTATATTA  20
+            ||||||||||||||||||||
+Sbjct  522  AGCTCCAATAGCGTATATTA  541
+
+
+>PP155473.1 Blastocystis sp. strain ST3 isolate YNYC3 small subunit ribosomal 
+RNA gene, partial sequence
+Length=456
+
+ Score = 37.4 bits (40),  Expect = 16
+ Identities = 20/20 (100%), Gaps = 0/20 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGCTCCAATAGCGTATATTA  20
+            ||||||||||||||||||||
+Sbjct  94   AGCTCCAATAGCGTATATTA  113
+
+
+>PX904269.1 Cladosporium sphaerospermum isolate QEBSM6 small subunit ribosomal 
+RNA gene, partial sequence
+Length=556
+
+ Score = 37.4 bits (40),  Expect = 16
+ Identities = 20/20 (100%), Gaps = 0/20 (0%)
+ Strand=Plus/Plus
+
+Query  1    AGCTCCAATAGCGTATATTA  20
+            ||||||||||||||||||||
+Sbjct  393  AGCTCCAATAGCGTATATTA  412
+
+
+Query= primer_B_20.3pct
+
+Length=20
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+MK003440.1 Uncultured eukaryote clone AMD_18S_OTUa_1504 small ...  37.4    16     100%      
+MT533871.1 Uncultured eukaryote clone UL_48278_Uncultured_Rhiz...  37.4    16     100%      
+PX770785.1 Paulinella sp. T75739-1 strain Solomon_05 small sub...  37.4    16     100%      
+PQ405088.1 Uncultured eukaryote clone OTU180 small subunit rib...  37.4    16     100%      
+MK350432.1 Uncultured eukaryote isolate OTU72 small subunit ri...  37.4    16     100%      
+MK350716.1 Uncultured eukaryote isolate OTU356 small subunit r...  37.4    16     100%      
+LR216826.1 uncultured marine eukaryote partial 18S rRNA gene, ...  37.4    16     100%      
+MH008718.1 Uncultured eukaryote isolate P230 small subunit rib...  37.4    16     100%      
+
+ALIGNMENTS
+
+[... remaining alignments truncated; full report regenerable with scripts/phase5_identify.py ...]

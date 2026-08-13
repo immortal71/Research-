@@ -1,9 +1,15 @@
 # Phase 4 report: characterizing the real Phase 1 candidates
 
 **Input:** the 4 real sense/antisense-paired cluster centroids found in
-Phase 1 (`data/reference/vnom/SRR11060618_subset.fasta`, real human gut
-metatranscriptome contigs) — i.e. this phase runs on real data, not a
+Phase 1 (`data/reference/vnom/SRR11060618_subset.fasta`, real *Prunus
+persica* stamen RNA-Seq contigs) — i.e. this phase runs on real data, not a
 synthetic demo. `scripts/phase4_characterize.py`, n_shuffles=100.
+
+> **All four have since been identified.** NODE_36652 is Peach latent
+> mosaic viroid (98% nt identity, E=5e-155), and the 337 nt circular unit
+> reported below matches PLMVd's complete genome length exactly. The other
+> three are peach genomic and mRNA sequence. See
+> `results/phase5_identification_report.md`.
 
 | contig | length | GC% | circular (unit len) | structure z | orphan score | longest ORF (nt) | SOS-significant? |
 |---|---|---|---|---|---|---|---|

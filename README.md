@@ -18,15 +18,25 @@ Obelisks themselves would score high on the "structured" and "dual-strand" parts
 
 Four scripts, one per phase.
 
-`scripts/phase1_reproduce.py` runs the VNom-style pipeline against VNom's own real gut metatranscriptome test data. It finds 31 out of 38 contigs are circular, and those collapse into 4 sense/antisense-paired clusters. That's the sanity check that the reimplementation actually works.
+`scripts/phase1_reproduce.py` runs the VNom-style pipeline against VNom's own real test data (SRA run SRR11060618, *Prunus persica* stamen ssRNA-seq). It finds 31 out of 38 contigs are circular, and those collapse into 4 sense/antisense-paired clusters. That's the sanity check that the reimplementation actually works.
+
+Phase 5 has since identified those 4 clusters, and the top one is **Peach latent mosaic viroid at 98% identity** — a real circular, non-coding, ~337 nt RNA replicon. The circularity code resolved its unit length as 337 nt from sequence alone, before any database was consulted. That is the pipeline finding exactly the class of molecule it was built for, on real data, and it is the strongest evidence in this repo that the signature works.
 
 `scripts/phase2_calibrate.py` builds a synthetic labeled corpus (real positives, coding decoys, structured-coding decoys, plain nulls), scores everything, and reports ROC-AUC, empirical FDR at BH-corrected alpha=0.05, and a power-vs-depth curve. It also documents a real specificity gap that the first version had, and how it got fixed.
 
-`scripts/phase3_sweep.py` is the runner you point at real assembled contigs. It ships with both a `--demo` mode (synthetic corpus, for smoke-testing the pipeline) and a real end-to-end run against SRR13291825 pulled fresh from the AWS SRA Open Data mirror, assembled with MEGAHIT in-sandbox. That real run found a legitimate signal (structure z=5, sense/antisense-paired, high-coverage RNA), and — importantly — also revealed a real methodology gap (adapter-dimer contigs mimic the signature perfectly) that Phase 2's synthetic calibration missed. That gap is now fixed (`src/rnasig/preprocess.py`, adapter/homopolymer filter, on by default) and covered by tests. See `results/phase3_real_sweep_report.md` for the full story.
+`scripts/phase3_sweep.py` is the runner you point at real assembled contigs. It ships with both a `--demo` mode (synthetic corpus, for smoke-testing the pipeline) and a real end-to-end run against SRR13291825 pulled fresh from the AWS SRA Open Data mirror, assembled with MEGAHIT in-sandbox. That run exposed two methodology gaps that Phase 2's synthetic calibration missed: adapter-dimer contigs mimic the signature perfectly, and so do off-target PCR products. Both are now filtered and covered by tests. See `results/phase3_real_sweep_report.md`.
+
+Its actual candidates did not survive Phase 5. **SRR13291825 turned out to be an 18S rRNA amplicon survey of soil DNA, so it could not have contained the kind of molecule this pipeline looks for.** Read `results/phase5_identification_report.md` before reusing anything from that sweep.
 
 `scripts/phase4_characterize.py` is for anything that survives Phase 3: deeper look with more shuffles, a 6-frame ORF map, GC%, circularity resolution, and an SVG rendering of the predicted structure.
 
-Everything under `src/rnasig/` is the library. `tests/` has 20 pytest tests that run in a few seconds.
+`scripts/phase5_identify.py` does the two things the earlier phases kept deferring. It preflights a run's library type before you sweep it, and it resolves surviving candidates against nt, nr and Rfam so "novel" has to survive contact with a database. Running it against the Phase 3 input fails that run in a few seconds:
+
+```
+python scripts/phase5_identify.py --run SRR13291825
+```
+
+Everything under `src/rnasig/` is the library. `tests/` has 50 pytest tests that run in a few seconds.
 
 ## The signature itself
 
@@ -53,11 +63,16 @@ Standard stack: biopython, numpy, scipy, pandas, scikit-learn, ViennaRNA, pytest
 ## Running it
 
 ```
+python scripts/phase5_identify.py --run <ACCESSION>          # do this first
 python scripts/phase1_reproduce.py
 python scripts/phase2_calibrate.py
 python scripts/phase3_sweep.py --demo --outdir results/sweep_demo
 python scripts/phase4_characterize.py --input candidate.fasta --outdir results/char_x
+python scripts/phase5_identify.py --input candidate.fasta --outdir results/identify_x
 ```
+
+Phase 5 comes first and last on purpose. Check the library type before you spend
+an assembly on a run, and check the databases before you call anything novel.
 
 Each phase drops its outputs in `results/`, one markdown report and one JSON.
 
@@ -75,4 +90,6 @@ docs/           METHODS.md and LIMITATIONS.md
 
 ## Before you trust the numbers
 
-`docs/LIMITATIONS.md` says plainly what came from real data (Phase 1) and what came from synthetic corpora (Phases 2 and 3), and why the network policy in this sandbox made a real Phase 3 sweep impossible. Nothing here claims a new organism was found. It's a candidate-generation pipeline, calibrated honestly, run on what data was actually reachable.
+`docs/LIMITATIONS.md` says plainly what came from real data (Phase 1) and what came from synthetic corpora (Phase 2), and which conclusions have since been withdrawn. Nothing here claims a new organism was found.
+
+The one thing this repo did find is worth stating plainly, because it is a negative result and negative results are easy to bury. Phase 3 ran on a real public run, produced a candidate that survived every filter, and the candidate was a bacterial FAD-dependent oxidoreductase gene fragment in a soil DNA amplicon library. The pipeline's non-coding score rated it, and the two other survivors, as borderline non-coding; all three encode proteins at 73-97% amino-acid identity. `results/phase5_identification_report.md` has the evidence and what changed as a result.

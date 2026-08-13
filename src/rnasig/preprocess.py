@@ -12,7 +12,9 @@ that showed up on real data:
 
   1. Contigs that contain any of the canonical Illumina adapter / primer
      substrings (TruSeq, Nextera).
-  2. Contigs dominated by a homopolymer or a tiny dinucleotide repeat
+  2. Contigs that *end* in a truncated adapter, which is what read-through
+     leaves behind when the assembler runs out of coverage mid-adapter.
+  3. Contigs dominated by a homopolymer or a tiny dinucleotide repeat
      (assembler artifacts from polyA tails / adapter poly-T).
 
 Both are conservative: match required to be at least MIN_MATCH nt exact
@@ -46,6 +48,17 @@ _ILLUMINA_ADAPTERS = [
 _MIN_MATCH = 20  # nt of exact adapter substring needed to flag a contig
 _HOMOPOLYMER_MIN = 12  # nt of a single-base run to flag as artifact-dominated
 
+# Adapter read-through at the very end of a contig is usually *truncated*:
+# the assembler runs out of coverage partway into the adapter, so only the
+# first few nt of it survive and the 20-nt interior rule above cannot fire.
+# k141_3 in the SRR13291825 sweep ended in AGATCGGAAG -- 10 nt of the
+# universal Illumina adapter -- and was scored as a novel candidate for two
+# rounds because of exactly this gap. A shorter match is safe here only
+# because it is anchored to a terminus: an arbitrary 10-mer landing exactly
+# at a contig end is ~4^-10, whereas allowing it anywhere internally would
+# strip real sequence.
+_MIN_TERMINAL_MATCH = 10
+
 
 @dataclass
 class FilterReport:
@@ -66,6 +79,24 @@ def _has_adapter_hit(seq: str) -> str | None:
         rc_probe = revcomp(adapter)[:_MIN_MATCH]
         if rc_probe in seq:
             return adapter + "(rc)"
+    return None
+
+
+def _terminal_adapter_hit(seq: str) -> str | None:
+    """Return an adapter whose truncated form sits at a contig terminus.
+
+    Read-through leaves the *start* of the adapter at the 3' end of a
+    contig, or the *end* of its reverse complement at the 5' end. Both are
+    checked, longest match first, so the reported reason names as much of
+    the adapter as was actually observed.
+    """
+    for adapter in _ILLUMINA_ADAPTERS:
+        rc_adapter = revcomp(adapter)
+        for length in range(min(_MIN_MATCH, len(adapter)), _MIN_TERMINAL_MATCH - 1, -1):
+            if seq.endswith(adapter[:length]):
+                return f"{adapter[:length]}@3'"
+            if seq.startswith(rc_adapter[-length:]):
+                return f"{rc_adapter[-length:]}@5'(rc)"
     return None
 
 
@@ -92,6 +123,12 @@ def filter_contigs(records: list[Record]) -> tuple[list[Record], FilterReport]:
         if adapter is not None:
             dropped_ids.append(r.id)
             dropped_reasons[r.id] = f"adapter:{adapter}"
+            n_adapter += 1
+            continue
+        terminal = _terminal_adapter_hit(seq)
+        if terminal is not None:
+            dropped_ids.append(r.id)
+            dropped_reasons[r.id] = f"adapter_terminal:{terminal}"
             n_adapter += 1
             continue
         hp = _dominant_homopolymer(seq)

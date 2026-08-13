@@ -1,0 +1,129 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W38H8AP016
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= k141_3
+
+Length=311
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+CP063458.1 Humisphaera borealis strain M1803 chromosome, compl...  154     8e-33  74%       
+OZ490322.1 MAG: uncultured Phycisphaerales bacterium isolate M...  153     3e-32  75%       
+OY969783.1 MAG: Tepidisphaeraceae bacterium isolate MFD04580.b...  135     7e-27  72%       
+CP191258.1 Fontivita pretiosa strain B-254 chromosome, complet...  113     2e-20  71%       
+OZ490605.1 MAG: uncultured Acidobacteriota bacterium isolate M...  87.8    9e-13  68%       
+OZ490371.1 MAG: uncultured Acidobacteriota bacterium isolate M...  86.0    3e-12  69%       
+OZ375161.1 MAG: uncultured Gemmatimonadota bacterium isolate M...  83.3    4e-11  70%       
+OZ490332.1 MAG: Vicinamibacterales bacterium isolate MFD02979....  80.6    1e-10  68%       
+OZ490427.1 MAG: uncultured Acidobacteriota bacterium isolate M...  78.8    5e-10  69%       
+OZ490473.1 MAG: uncultured Gemmatimonadaceae bacterium isolate...  77.0    2e-09  68%       
+AP012338.1 Phycisphaera mikurensis NBRC 102666 DNA, complete g...  76.1    6e-09  75%       
+CP185290.1 Geothermobacter ehrlichii strain SS015 chromosome, ...  74.3    2e-08  70%       
+OZ490756.1 MAG: uncultured Acidobacteriota bacterium isolate M...  71.6    7e-08  68%       
+OY969570.1 MAG: uncultured Gemmatimonadales bacterium isolate ...  70.7    2e-07  68%       
+CP070827.1 MAG: Phycisphaerales bacterium isolate bin11 chromo...  70.7    2e-07  67%       
+
+ALIGNMENTS
+>CP063458.1 Humisphaera borealis strain M1803 chromosome, complete genome
+Length=7189892
+
+ Score = 154 bits (170),  Expect = 8e-33
+ Identities = 193/260 (74%), Gaps = 5/260 (2%)
+ Strand=Plus/Minus
+
+Query  49       TTGAATCGGCGGACGTCGTCGGGGCCCATCGGGTGGTCGGCGGGCGCGTGCGTCATCACC  108
+                ||| | || || ||||||||| | |||||   |||||||||| | |||||||| |  || 
+Sbjct  6392854  TTGTACCGCCGCACGTCGTCGAGCCCCATGATGTGGTCGGCGTGGGCGTGCGTGAAGACG  6392795
+
+Query  109      ACGGCGTCGATCATGTCGACGCCGTTGACCA-CGCACTGCAGGCGAAGCTCGGGCGTGGT  167
+                ||||||||||||  ||  ||   |||  ||| ||| ||||||||| || ||||| |||||
+Sbjct  6392794  ACGGCGTCGATCCGGTGCACCTTGTTCGCCAGCGC-CTGCAGGCGGAGTTCGGGAGTGGT  6392736
+
+Query  168      GTCAACCAGGACACGGGTTTCGCCCTGGCTGATGAGCACCGACGGGCGGGTGCGTTTGTC  227
+                 || ||||| || ||||| ||||| | ||||||||  || || | ||||||||| | |||
+Sbjct  6392735  ATCGACCAGCACGCGGGTGTCGCCGTAGCTGATGACAACGGAGGTGCGGGTGCGCTGGTC  6392676
+
+Query  228      ATGCGAGTCGGTGCTGCGGCACACCTCGCAGTGGCAGCCGATCATGGGAATTAC--CGCG  285
+                  | |  ||||  |||  ||| ||  |||||| |||||||||||| |||||  |  ||| 
+Sbjct  6392675  GAGGGGATCGGCACTGGTGCAGACGGCGCAGTCGCAGCCGATCATCGGAATGCCGGCGCT  6392616
+
+Query  286      GCTGCTGGAGTAGA-GAAGA  304
+                | ||| ||||  || |||||
+Sbjct  6392615  GGTGCCGGAGCCGAGGAAGA  6392596
+
+
+>OZ490322.1 MAG: uncultured Phycisphaerales bacterium isolate MFD04463.bin.3.1811.r1 
+genome assembly, chromosome: 1
+Length=5554065
+
+ Score = 153 bits (169),  Expect = 3e-32
+ Identities = 170/227 (75%), Gaps = 0/227 (0%)
+ Strand=Plus/Minus
+
+Query  49       TTGAATCGGCGGACGTCGTCGGGGCCCATCGGGTGGTCGGCGGGCGCGTGCGTCATCACC  108
+                ||||| ||||| ||||||||  | |||||   ||| |||||| ||||||| || ||||| 
+Sbjct  1353295  TTGAAACGGCGAACGTCGTCCAGCCCCATGATGTGATCGGCGTGCGCGTGGGTGATCACG  1353236
+
+Query  109      ACGGCGTCGATCATGTCGACGCCGTTGACCACGCACTGCAGGCGAAGCTCGGGCGTGGTG  168
+                ||||||| ||||||||||| |   ||| | |||||||| || || |||||||||| |   
+Sbjct  1353235  ACGGCGTGGATCATGTCGATGGAATTGGCGACGCACTGAAGCCGCAGCTCGGGCGCGACA  1353176
+
+Query  169      TCAACCAGGACACGGGTTTCGCCCTGGCTGATGAGCACCGACGGGCGGGTGCGTTTGTCA  228
+                || ||||| || ||     ||   ||   |||||   |||||||||||||||| ||||| 
+Sbjct  1353175  TCGACCAGCACGCGCACGCCGTTGTGTGAGATGACGGCCGACGGGCGGGTGCGCTTGTCG  1353116
+
+Query  229      TGCGAGTCGGTGCTGCGGCACACCTCGCAGTGGCAGCCGATCATGGG  275
+                ||||  |||| ||||  ||| ||   ||| |||||||||||||| ||
+Sbjct  1353115  TGCGGATCGGCGCTGGAGCAGACGGGGCAATGGCAGCCGATCATCGG  1353069
+
+
+>OY969783.1 MAG: Tepidisphaeraceae bacterium isolate MFD04580.bin.c.1 genome 
+assembly, chromosome: 1
+Length=6868257
+
+ Score = 135 bits (149),  Expect = 7e-27
+ Identities = 179/247 (72%), Gaps = 10/247 (4%)
+ Strand=Plus/Minus
+
+Query  39      CTTGATCACATTGAATCGGCGGACGTCGTCGGGGCCCATCGGGTGGTCGGCGGGCGCGTG  98
+               ||||||| | ||||| ||||||||||||||  | |||||   ||| |||||  | |||||
+Sbjct  229008  CTTGATCGCGTTGAACCGGCGGACGTCGTCCAGCCCCATGATGTGATCGGCATGGGCGTG  228949
+
+Query  99      CGTCATCACCACGGCGTCGATCATGTCGACGCCGTTGACCACGCACTGCAGGCGAAGCTC  158
+               |||    || || ||||||||    |||||   |||  | | ||| || |||||||||||
+Sbjct  228948  CGTGTAGACGACCGCGTCGATGCGATCGACCTTGTTCGCGATGCATTGGAGGCGAAGCTC  228889
+
+Query  159     GGGCGTGGTGTCAACCAGGA--------CACGGGTTTC-GCCCTGGCTGATGAGCACCGA  209
+                || ||||| || |||||||        | |||||| | ||| | ||||||||  |||||
+Sbjct  228888  CGGGGTGGTATCGACCAGGACGCGCGTTCGCGGGTTGCGGCCGTAGCTGATGACGACCGA  228829
+
+Query  210     CGGGCGGGTGCGTTTGTCATGCGAGTCGGTGCTGCGGCA-CACCTCGCAGTGGCAGCCGA  268
+               ||| ||  | || |||||  | | ||||||||||  ||| |||  |||||| |||||| |
+Sbjct  228828  CGGCCGCATCCGCTTGTCGCGGGGGTCGGTGCTGGCGCAGCACGGCGCAGTCGCAGCCAA  228769
+
+Query  269     TCATGGG  275
+               |||| ||
+Sbjct  228768  TCATCGG  228762
+
+
+
+[... remaining alignments truncated; full report regenerable with scripts/phase5_identify.py ...]

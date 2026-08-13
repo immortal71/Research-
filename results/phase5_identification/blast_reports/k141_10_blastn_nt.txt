@@ -1,0 +1,83 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W38P4BH014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= k141_10
+
+Length=422
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+CP101156.1 Natronosalvus amylolyticus strain WLHSJ1 chromosome...  49.1    1.1    80%       
+CP191906.1 Kutzneria sp. CA-250172 chromosome, complete genome     49.1    1.1    87%       
+CP117781.1 Burkholderia sp. FERM BP-3421 chromosome 2, complet...  47.3    4.0    91%       
+OZ489579.1 MAG: uncultured actinomycete isolate MFD00991.bin.2...  47.3    4.0    79%       
+XM_056605265.1 PREDICTED: Gadus chalcogrammus negative elongat...  47.3    4.0    87%       
+XM_060069112.1 PREDICTED: Gadus macrocephalus negative elongat...  47.3    4.0    87%       
+AP023358.1 Micromonospora endophytica (Xie et al. 2001) Li et ...  46.4    4.0    86%       
+AM180088.1 Haloquadratum walsbyi DSM 16790 complete genome         46.4    4.0    93%       
+CP148049.1 Micromonospora sp. SH-82 chromosome, complete genome    46.4    4.0    83%       
+FR746099.1 Haloquadratum walsbyi C23 complete genome               46.4    4.0    93%       
+CP151099.1 Nostoc sp. UHCC 0302 chromosome, complete genome        46.4    4.0    93%       
+
+ALIGNMENTS
+>CP101156.1 Natronosalvus amylolyticus strain WLHSJ1 chromosome, complete 
+genome
+Length=3523614
+
+ Score = 49.1 bits (53),  Expect = 1.1
+ Identities = 41/51 (80%), Gaps = 6/51 (12%)
+ Strand=Plus/Plus
+
+Query  80       TCTTCCACTTCGTCCG------CGAGCGGATTGCCCGCGATGATTTGCTCG  124
+                |||||||||||| ||       |||||||| |||||||||||||| |||||
+Sbjct  1082429  TCTTCCACTTCGGCCAGGCGCTCGAGCGGAATGCCCGCGATGATTCGCTCG  1082479
+
+
+>CP191906.1 Kutzneria sp. CA-250172 chromosome, complete genome
+Length=12243265
+
+ Features in this part of subject sequence:
+   malate synthase a
+
+ Score = 49.1 bits (53),  Expect = 1.1
+ Identities = 34/39 (87%), Gaps = 0/39 (0%)
+ Strand=Plus/Minus
+
+Query  74       TCTACTTCTTCCACTTCGTCCGCGAGCGGATTGCCCGCG  112
+                ||||||||||||||  ||||||||||| | | |||||||
+Sbjct  9072315  TCTACTTCTTCCACAACGTCCGCGAGCTGCTGGCCCGCG  9072277
+
+
+>CP117781.1 Burkholderia sp. FERM BP-3421 chromosome 2, complete sequence
+Length=3002736
+
+ Score = 47.3 bits (51),  Expect = 4.0
+ Identities = 30/33 (91%), Gaps = 0/33 (0%)
+ Strand=Plus/Minus
+
+Query  99      GCGGATTGCCCGCGATGATTTGCTCGGCCCGGG  131
+               ||||||||||||||||||   ||||||||||||
+Sbjct  366502  GCGGATTGCCCGCGATGACGGGCTCGGCCCGGG  366470
+
+
+
+[... remaining alignments truncated; full report regenerable with scripts/phase5_identify.py ...]

@@ -1,0 +1,59 @@
+{
+  "accession": "SRR13291825",
+  "library_strategy": "AMPLICON",
+  "library_selection": "PCR",
+  "library_source": "METAGENOMIC",
+  "scientific_name": "soil metagenome",
+  "study_accession": "PRJNA685954",
+  "read_count": 56865,
+  "metadata_fetched": true,
+  "compatible": false,
+  "unknown": false,
+  "reasons": [
+    "library_strategy=AMPLICON: a targeted marker-gene survey. One locus is amplified to saturation, so coverage is not abundance and PCR concatemers mimic circularity.",
+    "library_selection=PCR: template was amplified from specific primers, so contigs are PCR products rather than sampled molecules",
+    "library_source=METAGENOMIC: the molecules sequenced are DNA, so RNA secondary-structure scores describe a molecule that was never present"
+  ],
+  "read_profiles": [
+    {
+      "path": "C:/Users/Dell/AppData/Local/Temp/claude/c--Users-Dell-Downloads-research/29908c84-f3c5-409a-a995-3566890d5da4/scratchpad/reads/SRR13291825_1.fastq.gz",
+      "n_reads": 56865,
+      "top_fraction": 0.6853073067792139,
+      "is_amplicon": true,
+      "top_prefixes": [
+        [
+          "AGCTCCAATAGCGTATATTA",
+          16324
+        ],
+        [
+          "AGAAGACATCCTTGGTGAAT",
+          11542
+        ],
+        [
+          "TGAAAACATCCTTGGCAAAT",
+          11104
+        ]
+      ]
+    },
+    {
+      "path": "C:/Users/Dell/AppData/Local/Temp/claude/c--Users-Dell-Downloads-research/29908c84-f3c5-409a-a995-3566890d5da4/scratchpad/reads/SRR13291825_2.fastq.gz",
+      "n_reads": 56865,
+      "top_fraction": 0.6865558779565638,
+      "is_amplicon": true,
+      "top_prefixes": [
+        [
+          "AGCTCCAATAGCGTATATTA",
+          16371
+        ],
+        [
+          "AGAAGACATCCTTGGTGAAT",
+          11439
+        ],
+        [
+          "TGAAAACATCCTTGGCAAAT",
+          11231
+        ]
+      ]
+    }
+  ]
+}

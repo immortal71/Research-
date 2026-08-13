@@ -1,0 +1,23 @@
+== library preflight: SRR13291825 ==
+  SRR13291825: strategy=AMPLICON selection=PCR source=METAGENOMIC (soil metagenome)
+  reads: 56865
+  VERDICT: INCOMPATIBLE -- do not sweep this run
+    - library_strategy=AMPLICON: a targeted marker-gene survey. One locus is amplified to saturation, so coverage is not abundance and PCR concatemers mimic circularity.
+    - library_selection=PCR: template was amplified from specific primers, so contigs are PCR products rather than sampled molecules
+    - library_source=METAGENOMIC: the molecules sequenced are DNA, so RNA secondary-structure scores describe a molecule that was never present
+
+== read profile: C:/Users/Dell/AppData/Local/Temp/claude/c--Users-Dell-Downloads-research/29908c84-f3c5-409a-a995-3566890d5da4/scratchpad/reads/SRR13291825_1.fastq.gz ==
+  56865 reads, top 3 5'-20mers cover 68.5% (threshold 20%) -> amplicon-like (primer-dominated)
+    AGCTCCAATAGCGTATATTA  16324  (28.7%)
+    AGAAGACATCCTTGGTGAAT  11542  (20.3%)
+    TGAAAACATCCTTGGCAAAT  11104  (19.5%)
+  VERDICT: primer-dominated -- targeted library, not shotgun RNA
+
+== read profile: C:/Users/Dell/AppData/Local/Temp/claude/c--Users-Dell-Downloads-research/29908c84-f3c5-409a-a995-3566890d5da4/scratchpad/reads/SRR13291825_2.fastq.gz ==
+  56865 reads, top 3 5'-20mers cover 68.7% (threshold 20%) -> amplicon-like (primer-dominated)
+    AGCTCCAATAGCGTATATTA  16371  (28.8%)
+    AGAAGACATCCTTGGTGAAT  11439  (20.1%)
+    TGAAAACATCCTTGGCAAAT  11231  (19.8%)
+  VERDICT: primer-dominated -- targeted library, not shotgun RNA
+
+wrote results\phase5_identification\preflight_SRR13291825.json

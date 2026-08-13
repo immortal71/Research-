@@ -1,0 +1,252 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W4XPKTP016
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= NODE_36652_length_943_cov_17349.429885_g18276_i0
+
+Length=943
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MZ220895.1 Peach latent mosaic viroid isolate 13C249A, complet...  562     5e-155  98%       
+GQ499305.1 Peach latent mosaic viroid isolate 1, complete sequ...  543     5e-149  97%       
+KX430170.1 Peach latent mosaic viroid isolate V1.1.2, complete...  540     2e-148  96%       
+KX430173.1 Peach latent mosaic viroid isolate V1.1.5, complete...  539     6e-148  96%       
+MZ220915.1 Peach latent mosaic viroid isolate 13C270C2, comple...  535     7e-147  96%       
+MZ220897.1 Peach latent mosaic viroid isolate 13C249C, complet...  535     7e-147  96%       
+MZ220925.1 Peach latent mosaic viroid isolate 13C270A1, comple...  533     2e-146  96%       
+KX430168.1 Peach latent mosaic viroid isolate v2.7, complete s...  526     4e-144  95%       
+
+ALIGNMENTS
+>MZ220895.1 Peach latent mosaic viroid isolate 13C249A, complete genome
+Length=337
+
+ Score = 562 bits (622),  Expect = 5e-155
+ Identities = 325/333 (98%), Gaps = 1/333 (0%)
+ Strand=Plus/Plus
+
+Query  273  CATAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAA  332
+            || |||||||||||||||||||||||||||||||||||||||||||||||| ||||||||
+Sbjct  3    CAAAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTTTGAGAGAA  62
+
+Query  333  TAAGCACCTCTCAGCCCCTCCACCTTGGGGTGCCCTAATCGAGACACTGCAGTTTCGATG  392
+            ||| ||||||||||||||||||||||||||||||||||||||  ||||||||||||||||
+Sbjct  63   TAAACACCTCTCAGCCCCTCCACCTTGGGGTGCCCTAATCGAAGCACTGCAGTTTCGATG  122
+
+Query  393  GAAAGGCTAAGAACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGTC  452
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  123  GAAAGGCTAAGAACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGTC  182
+
+Query  453  GAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCG  512
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  183  GAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCG  242
+
+Query  513  GGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAG-TGAAAGGTCTGCGCTAAGCGCA  571
+            ||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||| ||
+Sbjct  243  GGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTTGAAAGGTCTGTGCTAAGCACA  302
+
+Query  572  CTGATGAGTTCCTGAAATGGAACGAAACCTTTC  604
+            |||||||||||||||||||||||||||||||||
+Sbjct  303  CTGATGAGTTCCTGAAATGGAACGAAACCTTTC  335
+
+
+ Score = 557 bits (617),  Expect = 2e-153
+ Identities = 324/333 (97%), Gaps = 1/333 (0%)
+ Strand=Plus/Plus
+
+Query  610  CATAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAA  669
+            || |||||||||||||||||||||||||||||||||||||||||||||||| ||||||||
+Sbjct  3    CAAAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTTTGAGAGAA  62
+
+Query  670  TAAGCACCTCTCAGCCCCTCCACCTTGGGGTGCCCTAATCGAGACACTGCAGTTTCGATG  729
+            ||| ||||||||||||||||||||||||||||||||||||||  ||||||||||||||||
+Sbjct  63   TAAACACCTCTCAGCCCCTCCACCTTGGGGTGCCCTAATCGAAGCACTGCAGTTTCGATG  122
+
+Query  730  GAAAGGCTAAGAACGTCGCTATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGTC  789
+            ||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||
+Sbjct  123  GAAAGGCTAAGAACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGTC  182
+
+Query  790  GAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCG  849
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  183  GAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCG  242
+
+Query  850  GGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAG-TGAAAGGTCTGCGCTAAGCGCA  908
+            ||||||||||||||||||||||||||||||||||||| ||||||||||| ||||||| ||
+Sbjct  243  GGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTTGAAAGGTCTGTGCTAAGCACA  302
+
+Query  909  CTGATGAGTTCCTGAAATGGAACGAAACCTTTC  941
+            |||||||||||||||||||||||||||||||||
+Sbjct  303  CTGATGAGTTCCTGAAATGGAACGAAACCTTTC  335
+
+
+ Score = 449 bits (497),  Expect = 8e-121
+ Identities = 261/268 (97%), Gaps = 1/268 (0%)
+ Strand=Plus/Plus
+
+Query  1    ACCTCTCAGCCCCTCCACCTTGGGGTGCCCTATCCGAAGCACTGCAGTTTCGGTAGAAAG  60
+            ||||||||||||||||||||||||||||||||  |||||||||||||||||| | |||||
+Sbjct  68   ACCTCTCAGCCCCTCCACCTTGGGGTGCCCTAATCGAAGCACTGCAGTTTCGATGGAAAG  127
+
+Query  61   GCTAAGAACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGTCGAACC  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  128  GCTAAGAACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGTCGAACC  187
+
+Query  121  CAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCGGGATT  180
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  188  CAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCGGGATT  247
+
+Query  181  CAAACCCGGTCCCCCTCAGAGGTGACTCTGAG-TGAAAGGTCTGCGCTAAGCGCACTGAT  239
+            |||||||||||||||||||||||||||||||| ||||||||||| ||||||| |||||||
+Sbjct  248  CAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTTGAAAGGTCTGTGCTAAGCACACTGAT  307
+
+Query  240  GAGTTCCTGAAATGGAACGAAACCTTTC  267
+            ||||||||||||||||||||||||||||
+Sbjct  308  GAGTTCCTGAAATGGAACGAAACCTTTC  335
+
+
+ Score = 54.5 bits (59),  Expect = 0.063
+ Identities = 43/52 (83%), Gaps = 0/52 (0%)
+ Strand=Plus/Minus
+
+Query  889  AAAGGTCTGCGCTAAGCGCACTGATGAGTTCCTGAAATGGAACGAAACCTTT  940
+            ||| ||||| ||||||| |||||||||||  |||| |||  ||||||| |||
+Sbjct  55   AAAAGTCTGGGCTAAGCCCACTGATGAGTCACTGAGATGTGACGAAACTTTT  4
+
+
+ Score = 54.5 bits (59),  Expect = 0.063
+ Identities = 43/52 (83%), Gaps = 0/52 (0%)
+ Strand=Plus/Minus
+
+Query  552  AAAGGTCTGCGCTAAGCGCACTGATGAGTTCCTGAAATGGAACGAAACCTTT  603
+            ||| ||||| ||||||| |||||||||||  |||| |||  ||||||| |||
+Sbjct  55   AAAAGTCTGGGCTAAGCCCACTGATGAGTCACTGAGATGTGACGAAACTTTT  4
+
+
+ Score = 54.5 bits (59),  Expect = 0.063
+ Identities = 43/52 (83%), Gaps = 0/52 (0%)
+ Strand=Plus/Minus
+
+Query  215  AAAGGTCTGCGCTAAGCGCACTGATGAGTTCCTGAAATGGAACGAAACCTTT  266
+            ||| ||||| ||||||| |||||||||||  |||| |||  ||||||| |||
+Sbjct  55   AAAAGTCTGGGCTAAGCCCACTGATGAGTCACTGAGATGTGACGAAACTTTT  4
+
+
+ Score = 49.1 bits (53),  Expect = 2.7
+ Identities = 37/44 (84%), Gaps = 0/44 (0%)
+ Strand=Plus/Minus
+
+Query  615  GTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGAC  658
+            |||||||  ||| ||||  ||||||||||| ||||||| |||||
+Sbjct  330  GTTTCGTTCCATTTCAGGAACTCATCAGTGTGCTTAGCACAGAC  287
+
+
+ Score = 49.1 bits (53),  Expect = 2.7
+ Identities = 37/44 (84%), Gaps = 0/44 (0%)
+ Strand=Plus/Minus
+
+Query  278  GTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGAC  321
+            |||||||  ||| ||||  ||||||||||| ||||||| |||||
+Sbjct  330  GTTTCGTTCCATTTCAGGAACTCATCAGTGTGCTTAGCACAGAC  287
+
+
+>GQ499305.1 Peach latent mosaic viroid isolate 1, complete sequence
+Length=338
+
+ Score = 543 bits (601),  Expect = 5e-149
+ Identities = 321/332 (97%), Gaps = 2/332 (1%)
+ Strand=Plus/Plus
+
+Query  273  CATAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAA  332
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  4    CATAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAA  63
+
+Query  333  TAAGCACCTCTCAGCCCCTCCACCTTGGGGTGCCCTAATCGAGACACTGCAGTTTC-GAT  391
+            |||| |||||||||||||||||||||||||||||||| |||   |||||||||| | |||
+Sbjct  64   TAAG-ACCTCTCAGCCCCTCCACCTTGGGGTGCCCTATTCGGAGCACTGCAGTTCCCGAT  122
+
+Query  392  GGAAAGGCTAAGAACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGT  451
+             ||||||||||| |||||||| |||||||||||||||| |||||||||||||||||||||
+Sbjct  123  AGAAAGGCTAAGCACGTCGCATTGACGTAAGGTGGGACGTTTCCCTAGGGTTTGAGCGGT  182
+
+Query  452  CGAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCC  511
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  183  CGAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCC  242
+
+Query  512  GGGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTGCGCTAAGCGCA  571
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  243  GGGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTGCGCTAAGCGCA  302
+
+Query  572  CTGATGAGTTCCTGAAATGGAACGAAACCTTT  603
+            ||||||||||||||||||||||||||||||||
+Sbjct  303  CTGATGAGTTCCTGAAATGGAACGAAACCTTT  334
+
+
+ Score = 538 bits (596),  Expect = 6e-148
+ Identities = 320/332 (96%), Gaps = 2/332 (1%)
+ Strand=Plus/Plus
+
+Query  610  CATAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAA  669
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  4    CATAAGTTTCGTCACATCTCAGTGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAA  63
+
+Query  670  TAAGCACCTCTCAGCCCCTCCACCTTGGGGTGCCCTAATCGAGACACTGCAGTTTC-GAT  728
+            |||| |||||||||||||||||||||||||||||||| |||   |||||||||| | |||
+Sbjct  64   TAAG-ACCTCTCAGCCCCTCCACCTTGGGGTGCCCTATTCGGAGCACTGCAGTTCCCGAT  122
+
+Query  729  GGAAAGGCTAAGAACGTCGCTATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGT  788
+             ||||||||||| |||||||  |||||||||||||||| |||||||||||||||||||||
+Sbjct  123  AGAAAGGCTAAGCACGTCGCATTGACGTAAGGTGGGACGTTTCCCTAGGGTTTGAGCGGT  182
+
+Query  789  CGAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCC  848
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  183  CGAACCCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCC  242
+
+Query  849  GGGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTGCGCTAAGCGCA  908
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  243  GGGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTGCGCTAAGCGCA  302
+
+Query  909  CTGATGAGTTCCTGAAATGGAACGAAACCTTT  940
+            ||||||||||||||||||||||||||||||||
+Sbjct  303  CTGATGAGTTCCTGAAATGGAACGAAACCTTT  334
+
+
+ Score = 443 bits (490),  Expect = 3e-119
+ Identities = 259/267 (97%), Gaps = 1/267 (0%)
+ Strand=Plus/Plus
+
+Query  1    ACCTCTCAGCCCCTCCACCTTGGGGTGCCCTATCCGAAGCACTGCAGTTTCGG-TAGAAA  59
+            ||||||||||||||||||||||||||||||||| || |||||||||||| | | ||||||
+Sbjct  68   ACCTCTCAGCCCCTCCACCTTGGGGTGCCCTATTCGGAGCACTGCAGTTCCCGATAGAAA  127
+
+Query  60   GGCTAAGAACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTGAGCGGTCGAAC  119
+            ||||||| |||||||| |||||||||||||||| ||||||||||||||||||||||||||
+Sbjct  128  GGCTAAGCACGTCGCATTGACGTAAGGTGGGACGTTTCCCTAGGGTTTGAGCGGTCGAAC  187
+
+Query  120  CCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCGGGAT  179
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  188  CCAGGGGGAGTGTGACCCAGGTACCGCCGTAGAAACTGGGTTACGACGCCTACCCGGGAT  247
+
+Query  180  TCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTGCGCTAAGCGCACTGAT  239
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  248  TCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTGCGCTAAGCGCACTGAT  307
+
+
+[... 85 further lines truncated. Full report regenerable via scripts/phase5_identify.py ...]

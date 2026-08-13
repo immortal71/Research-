@@ -1,0 +1,130 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTX 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W3H5R5C014
+
+
+Database: All non-redundant GenBank CDS
+translations+PDB+SwissProt+PIR+PRF excluding environmental samples
+from WGS projects
+           1,129,032,111 sequences; 426,408,034,124 total letters
+Query= k141_10
+
+Length=422
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+MDQ2949988.1 DUF2007 domain-containing protein [Acidobacteriot...  185     2e-56  88%       
+MGI8742651.1 putative signal transducing protein [Bryobacterac...  168     1e-49  79%       
+MHH6613526.1 putative signal transducing protein [Bryobacterac...  140     1e-38  77%       
+HXA65108.1 DUF2007 domain-containing protein [Bryobacteraceae ...  131     3e-35  63%       
+HLK17956.1 hypothetical protein [Bryobacteraceae bacterium]        129     4e-34  61%       
+MGD0300053.1 hypothetical protein [Bryobacteraceae bacterium]      128     6e-34  61%       
+HLJ49760.1 DUF2007 domain-containing protein [Bryobacteraceae ...  127     1e-33  65%       
+HEX4596018.1 DUF2007 domain-containing protein [Bryobacteracea...  125     8e-33  60%       
+
+ALIGNMENTS
+>MDQ2949988.1 DUF2007 domain-containing protein [Acidobacteriota bacterium]
+Length=171
+
+ Score = 185 bits (469),  Expect = 2e-56, Method: Compositional matrix adjust.
+ Identities = 91/104 (88%), Positives = 97/104 (93%), Gaps = 0/104 (0%)
+ Frame = -3
+
+Query  312  MTEASQLVTVYRSMDPEAEQDCETIVGLLTAEGLSPVILDDTARGVPEGVYEVCVPPGES  133
+            MTEASQLVTVYRSMDPEA +DCETIV LLTAEGLSPVILDD+ARGVPEGVYEVCV P E+
+Sbjct  1    MTEASQLVTVYRSMDPEAAEDCETIVSLLTAEGLSPVILDDSARGVPEGVYEVCVSPSEA  60
+
+Query  132  ARAEQIIAGNPLADEVEEVDNSHELDLEPIYHSEGGSMGEVEAM  1
+            A+AEQIIA NPLADEVEEVDNSHELDLE +YHSEG +MGEVEAM
+Sbjct  61   AQAEQIIASNPLADEVEEVDNSHELDLETVYHSEGAAMGEVEAM  104
+
+
+>MGI8742651.1 putative signal transducing protein [Bryobacteraceae bacterium]
+Length=172
+
+ Score = 168 bits (425),  Expect = 1e-49, Method: Compositional matrix adjust.
+ Identities = 82/104 (79%), Positives = 93/104 (89%), Gaps = 0/104 (0%)
+ Frame = -3
+
+Query  312  MTEASQLVTVYRSMDPEAEQDCETIVGLLTAEGLSPVILDDTARGVPEGVYEVCVPPGES  133
+            MTEASQLVTVYRSM+PEA++DCETIV LLTAEGL+PVILDDTA GVPEGVYEVCVP  ++
+Sbjct  1    MTEASQLVTVYRSMEPEAKEDCETIVSLLTAEGLAPVILDDTAPGVPEGVYEVCVPANQA  60
+
+Query  132  ARAEQIIAGNPLADEVEEVDNSHELDLEPIYHSEGGSMGEVEAM  1
+            A+AE +I  NPL DEVE+VDNS ELDLEPIYHSEG +M EVEA+
+Sbjct  61   AKAEDVIDSNPLPDEVEDVDNSEELDLEPIYHSEGNAMAEVEAV  104
+
+
+>MHH6613526.1 putative signal transducing protein [Bryobacteraceae bacterium]
+Length=186
+
+ Score = 140 bits (353),  Expect = 1e-38, Method: Compositional matrix adjust.
+ Identities = 80/104 (77%), Positives = 91/104 (88%), Gaps = 0/104 (0%)
+ Frame = -3
+
+Query  312  MTEASQLVTVYRSMDPEAEQDCETIVGLLTAEGLSPVILDDTARGVPEGVYEVCVPPGES  133
+            MTE SQLVTVYRSMD EA++DCETIV LLTAEGLSPVILDD+A GVPEGVYEVCVP  E+
+Sbjct  1    MTEPSQLVTVYRSMDQEAKEDCETIVSLLTAEGLSPVILDDSAPGVPEGVYEVCVPAPEA  60
+
+Query  132  ARAEQIIAGNPLADEVEEVDNSHELDLEPIYHSEGGSMGEVEAM  1
+            +RAE++I  NPL DEVEEVD++ ELDLE IYHSEG +M EVEA+
+Sbjct  61   SRAEELIDANPLPDEVEEVDDAEELDLETIYHSEGNAMAEVEAV  104
+
+
+  Database: All non-redundant GenBank CDS translations+PDB+SwissProt+PIR+PRF
+excluding environmental samples from WGS projects
+    Posted date:  Aug 12, 2026  4:53 AM
+  Number of letters in database: 426,408,034,124
+  Number of sequences in database:  1,129,032,111
+
+Lambda      K        H
+   0.318    0.134    0.401 
+Gapped
+Lambda      K        H
+   0.267   0.0410    0.140 
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Number of Sequences: 1129032111
+Number of Hits to DB: 158412487
+Number of extensions: 177940
+Number of successful extensions: 23698
+Number of sequences better than 10: 8
+Number of HSP's better than 10 without gapping: 0
+Number of HSP's gapped: 23651
+Number of HSP's successfully gapped: 8
+Length of query: 422
+Length of database: 426408034124
+Length adjustment: 106
+Effective length of query: 316
+Effective length of database: 306730630358
+Effective search space: 10428841432172
+Effective search space used: 10428841432172
+T: 20
+A: 40
+X1: 16 (7.3 bits)
+X2: 38 (14.6 bits)
+X3: 64 (24.7 bits)
+S1: 41 (20.4 bits)
+S2: 92 (40.0 bits)
+ka-blk-alpha gapped: 1.9
+ka-blk-alpha ungapped: 0.7916
+ka-blk-alpha_v gapped: 42.6028
+ka-blk-alpha_v ungapped: 4.96466
+ka-blk-sigma gapped: 43.6362
+
+

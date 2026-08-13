@@ -1,5 +1,16 @@
 # Phase 3 full-filter report: after the ncRNA exclusion step
 
+> **The candidates in this report have been resolved and are withdrawn.**
+> The "honest next step" listed at the bottom, BLAST/cmscan against nt and
+> Rfam, has now been done. k141_25 encodes a bacterial FAD-dependent
+> oxidoreductase (97% aa identity), k141_10 a DUF2007 signal-transducing
+> protein (88%), and k141_3 an MBL fold metallo-hydrolase (73%). The run
+> itself is a soil DNA amplicon library and could not have contained a
+> novel RNA element. The guess below that k141_3 is "probably still rRNA"
+> was right that it is not novel and wrong about what it is: it is a
+> chimera of bacterial gene, SSU primer site and Illumina adapter. See
+> `results/phase5_identification_report.md`.
+
 Follow-up to `results/phase3_real_sweep_report.md`. The earlier report
 noted that "the top surviving hit is likely rRNA, which is the correct
 thing to surface first in a signature-only pipeline. To find genuinely

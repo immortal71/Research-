@@ -1,0 +1,252 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W4Y3SSF014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= NODE_52236_length_347_cov_206.087591_g32278_i0
+
+Length=347
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+AP041246.1 Prunus itosakura NIG-0593 DNA, chromosome: 7            251     1e-61  99%       
+CP168779.1 Malus domestica cultivar Golden Delicious chromosom...  219     2e-52  73%       
+CP168766.1 Malus domestica cultivar Golden Delicious chromosom...  188     4e-43  73%       
+CP157410.1 Ziziphus jujuba isolate TW-2024b chromosome 08          126     4e-24  81%       
+XM_011470340.1 PREDICTED: Fragaria vesca subsp. vesca 40S ribo...  103     5e-17  76%       
+XR_004098899.1 PREDICTED: Ipomoea triloba 40S ribosomal protei...  94.2    2e-14  75%       
+XR_004098900.1 PREDICTED: Ipomoea triloba 40S ribosomal protei...  94.2    2e-14  75%       
+XR_004098901.1 PREDICTED: Ipomoea triloba 40S ribosomal protei...  94.2    2e-14  75%       
+
+ALIGNMENTS
+>AP041246.1 Prunus itosakura NIG-0593 DNA, chromosome: 7
+Length=27990360
+
+ Score = 251 bits (277),  Expect = 1e-61
+ Identities = 140/141 (99%), Gaps = 0/141 (0%)
+ Strand=Plus/Plus
+
+Query  2         TTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGA  61
+                 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  24345916  TTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGA  24345975
+
+Query  62        AATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCATTGTTTTCATGCAGTAA  121
+                 ||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||
+Sbjct  24345976  AATTGATATATATACTCCATGCCATCATCCTCATGAAATGCCATTGTTTTCATGCAGTAA  24346035
+
+Query  122       CCGTGAGGAGGGTACATTTTT  142
+                 |||||||||||||||||||||
+Sbjct  24346036  CCGTGAGGAGGGTACATTTTT  24346056
+
+
+ Score = 251 bits (277),  Expect = 1e-61
+ Identities = 140/141 (99%), Gaps = 0/141 (0%)
+ Strand=Plus/Plus
+
+Query  139       TTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGA  198
+                 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  24345916  TTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGA  24345975
+
+Query  199       AATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCATTGTTTTCATGCAGTAA  258
+                 ||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||
+Sbjct  24345976  AATTGATATATATACTCCATGCCATCATCCTCATGAAATGCCATTGTTTTCATGCAGTAA  24346035
+
+Query  259       CCGTGAGGAGGGTACATTTTT  279
+                 |||||||||||||||||||||
+Sbjct  24346036  CCGTGAGGAGGGTACATTTTT  24346056
+
+
+ Score = 163 bits (180),  Expect = 2e-35
+ Identities = 131/157 (83%), Gaps = 1/157 (1%)
+ Strand=Plus/Plus
+
+Query  123       CGTGAGGAGGGTACATTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTG  182
+                 |||||| | ||||  ||| ||||||||||||||||| |||||||| ||||||||| ||||
+Sbjct  24346528  CGTGAG-ATGGTAGTTTTATGTCATCTACAAAGCATGTTGGTGTTTTCGTACCAAATTTG  24346586
+
+Query  183       TGTCGGAAGATGACGAAATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCAT  242
+                 |||||||||||||||||||| || || || |||  ||  || ||| |||||| ||||  |
+Sbjct  24346587  TGTCGGAAGATGACGAAATTTATTTACATCCTCTGTGAGATAATCCTCATGAGATGCTCT  24346646
+
+Query  243       TGTTTTCATGCAGTAACCGTGAGGAGGGTACATTTTT  279
+                 ||||||||||  |||||| |  |||||||||||||||
+Sbjct  24346647  TGTTTTCATGTTGTAACCTTAGGGAGGGTACATTTTT  24346683
+
+
+ Score = 161 bits (178),  Expect = 6e-35
+ Identities = 250/349 (72%), Gaps = 25/349 (7%)
+ Strand=Plus/Plus
+
+Query  1         TTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACG  60
+                 ||| ||||||||||||||||| |||||||| ||||||||| |||||||||||||||||||
+Sbjct  24346542  TTTATGTCATCTACAAAGCATGTTGGTGTTTTCGTACCAAATTTGTGTCGGAAGATGACG  24346601
+
+Query  61        AAATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCATTGTTTTCATGCAGTA  120
+                 ||||| || || || |||  ||  || ||| |||||| ||||  |||||||||||  |||
+Sbjct  24346602  AAATTTATTTACATCCTCTGTGAGATAATCCTCATGAGATGCTCTTGTTTTCATGTTGTA  24346661
+
+Query  121       ACCGTGAGGAGGGTACATTTTTGTCATCTACAAAGCA-TATTGGTGTTCTCGTACCAACT  179
+                 ||| |  ||||||||||||||| |       |  ||| | ||  |||| |  ||    | 
+Sbjct  24346662  ACCTTAGGGAGGGTACATTTTTCT-------AGTGCATTGTTACTGTTAT-TTA--GGCC  24346711
+
+Query  180       TTGTGTCGGAAGATGACGAAATTGATATATATACTCCATGCCATCATCTTCATGAAAT--  237
+                 ||| ||   |    ||| | |    ||    |||||     |||  | |   ||||||  
+Sbjct  24346712  TTGGGTTTCA----GAC-ACACATCTAGTGTTACTC----TCATTTTGTATTTGAAATAT  24346762
+
+Query  238       -GCCATTGTTTTCATGCAGTAACCGTGAGGAGGGTACATTTTTGTCATCTACAAAGCATA  296
+                    || |||| |  |||   |   |||| || ||||  ||| ||||||||||||||||| 
+Sbjct  24346763  AATCAGTGTTGTTTTGC-CAATTTGTGA-GATGGTAGTTTTATGTCATCTACAAAGCATG  24346820
+
+Query  297       TTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGAAATTGATATA  345
+                 |||||||| ||||||||  |||||||||||||||||||||||| || ||
+Sbjct  24346821  TTGGTGTTTTCGTACCATTTTTGTGTCGGAAGATGACGAAATTTATTTA  24346869
+
+
+ Score = 148 bits (163),  Expect = 1e-30
+ Identities = 127/156 (81%), Gaps = 1/156 (1%)
+ Strand=Plus/Plus
+
+Query  124       GTGAGGAGGGTACATTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGT  183
+                 ||||| | ||||  ||| ||||||||||||||||| |||||||| ||||||||  |||||
+Sbjct  24346786  GTGAG-ATGGTAGTTTTATGTCATCTACAAAGCATGTTGGTGTTTTCGTACCATTTTTGT  24346844
+
+Query  184       GTCGGAAGATGACGAAATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCATT  243
+                 ||||||||||||||||||| || ||  | |||  ||  || ||| |||||| ||||  ||
+Sbjct  24346845  GTCGGAAGATGACGAAATTTATTTACTTCCTCTGTGAGATAATCCTCATGAGATGCTCTT  24346904
+
+Query  244       GTTTTCATGCAGTAACCGTGAGGAGGGTACATTTTT  279
+                 |||||||||  |||||| |  ||||||||||| |||
+Sbjct  24346905  GTTTTCATGTTGTAACCTTAGGGAGGGTACATCTTT  24346940
+
+
+ Score = 144 bits (159),  Expect = 2e-29
+ Identities = 117/142 (82%), Gaps = 0/142 (0%)
+ Strand=Plus/Plus
+
+Query  1         TTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACG  60
+                 ||| ||||||||||||||||| |||||||| ||||||||  |||||||||||||||||||
+Sbjct  24346799  TTTATGTCATCTACAAAGCATGTTGGTGTTTTCGTACCATTTTTGTGTCGGAAGATGACG  24346858
+
+Query  61        AAATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCATTGTTTTCATGCAGTA  120
+                 ||||| || ||  | |||  ||  || ||| |||||| ||||  |||||||||||  |||
+Sbjct  24346859  AAATTTATTTACTTCCTCTGTGAGATAATCCTCATGAGATGCTCTTGTTTTCATGTTGTA  24346918
+
+Query  121       ACCGTGAGGAGGGTACATTTTT  142
+                 ||| |  ||||||||||| |||
+Sbjct  24346919  ACCTTAGGGAGGGTACATCTTT  24346940
+
+
+ Score = 140 bits (154),  Expect = 2e-28
+ Identities = 116/142 (82%), Gaps = 0/142 (0%)
+ Strand=Plus/Plus
+
+Query  1         TTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACG  60
+                 ||| |||||||||||||||||||||||||| | ||||| | ||||||||||||| |||| 
+Sbjct  24346317  TTTCTGTCATCTACAAAGCATATTGGTGTTTTTGTACCTAATTTGTGTCGGAAGTTGACA  24346376
+
+Query  61        AAATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCATTGTTTTCATGCAGTA  120
+                 ||||||||  | || |||||||  || |||||||||||||||  |||||||||||  | |
+Sbjct  24346377  AAATTGATTGACATCCTCCATGAGATAATCTTCATGAAATGCTTTTGTTTTCATGTTGCA  24346436
+
+Query  121       ACCGTGAGGAGGGTACATTTTT  142
+                 | | |  |||||| | || |||
+Sbjct  24346437  ATCTTAGGGAGGGCAAATCTTT  24346458
+
+
+ Score = 140 bits (154),  Expect = 2e-28
+ Identities = 116/142 (82%), Gaps = 0/142 (0%)
+ Strand=Plus/Plus
+
+Query  138       TTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACG  197
+                 ||| |||||||||||||||||||||||||| | ||||| | ||||||||||||| |||| 
+Sbjct  24346317  TTTCTGTCATCTACAAAGCATATTGGTGTTTTTGTACCTAATTTGTGTCGGAAGTTGACA  24346376
+
+Query  198       AAATTGATATATATACTCCATGCCATCATCTTCATGAAATGCCATTGTTTTCATGCAGTA  257
+                 ||||||||  | || |||||||  || |||||||||||||||  |||||||||||  | |
+Sbjct  24346377  AAATTGATTGACATCCTCCATGAGATAATCTTCATGAAATGCTTTTGTTTTCATGTTGCA  24346436
+
+Query  258       ACCGTGAGGAGGGTACATTTTT  279
+                 | | |  |||||| | || |||
+Sbjct  24346437  ATCTTAGGGAGGGCAAATCTTT  24346458
+
+
+ Score = 131 bits (144),  Expect = 1e-25
+ Identities = 72/72 (100%), Gaps = 0/72 (0%)
+ Strand=Plus/Plus
+
+Query  276       TTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGA  335
+                 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  24345916  TTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGA  24345975
+
+Query  336       AATTGATATATA  347
+                 ||||||||||||
+Sbjct  24345976  AATTGATATATA  24345987
+
+
+ Score = 107 bits (118),  Expect = 1e-18
+ Identities = 76/86 (88%), Gaps = 1/86 (1%)
+ Strand=Plus/Plus
+
+Query  260       CGTGAGGAGGGTACATTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTG  319
+                 |||||| | ||||  ||| ||||||||||||||||| |||||||| ||||||||| ||||
+Sbjct  24346528  CGTGAG-ATGGTAGTTTTATGTCATCTACAAAGCATGTTGGTGTTTTCGTACCAAATTTG  24346586
+
+Query  320       TGTCGGAAGATGACGAAATTGATATA  345
+                 |||||||||||||||||||| || ||
+Sbjct  24346587  TGTCGGAAGATGACGAAATTTATTTA  24346612
+
+
+ Score = 92.4 bits (101),  Expect = 9e-14
+ Identities = 61/68 (90%), Gaps = 0/68 (0%)
+ Strand=Plus/Plus
+
+Query  275       TTTTTGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACG  334
+                 ||| |||||||||||||||||||||||||| | ||||| | ||||||||||||| |||| 
+Sbjct  24346317  TTTCTGTCATCTACAAAGCATATTGGTGTTTTTGTACCTAATTTGTGTCGGAAGTTGACA  24346376
+
+Query  335       AAATTGAT  342
+                 ||||||||
+Sbjct  24346377  AAATTGAT  24346384
+
+
+>CP168779.1 Malus domestica cultivar Golden Delicious chromosome 15
+Length=54725691
+
+ Score = 219 bits (242),  Expect = 2e-52
+ Identities = 238/327 (73%), Gaps = 53/327 (16%)
+ Strand=Plus/Minus
+
+Query  5         TGTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACGAAAT  64
+                 |||||||||||||||| ||||||| | || ||| |||| ||||||||||| |||||||||
+Sbjct  17099141  TGTCATCTACAAAGCAGATTGGTGGTTTCATACGAACTCTGTGTCGGAAGTTGACGAAAT  17099082
+
+Query  65        TGATATATATACTCCATGCCATCATCTTCATGAAATGCCATTGTTTTCATGCAGTAACCG  124
+                 ||||  | || |||||||||||||||  |||||| | |||||  ||||||||||||||||
+Sbjct  17099081  TGATTGAAATCCTCCATGCCATCATC--CATGAAGT-CCATTTCTTTCATGCAGTAACCG  17099025
+
+Query  125       TGAGGAGGGTACATTTTT------------------------------------------  142
+                   ||||||||||||| ||                                          
+Sbjct  17099024  CAAGGAGGGTACATTGTTAAATGTCTGCAACTATTTATATTCCAATTTGTGATATGTGGT  17098965
+
+Query  143       -----GTCATCTACAAAGCATATTGGTGTTCTCGTACCAACTTTGTGTCGGAAGATGACG  197
+                      ||||||||||||||||||||||||| ||||||||| ||||||||||||| |||| 
+Sbjct  17098964  CTTATGTCATCTACAAAGCATATTGGTGTTTTCGTACCAAATTTGTGTCGGAAGTTGACA  17098905
+
+[... 146 further lines truncated. Full report regenerable via scripts/phase5_identify.py ...]

@@ -1,5 +1,13 @@
 # Phase 3 report: real environmental sweep
 
+> **Superseded in part. SRR13291825 is an 18S rRNA amplicon survey of soil
+> DNA, not a metatranscriptome.** It is a PCR metabarcoding library, so it
+> contains no RNA and its coverage figures reflect amplification rather than
+> abundance. Every biological conclusion below is withdrawn. What the report
+> still documents accurately is the mechanics: the pull, the assembly, the
+> sweep, and the adapter-dimer failure mode it uncovered. See
+> `results/phase5_identification_report.md`.
+
 **Update to the earlier synthetic-only Phase 3.** After the initial writeup
 noted that "every standard sequence-archive route was blocked by the
 sandbox network policy," I retested more carefully and found the **AWS

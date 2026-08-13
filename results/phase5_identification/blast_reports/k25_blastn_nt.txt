@@ -1,0 +1,123 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W34733J014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= k141_25_monomer_186nt
+
+Length=186
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+OZ375105.1 MAG: uncultured Alphaproteobacteria bacterium isola...  94.2    1e-14  78%       
+OZ253937.1 MAG: Alphaproteobacteria bacterium isolate 26bd64c0...  83.3    2e-11  79%       
+OZ490498.1 MAG: uncultured Alphaproteobacteria bacterium isola...  77.9    9e-10  81%       
+OY969766.1 MAG: uncultured Alphaproteobacteria bacterium isola...  77.9    9e-10  81%       
+CP103869.1 Novosphingobium humi strain G5 plasmid unnamed1, co...  53.6    0.010  90%       
+CP127295.1 Amycolatopsis mongoliensis strain 4-36 chromosome, ...  49.1    0.44   91%       
+CP033334.1 Mesorhizobium loti strain NZP2042 chromosome, compl...  49.1    0.44   91%       
+CP033364.1 Mesorhizobium sp. NZP2234 chromosome, complete genome   49.1    0.44   91%       
+CP030353.1 Novosphingobium sp. P6W chromosome 2, complete sequ...  49.1    0.44   87%       
+AP024335.1 Microbacterium sp. SW12 DNA, complete genome            49.1    0.44   87%       
+AP023246.1 Mesorhizobium sp. 113-3-9 DNA, complete genome          47.3    1.5    91%       
+CP084265.1 Caballeronia sp. Lep1P3 chromosome 1, complete sequ...  47.3    1.5    85%       
+CP090732.1 Burkholderia cepacia strain 2011Ycf793I chromosome ...  46.4    1.5    83%       
+CP090698.1 Burkholderia cepacia strain 2017Y70952565VI chromos...  46.4    1.5    83%       
+AP040121.1 Burkholderia sp. SJ1 DNA, chromosome 2, complete se...  46.4    1.5    89%       
+CP021067.1 Burkholderia cenocepacia strain PC184 Mulks chromos...  46.4    1.5    89%       
+OZ242265.1 MAG: Gammaproteobacteria bacterium isolate e770b403...  46.4    1.5    93%       
+OZ480206.1 Burkholderia arboris strain R-1925 genome assembly,...  46.4    1.5    83%       
+CP000459.1 Burkholderia cenocepacia HI2424 chromosome 2, compl...  46.4    1.5    89%       
+CP060040.1 Burkholderia cenocepacia strain PS27 chromosome 2, ...  46.4    1.5    89%       
+LT629771.1 Jiangella sp. DSM 45060 genome assembly, chromosome: I  46.4    1.5    89%       
+CP028858.1 Halococcoides cellulosivorans strain HArcel1 chromo...  46.4    1.5    89%       
+CP019668.1 Burkholderia cenocepacia strain VC7848, complete ge...  46.4    1.5    89%       
+OZ480175.1 Burkholderia arboris strain R-13059 genome assembly...  46.4    1.5    83%       
+CP078071.1 Burkholderia sp. EMB26 chromosome 2, complete sequence  46.4    1.5    89%       
+AP029052.1 Burkholderia contaminans GalA64 DNA, chromosome: 2,...  46.4    1.5    89%       
+CP019670.1 Burkholderia cenocepacia strain VC12802 chromosome ...  46.4    1.5    89%       
+CP050979.1 Burkholderia cenocepacia strain FDAARGOS_720 chromo...  46.4    1.5    89%       
+CP090738.1 Burkholderia cepacia strain 2011Ycf427V chromosome ...  46.4    1.5    83%       
+CP013376.1 Burkholderia cepacia strain INT3-BP177 chromosome 2...  46.4    1.5    83%       
+CP194945.1 Pseudomonas triticicola strain Lu_F5_025 chromosome...  46.4    1.5    89%       
+OZ490895.1 MAG: uncultured Eubacteriales bacterium isolate MFD...  45.5    5.4    86%       
+XM_049552837.1 PREDICTED: Solanum stenotomum probable protein ...  45.5    5.4    96%       
+GQ261254.1 Solanum lycopersicum cultivar Rio Grande PtoR Hop-i...  45.5    5.4    96%       
+XM_043196717.1 Ogataea haglerorum uncharacterized protein (KL9...  45.5    5.4    86%       
+XM_031071741.1 PREDICTED: Quercus lobata probable protein phos...  45.5    5.4    96%       
+XM_024024844.2 PREDICTED: Quercus suber probable protein phosp...  45.5    5.4    96%       
+CP184789.1 Brevibacterium luteolum strain DMY-1 chromosome, co...  45.5    5.4    86%       
+NM_001279300.2 Solanum lycopersicum Hop-interacting protein TH...  45.5    5.4    96%       
+OZ409840.1 Stenotrophomonas sp. AC248 genome assembly, chromos...  45.5    5.4    80%       
+
+ALIGNMENTS
+>OZ375105.1 MAG: uncultured Alphaproteobacteria bacterium isolate MFD06157-9B.bin.c.48 
+genome assembly, chromosome: 1
+Length=5641714
+
+ Score = 94.2 bits (103),  Expect = 1e-14
+ Identities = 90/115 (78%), Gaps = 3/115 (3%)
+ Strand=Plus/Plus
+
+Query  75       CTTGCCGT---AGGTCGCAAGCCCAATCAGCCCGTTGCTGTGCCCGCCAACACCGCCGGC  131
+                ||||||||   ||||| ||||| | ||||  |||||||  || ||||| |||||||||||
+Sbjct  3911101  CTTGCCGTCATAGGTCACAAGCGCGATCAATCCGTTGCAATGGCCGCCGACACCGCCGGC  3911160
+
+Query  132      GACGTAAAGGCCGGGGACCGACGAGCGCATCGTCATGGTATCGACGTCGATCCCG  186
+                ||| || || || || ||||||||   ||||||| | |||||||| || || |||
+Sbjct  3911161  GACATAGAGACCCGGCACCGACGACGCCATCGTCTTCGTATCGACATCAATGCCG  3911215
+
+
+>OZ253937.1 MAG: Alphaproteobacteria bacterium isolate 26bd64c0-0f2d-4e52-a063-61ff611ccdf2 
+genome assembly, chromosome: 1
+Length=4333714
+
+ Score = 83.3 bits (91),  Expect = 2e-11
+ Identities = 85/108 (79%), Gaps = 5/108 (5%)
+ Strand=Plus/Minus
+
+Query  73       GTCTTGCCGT---AGGTCGCAAGCCCAATCAGCCCGTTGCTGTG-CCCGCCAACACCGCC  128
+                ||||||||||   |||| || | | | |||||||||||||| || ||||||| | |||||
+Sbjct  2505693  GTCTTGCCGTCGAAGGTGGCCAACGCGATCAGCCCGTTGCTATGGCCCGCCAGC-CCGCC  2505635
+
+Query  129      GGCGACGTAAAGGCCGGGGACCGACGAGCGCATCGTCATGGTATCGAC  176
+                |||||| ||||| ||||| |  || |||||||| |||   ||||| ||
+Sbjct  2505634  GGCGACATAAAGCCCGGGTAGGGAGGAGCGCATGGTCTCCGTATCCAC  2505587
+
+
+>OZ490498.1 MAG: uncultured Alphaproteobacteria bacterium isolate MFD05674.bin.c.4.r1 
+genome assembly, chromosome: 1
+Length=3635852
+
+ Score = 77.9 bits (85),  Expect = 9e-10
+ Identities = 65/80 (81%), Gaps = 0/80 (0%)
+ Strand=Plus/Minus
+
+Query  97       ATCAGCCCGTTGCTGTGCCCGCCAACACCGCCGGCGACGTAAAGGCCGGGGACCGACGAG  156
+                ||||| |||||||| || ||||| |||||||| || || ||||| || || |||||||||
+Sbjct  1304050  ATCAGGCCGTTGCTATGGCCGCCGACACCGCCAGCAACATAAAGACCAGGCACCGACGAG  1303991
+
+Query  157      CGCATCGTCATGGTATCGAC  176
+                |||||  ||   ||||||||
+Sbjct  1303990  CGCATGTTCGCCGTATCGAC  1303971
+
+
+
+[... remaining alignments truncated; full report regenerable with scripts/phase5_identify.py ...]

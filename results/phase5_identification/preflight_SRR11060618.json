@@ -1,0 +1,13 @@
+{
+  "accession": "SRR11060618",
+  "library_strategy": "RNA-Seq",
+  "library_selection": "Oligo-dT",
+  "library_source": "TRANSCRIPTOMIC",
+  "scientific_name": "Prunus persica",
+  "study_accession": "PRJNA493230",
+  "read_count": 83141687,
+  "metadata_fetched": true,
+  "compatible": true,
+  "unknown": false,
+  "reasons": []
+}
