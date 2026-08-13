@@ -1,0 +1,402 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 7W5HV799014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= NODE_36652_length_943_cov_17349.429885_g18276_i0
+
+Length=943
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MZ220895.1 Peach latent mosaic viroid isolate 13C249A, complet...  562     5e-155  98%       
+GQ499305.1 Peach latent mosaic viroid isolate 1, complete sequ...  543     5e-149  97%       
+KX430170.1 Peach latent mosaic viroid isolate V1.1.2, complete...  540     2e-148  96%       
+Query= NODE_36703_length_941_cov_15563.079493_g18313_i0
+
+Length=941
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MZ220895.1 Peach latent mosaic viroid isolate 13C249A, complet...  562     5e-155  98%       
+KX430173.1 Peach latent mosaic viroid isolate V1.1.5, complete...  548     1e-150  96%       
+GQ499305.1 Peach latent mosaic viroid isolate 1, complete sequ...  547     1e-150  97%       
+Query= NODE_38543_length_845_cov_2.240933_g19544_i0
+
+Length=845
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               1080    0.0    88%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            844     0.0    82%       
+AP041247.1 Prunus itosakura NIG-0593 DNA, chromosome: 8            835     0.0    82%       
+Query= NODE_39265_length_804_cov_12738.165527_g20068_i0
+
+Length=804
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MZ220895.1 Peach latent mosaic viroid isolate 13C249A, complet...  562     4e-155  98%       
+MZ220897.1 Peach latent mosaic viroid isolate 13C249C, complet...  553     2e-152  97%       
+GQ499305.1 Peach latent mosaic viroid isolate 1, complete sequ...  543     4e-149  97%       
+Query= NODE_39587_length_786_cov_18.876578_g20316_i0
+
+Length=786
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               1108    0.0    91%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            853     0.0    84%       
+AP041247.1 Prunus itosakura NIG-0593 DNA, chromosome: 8            839     0.0    84%       
+Query= NODE_39588_length_786_cov_16.409537_g20317_i0
+
+Length=786
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               1094    0.0    91%         
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            817     0.0    83%         
+AP041247.1 Prunus itosakura NIG-0593 DNA, chromosome: 8            808     0.0    83%         
+Query= NODE_41591_length_684_cov_15713.220949_g21927_i0
+
+Length=684
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MZ220895.1 Peach latent mosaic viroid isolate 13C249A, complet...  562     4e-155  98%       
+GQ499305.1 Peach latent mosaic viroid isolate 1, complete sequ...  543     3e-149  97%       
+KX430173.1 Peach latent mosaic viroid isolate V1.1.5, complete...  537     1e-147  96%       
+Query= NODE_41940_length_668_cov_8.003361_g22223_i0
+
+Length=668
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               921     0.0    91%         
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            710     0.0    84%         
+AP041265.1 Prunus itosakura NIG-0593 DNA, unplaced contig tig0...  692     0.0    83%         
+Query= NODE_43211_length_613_cov_259.800000_g23366_i0
+
+Length=613
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               896     0.0    97%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            886     0.0    96%       
+AP041241.1 Prunus itosakura NIG-0593 DNA, chromosome: 2            882     0.0    96%       
+Query= NODE_43354_length_607_cov_24003.230337_g23493_i0
+
+Length=607
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MZ220896.1 Peach latent mosaic viroid isolate 13C249B, complet...  588     8e-163  99%       
+MZ220925.1 Peach latent mosaic viroid isolate 13C270A1, comple...  572     6e-158  98%       
+MZ220917.1 Peach latent mosaic viroid isolate 13C270D, complet...  569     2e-157  98%       
+Query= NODE_43485_length_602_cov_12615.137996_g23613_i0
+
+Length=602
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+KX430168.1 Peach latent mosaic viroid isolate v2.7, complete s...  560     1e-154  97%         
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  559     4e-154  97%         
+MZ220919.1 Peach latent mosaic viroid isolate 13C271B, complet...  558     4e-154  97%         
+Query= NODE_44223_length_573_cov_19058.436000_g24313_i0
+
+Length=573
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MZ220895.1 Peach latent mosaic viroid isolate 13C249A, complet...  557     1e-153  97%       
+GQ499305.1 Peach latent mosaic viroid isolate 1, complete sequ...  543     3e-149  97%       
+KX430173.1 Peach latent mosaic viroid isolate V1.1.5, complete...  539     3e-148  96%       
+Query= NODE_44708_length_553_cov_257.693750_g24784_i0
+
+Length=553
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               789     0.0    96%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            768     0.0    96%       
+AP041241.1 Prunus itosakura NIG-0593 DNA, chromosome: 2            768     0.0    95%       
+Query= NODE_45860_length_510_cov_7870.469108_g25914_i0
+
+Length=510
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+KF867863.1 Peach latent mosaic viroid clone 1504_7_337 clone-l...  590     6e-164  99%       
+KF867867.1 Peach latent mosaic viroid clone 1508_7_337 clone-l...  590     6e-164  99%       
+JX478281.1 Peach latent mosaic viroid clone 8_2556_337 clone-l...  590     6e-164  99%       
+Query= NODE_46016_length_505_cov_15667.324074_g26069_i0
+
+Length=505
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+PP350274.1 Peach latent mosaic viroid isolate Hatay12, partial...  554     4e-153  98%       
+JX479333.1 Peach latent mosaic viroid clone 1064_9_337 clone-l...  534     1e-146  97%       
+LC579907.1 Peach latent mosaic viroid AP03 RNA, complete genome    532     4e-146  95%       
+Query= NODE_46133_length_501_cov_8881.820093_g26185_i0
+
+Length=501
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+JX478753.2 Peach latent mosaic viroid clone 481_21_337 clone-l...  577     1e-159  98%       
+KF867869.1 Peach latent mosaic viroid clone 1510_7_337 clone-l...  572     1e-158  98%       
+KF868395.1 Peach latent mosaic viroid clone 2061_5_337 clone-l...  572     1e-158  98%       
+Query= NODE_46842_length_477_cov_14730.240099_g26891_i0
+
+Length=477
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+KX430168.1 Peach latent mosaic viroid isolate v2.7, complete s...  565     2e-156  98%       
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  559     3e-154  97%       
+MZ220897.1 Peach latent mosaic viroid isolate 13C249C, complet...  554     1e-152  97%       
+Query= NODE_46843_length_477_cov_10812.747525_g26892_i0
+
+Length=477
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+KX430168.1 Peach latent mosaic viroid isolate v2.7, complete s...  565     2e-156  98%       
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  559     3e-154  97%       
+MZ220897.1 Peach latent mosaic viroid isolate 13C249C, complet...  554     1e-152  97%       
+Query= NODE_46844_length_477_cov_5485.782178_g26893_i0
+
+Length=477
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+KX430168.1 Peach latent mosaic viroid isolate v2.7, complete s...  561     9e-155  97%       
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  554     4e-153  96%       
+MZ220897.1 Peach latent mosaic viroid isolate 13C249C, complet...  549     2e-151  97%       
+Query= NODE_47442_length_459_cov_10983.031088_g27487_i0
+
+Length=459
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  563     7e-156  97%       
+MW046338.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_2, ...  543     2e-149  96%       
+KX430168.1 Peach latent mosaic viroid isolate v2.7, complete s...  533     1e-146  97%       
+Query= NODE_48137_length_439_cov_22922.415301_g28179_i0
+
+Length=439
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+JX478931.2 Peach latent mosaic viroid clone 660_15_336 clone-l...  551     4e-152  96%       
+JX478968.2 Peach latent mosaic viroid clone 698_14_336 clone-l...  551     4e-152  96%       
+JX478888.2 Peach latent mosaic viroid clone 617_16_336 clone-l...  551     4e-152  96%       
+Query= NODE_48138_length_439_cov_10674.019126_g28180_i0
+
+Length=439
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+JX478931.2 Peach latent mosaic viroid clone 660_15_336 clone-l...  564     7e-156  97%       
+JX478968.2 Peach latent mosaic viroid clone 698_14_336 clone-l...  564     7e-156  97%       
+JX478888.2 Peach latent mosaic viroid clone 617_16_336 clone-l...  564     7e-156  97%       
+Query= NODE_48576_length_427_cov_418.621469_g28618_i0
+
+Length=427
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               608     6e-169  98%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            591     5e-164  97%       
+AP041241.1 Prunus itosakura NIG-0593 DNA, chromosome: 2            577     1e-159  96%       
+Query= NODE_48923_length_418_cov_1297.875362_g28965_i0
+
+Length=418
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+KY355207.1 Peach latent mosaic viroid isolate PLMVd-CH-P1-6, c...  554     3e-153  96%       
+KX430175.1 Peach latent mosaic viroid isolate V1.1.7, complete...  554     1e-152  97%       
+KY355210.1 Peach latent mosaic viroid isolate PLMVd-CH-P1-9, c...  551     4e-152  96%       
+Query= NODE_49461_length_404_cov_20021.160121_g29503_i0
+
+Length=404
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  541     7e-149  96%       
+PP350274.1 Peach latent mosaic viroid isolate Hatay12, partial...  539     2e-148  96%       
+JX479333.1 Peach latent mosaic viroid clone 1064_9_337 clone-l...  538     2e-148  96%       
+Query= NODE_49462_length_404_cov_18427.126888_g29504_i0
+
+Length=404
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  527     4e-145  95%       
+PP350274.1 Peach latent mosaic viroid isolate Hatay12, partial...  521     6e-143  95%       
+JX479333.1 Peach latent mosaic viroid clone 1064_9_337 clone-l...  520     6e-143  95%       
+Query= NODE_50292_length_384_cov_20822.350482_g30334_i0
+
+Length=384
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  511     3e-140  94%       
+MW046339.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_3, ...  499     2e-136  92%       
+MW046338.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_2, ...  490     1e-133  93%       
+Query= NODE_50979_length_370_cov_23057.535354_g31021_i0
+
+Length=370
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+JX479333.1 Peach latent mosaic viroid clone 1064_9_337 clone-l...  538     2e-148  96%       
+PP350274.1 Peach latent mosaic viroid isolate Hatay12, partial...  531     3e-146  97%       
+MW046338.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_2, ...  511     3e-140  96%       
+Query= NODE_51254_length_365_cov_109.280822_g31296_i0
+
+Length=365
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               597     9e-166  96%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            595     3e-165  96%       
+AP041241.1 Prunus itosakura NIG-0593 DNA, chromosome: 2            581     7e-161  95%       
+Query= NODE_51395_length_362_cov_24157.944637_g31437_i0
+
+Length=362
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+KX430167.1 Peach latent mosaic viroid isolate v2.6, complete s...  524     5e-144  98%       
+DQ680697.1 Peach latent mosaic viroid variant 240.4, complete ...  517     7e-142  98%       
+KX430165.1 Peach latent mosaic viroid isolate v2.4, complete s...  516     2e-141  98%       
+Query= NODE_51396_length_362_cov_594.979239_g31438_i0
+
+Length=362
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               625     2e-174  98%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            618     3e-172  98%       
+AP041241.1 Prunus itosakura NIG-0593 DNA, chromosome: 2            603     6e-168  97%       
+Query= NODE_51781_length_355_cov_300.312057_g31823_i0
+
+Length=355
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               597     9e-166  97%         
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            581     7e-161  97%         
+AY860314.1 Prunus domestica retrotransposon Cassandra, complet...  568     4e-157  96%         
+Query= NODE_52236_length_347_cov_206.087591_g32278_i0
+
+Length=347
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+AP041246.1 Prunus itosakura NIG-0593 DNA, chromosome: 7            251     1e-61  99%       
+CP168779.1 Malus domestica cultivar Golden Delicious chromosom...  219     2e-52  73%       
+CP168766.1 Malus domestica cultivar Golden Delicious chromosom...  188     4e-43  73%       
+Query= NODE_53802_length_323_cov_4.032000_g33844_i0
+
+Length=323
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+OZ022205.1 Prunus dulcis genome assembly, segment: 0               465     3e-126  92%       
+AP041265.1 Prunus itosakura NIG-0593 DNA, unplaced contig tig0...  357     1e-93   85%       
+AP041240.1 Prunus itosakura NIG-0593 DNA, chromosome: 1            355     4e-93   85%       
+Query= NODE_55773_length_295_cov_22962.896396_g35815_i0
+
+Length=295
+
+
+                                                                   Score     E      Max
+
+[... 66 further lines truncated. Regenerable via scripts/phase5_identify.py ...]

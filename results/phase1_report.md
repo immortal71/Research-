@@ -6,9 +6,17 @@ SRR11060618. Downloaded verbatim from https://github.com/Zheludev/VNom.
 
 **Correction:** this report originally called SRR11060618 a human gut
 metatranscriptome. It is *Prunus persica* (peach) stamen ssRNA-seq; see
-`data/reference/vnom/PROVENANCE.md`. The four candidates below have since
-been identified, and the top one is a real viroid:
-`results/phase5_identification_report.md`.
+`data/reference/vnom/PROVENANCE.md`.
+
+**All 38 contigs have since been identified against nt.** 24 are Peach
+latent mosaic viroid, 14 are peach host sequence, none is unidentified. That
+gives this phase a real ground truth to score against, and it scores well:
+SAS cluster 1 contains 20 viroid contigs and zero host contigs, while
+clusters 2, 3 and 4 contain 11 host contigs and zero viroid. Precision on
+the viroid cluster is 20/20, recall is 20/24, and the 337 nt circular unit
+reported below is PLMVd's exact genome length. Coverage separates the
+classes with no overlap either: host 2.2x to 595x, viroid 1,298x to
+24,158x. See `results/phase5_identification_report.md`.
 
 **Pipeline:** `src/rnasig/circularity.py` + `src/rnasig/cluster.py`
 (independent reimplementation of VNom's CircleFinder + circUCLUST +

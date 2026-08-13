@@ -12,13 +12,15 @@ in opposite directions.
 
 ## Short version
 
-**Phase 1 found a real viroid.** Its top candidate, NODE_36652, is Peach
-latent mosaic viroid at 98% nucleotide identity over 333 nt (E=5e-155).
-PLMVd is a genuine circular, non-coding, self-replicating RNA of 337 nt. The
-circularity code independently resolved NODE_36652's repeat unit as 337 nt
-from sequence alone, with no database involved. This is the pipeline
-recovering exactly the class of molecule it was designed to find, ranked
-first, on real data.
+**Phase 1 found a real viroid, and the clustering was exactly right.** 24 of
+the 38 test contigs are Peach latent mosaic viroid, a genuine circular,
+non-coding, self-replicating RNA of 337 nt. The pipeline's top
+sense/antisense cluster holds 20 of them and no host sequence at all, and
+none of its other three clusters holds any viroid. The circularity code
+independently resolved the repeat unit as 337 nt from sequence alone, with
+no database involved, which is PLMVd's exact genome length. This is the
+pipeline recovering exactly the class of molecule it was designed to find,
+ranked first, on real data.
 
 **Phase 3 was pointed at the wrong kind of data.** SRR13291825 is an 18S
 rRNA amplicon survey of soil DNA. The molecules sequenced were DNA, and they
@@ -34,18 +36,36 @@ distinction the pipeline previously had no way to draw.
 ## Phase 1: the true positive
 
 SRR11060618 is real RNA-Seq (`library_strategy=RNA-Seq`,
-`library_selection=Oligo-dT`, `library_source=TRANSCRIPTOMIC`). The four
-sense/antisense-paired cluster centroids resolve as:
+`library_selection=Oligo-dT`, `library_source=TRANSCRIPTOMIC`). All 38
+contigs in the test set were searched, not just the four cluster centroids,
+which turns this into a benchmark with real ground truth rather than a spot
+check.
 
-| contig | identification | identity | E |
-|---|---|---|---|
-| NODE_36652 | **Peach latent mosaic viroid**, complete genome | 98% | 5e-155 |
-| NODE_43211 | *Prunus* genomic sequence | 97% | 0.0 |
-| NODE_52236 | *Prunus* genomic / 40S ribosomal protein mRNA | 99% | 1e-61 |
-| NODE_38543 | *Prunus* genomic sequence | 88% | 0.0 |
+**24 of 38 contigs are Peach latent mosaic viroid. The other 14 are
+*Prunus* host sequence. Nothing is unidentified.**
 
-One in four is the target class, and it is the one the pipeline ranked
-first. NODE_36652 scored structure z=17.13, orphan 0.89, circular, at
+That makes it possible to score the clustering exactly:
+
+| SAS cluster | centroid | n | PLMVd | host |
+|---|---|---|---|---|
+| 1 | NODE_36652 | 20 | **20** | 0 |
+| 2 | NODE_38543 | 5 | 0 | 5 |
+| 3 | NODE_43211 | 4 | 0 | 4 |
+| 4 | NODE_52236 | 2 | 0 | 2 |
+
+The circular-permutation clustering put 20 viroid contigs in one cluster and
+no host sequence in it, and put no viroid in any of the other three.
+Precision on the viroid cluster is 20/20. Recall across all PLMVd contigs is
+20/24, the four misses being contigs that did not land in a
+sense/antisense-paired cluster at all. On a real dataset with a real answer,
+the method separates the replicating agent from its host cleanly.
+
+Coverage separates the two classes just as cleanly, with no overlap: host
+contigs run 2.2x to 595x, viroid contigs 1,298x to 24,158x. The gap is a
+factor of 2.2 with nothing inside it. A viroid replicating in host tissue
+should be far more abundant than any single host transcript, and it is.
+
+NODE_36652 specifically scored structure z=17.13, orphan 0.89, circular, at
 17,349x coverage. Those are the numbers a viroid should produce: viroids are
 among the most thermodynamically structured RNAs known, they encode no
 protein, and they replicate as covalently closed circles.
@@ -232,9 +252,10 @@ Withdrawn:
 
 Strengthened:
 
-- Phase 1. It recovered a genuine viroid and reconstructed its genome length
-  exactly, which is a stronger result than "the reimplementation agrees with
-  VNom's expected pattern".
+- Phase 1, considerably. It is no longer "the reimplementation agrees with
+  VNom's expected pattern" but a scored benchmark against known answers:
+  20/20 precision on the viroid cluster, 20/24 recall, no host sequence
+  misplaced into it, and the viroid's genome length reconstructed exactly.
 - The circularity module, which produced that 337 nt unit unaided.
 - The adapter and rRNA filters, which did their jobs.
 

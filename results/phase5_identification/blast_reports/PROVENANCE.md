@@ -7,7 +7,12 @@ alignments, with a marker at the cut. Nothing else is edited.
 Searches were run on 2026-08-13 against `core_nt` (128,547,243 sequences,
 948,086,538,397 letters, posted 2026-07-18) and `nr`.
 
-Phase 1 candidates, `blastn` vs `core_nt`:
+Whole test set, `blastn` vs `core_nt`, all 38 contigs in one batch:
+
+- `all38_vnom_contigs_nt.txt` — 24 Peach latent mosaic viroid, 14 *Prunus*
+  host, 0 unidentified
+
+Phase 1 cluster centroids, run individually first, `blastn` vs `core_nt`:
 
 - `NODE_36652_nt.txt` — Peach latent mosaic viroid, 98% over 333 nt, E=5e-155
 - `NODE_43211_nt.txt` — *Prunus* genomic

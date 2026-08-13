@@ -20,7 +20,9 @@ Five scripts, one per phase.
 
 `scripts/phase1_reproduce.py` runs the VNom-style pipeline against VNom's own real test data (SRA run SRR11060618, *Prunus persica* stamen ssRNA-seq). It finds 31 out of 38 contigs are circular, and those collapse into 4 sense/antisense-paired clusters. That's the sanity check that the reimplementation actually works.
 
-Phase 5 has since identified those 4 clusters, and the top one is **Peach latent mosaic viroid at 98% identity** — a real circular, non-coding, ~337 nt RNA replicon. The circularity code resolved its unit length as 337 nt from sequence alone, before any database was consulted. That is the pipeline finding exactly the class of molecule it was built for, on real data, and it is the strongest evidence in this repo that the signature works.
+Phase 5 has since identified all 38 of those contigs. 24 are **Peach latent mosaic viroid**, a real circular, non-coding, 337 nt RNA replicon; the other 14 are peach host sequence; none is unidentified. The top sense/antisense cluster holds 20 of the 24 viroid contigs and no host sequence at all, and none of the other three clusters holds any viroid. The circularity code resolved the repeat unit as 337 nt from sequence alone, before any database was consulted, which is PLMVd's exact genome length.
+
+So the reimplementation has now been scored against known answers rather than against an expected pattern: 20/20 precision on the viroid cluster, 20/24 recall, genome length exact. That is the strongest evidence in this repo that the signature works.
 
 `scripts/phase2_calibrate.py` builds a synthetic labeled corpus (real positives, coding decoys, structured-coding decoys, plain nulls), scores everything, and reports ROC-AUC, empirical FDR at BH-corrected alpha=0.05, and a power-vs-depth curve. It also documents a real specificity gap that the first version had, and how it got fixed.
 
