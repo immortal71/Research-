@@ -65,6 +65,42 @@ contigs run 2.2x to 595x, viroid contigs 1,298x to 24,158x. The gap is a
 factor of 2.2 with nothing inside it. A viroid replicating in host tissue
 should be far more abundant than any single host transcript, and it is.
 
+### The four misses, and what they cost
+
+Having ground truth makes the recall gap diagnosable rather than mysterious.
+
+Two of the four, NODE_55773 (295 nt) and NODE_56638 (285 nt), are shorter
+than PLMVd's 337 nt genome. A sub-monomer fragment has no terminal repeat to
+find, so no circularity detector can recover them from sequence alone. They
+are not a defect.
+
+The other two, NODE_43354 (607 nt) and NODE_43485 (602 nt), both carry a
+terminal repeat with exactly one substitution, implying a 338 nt unit.
+`find_circularity` matched terminal k-mers exactly, so a single point
+mutation defeated it. PLMVd replicates as a quasispecies with one of the
+highest mutation rates known for any replicon, which makes within-contig
+variation between two passes through the origin the expected case rather
+than an error.
+
+`find_circularity` now takes `max_mismatch`. Calibrated against 950 shuffled
+nulls from this same test set:
+
+| k | max_mismatch | FPR | PLMVd recall |
+|---|---|---|---|
+| 12 | 0 | 0.0000 | 20/24 |
+| 12 | **1** | **0.0000** | **22/24** |
+| 12 | 2 | 0.0211 | 22/24 |
+| 14 | 1 | 0.0000 | 22/24 |
+
+One mismatch buys both missing contigs at no measurable false-positive cost,
+and 22/24 is the ceiling. Two mismatches buy nothing further and start
+costing specificity. Both recovered contigs resolve to a 338 nt unit, which
+is PLMVd's length.
+
+The default stays at 0 so the numbers already committed under `results/`
+stay reproducible. The parameter is there, the calibration is above, and 1
+is the right setting for a new run.
+
 NODE_36652 specifically scored structure z=17.13, orphan 0.89, circular, at
 17,349x coverage. Those are the numbers a viroid should produce: viroids are
 among the most thermodynamically structured RNAs known, they encode no

@@ -30,27 +30,55 @@ class CircularityResult:
     monomer: str | None = None       # de-duplicated single-copy sequence
 
 
-def find_circularity(seq: str, k: int = 12) -> CircularityResult:
+def find_circularity(seq: str, k: int = 12, max_mismatch: int = 0) -> CircularityResult:
     """Look for a terminal repeat: does seq end with a k-mer that also occurs
     earlier in the sequence? If several candidate offsets exist, prefer the
     one closest to the 3' end (smallest overhang), matching the typical
     assembler behaviour of stopping as soon as the graph closes.
+
+    max_mismatch allows the terminal k-mer to differ from its earlier copy.
+    Exact matching assumes the two passes through the origin are identical,
+    which holds for a stable template and fails for a mutable one. On the
+    VNom test set, NODE_43354 and NODE_43485 are both Peach latent mosaic
+    viroid and both carry a terminal repeat with exactly one substitution,
+    implying a 338 nt unit; exact matching misses both. PLMVd replicates as
+    a quasispecies, so within-contig variation is the expected case rather
+    than an error. See results/phase5_identification_report.md.
+
+    The cost is a higher false-positive rate, since a mismatch-tolerant
+    k-mer is a weaker constraint. Measure it with
+    circularity_false_positive_rate before raising this on a new dataset.
     """
     n = len(seq)
     if n < 2 * k:
         return CircularityResult(is_circular=False)
 
     tail = seq[-k:]
-    # search for earlier occurrences of the tail k-mer, excluding the
-    # trivial position at the very end itself
     best_i = None
-    start = 0
-    while True:
-        i = seq.find(tail, start, n - 1)
-        if i == -1:
-            break
-        best_i = i  # keep overwriting -> last (rightmost, closest to 3') match wins
-        start = i + 1
+    if max_mismatch <= 0:
+        # search for earlier occurrences of the tail k-mer, excluding the
+        # trivial position at the very end itself
+        start = 0
+        while True:
+            i = seq.find(tail, start, n - 1)
+            if i == -1:
+                break
+            best_i = i  # keep overwriting -> last (rightmost, closest to 3') match wins
+            start = i + 1
+    else:
+        # Rightmost position whose k-mer is within max_mismatch of the tail.
+        # Scanned from the 3' end so the first acceptable hit is the closest
+        # one, matching the exact-match branch's preference.
+        for i in range(n - k - 1, -1, -1):
+            mismatches = 0
+            for a, b in zip(tail, seq[i : i + k]):
+                if a != b:
+                    mismatches += 1
+                    if mismatches > max_mismatch:
+                        break
+            else:
+                best_i = i
+                break
 
     if best_i is None:
         return CircularityResult(is_circular=False)
@@ -94,11 +122,11 @@ def resolve_concatemer(result: CircularityResult, tandem_thr: float = 0.1) -> Ci
     return result
 
 
-def circularity_false_positive_rate(null_seqs: list[str], k: int = 12) -> float:
+def circularity_false_positive_rate(null_seqs: list[str], k: int = 12, max_mismatch: int = 0) -> float:
     """Fraction of a null (non-circular, e.g. shuffled) sequence set flagged
-    as circular -- used to calibrate k and report the empirical FPR of the
-    detector itself."""
+    as circular -- used to calibrate k and max_mismatch and report the
+    empirical FPR of the detector itself."""
     if not null_seqs:
         return 0.0
-    hits = sum(1 for s in null_seqs if find_circularity(s, k=k).is_circular)
+    hits = sum(1 for s in null_seqs if find_circularity(s, k=k, max_mismatch=max_mismatch).is_circular)
     return hits / len(null_seqs)
