@@ -16,7 +16,7 @@ Obelisks themselves would score high on the "structured" and "dual-strand" parts
 
 ## What's in the box
 
-Four scripts, one per phase.
+Five scripts, one per phase.
 
 `scripts/phase1_reproduce.py` runs the VNom-style pipeline against VNom's own real test data (SRA run SRR11060618, *Prunus persica* stamen ssRNA-seq). It finds 31 out of 38 contigs are circular, and those collapse into 4 sense/antisense-paired clusters. That's the sanity check that the reimplementation actually works.
 
@@ -44,7 +44,7 @@ Three axes. All three have to line up.
 
 Structure stability. Fold with ViennaRNA MFE. Compare against dinucleotide-shuffled versions of the same sequence (Altschul-Erikson shuffle, so mono- and dinucleotide composition are preserved exactly). Take the z-score.
 
-Orphan / non-coding. No BLAST in this sandbox, so "matches nothing known" gets operationalized reference-free as low ORF coverage plus low in-frame codon bias. Not a validated gene predictor, and I say so in the code.
+Orphan / non-coding. Operationalized reference-free as low ORF coverage plus low in-frame codon bias, so the screen can run without a database. Not a validated gene predictor, and I say so in the code. It is now known to be unreliable in the direction that matters: it rated all three Phase 3 candidates as borderline non-coding and all three encode proteins, one at 97% amino-acid identity. Use `phase5_identify.py` to check anything it likes.
 
 Strand symmetry. Sense and antisense contigs of the same molecule co-occur in the same sample, and/or the contig has a circular terminal repeat.
 
@@ -80,7 +80,7 @@ Each phase drops its outputs in `results/`, one markdown report and one JSON.
 
 ```
 src/rnasig/     library
-scripts/        the four phase runners
+scripts/        the five phase runners
 tests/          pytest
 data/reference/ VNom's original code + test data, verbatim
 data/motifs/    empty on purpose; motifs are generated in code
