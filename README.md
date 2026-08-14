@@ -16,7 +16,7 @@ Obelisks themselves would score high on the "structured" and "dual-strand" parts
 
 ## What's in the box
 
-Five scripts, one per phase.
+Six scripts, one per phase.
 
 `scripts/phase1_reproduce.py` runs the VNom-style pipeline against VNom's own real test data (SRA run SRR11060618, *Prunus persica* stamen ssRNA-seq). It finds 31 out of 38 contigs are circular, and those collapse into 4 sense/antisense-paired clusters. That's the sanity check that the reimplementation actually works.
 
@@ -38,7 +38,15 @@ Its actual candidates did not survive Phase 5. **SRR13291825 turned out to be an
 python scripts/phase5_identify.py --run SRR13291825
 ```
 
-Everything under `src/rnasig/` is the library. `tests/` has 50 pytest tests that run in a few seconds.
+`scripts/phase6_hunt.py` is the one that starts from an accession rather than a file. It preflights a run's library type, streams a read subset straight from ENA without downloading the whole thing, assembles the abundant fraction, and keeps what looks circular in the size range viroids and obelisks occupy.
+
+```
+python scripts/phase6_hunt.py --accessions runs.txt --outdir results/hunt
+```
+
+That closes a gap that mattered more than it looked. Every earlier sweep began with a file someone had already downloaded, because getting contigs meant MEGAHIT or rnaSPAdes and neither has a Windows build. `src/rnasig/assemble.py` removes that dependency for the case this pipeline targets: small, high-copy-number RNA elements. It is not a general transcriptome assembler and the module says so at length. It was validated by streaming 300k reads of SRR11060618 and checking that Peach latent mosaic viroid comes back as a circular contig resolving to a 337 nt unit, its exact genome length.
+
+Everything under `src/rnasig/` is the library. `tests/` has 68 pytest tests that run in about ten seconds.
 
 ## The signature itself
 
@@ -62,10 +70,13 @@ pytest tests/ -q
 
 Standard stack: biopython, numpy, scipy, pandas, scikit-learn, ViennaRNA, pytest, matplotlib.
 
+On Windows, `import RNA` can fail with "Failed to load ViennaRNA RNAlib Python wrapper" even though the wheel installed cleanly. The wrapper is an MSVC build and needs `MSVCP140.dll`, which is not present unless the Visual C++ 2015-2022 redistributable has been installed; `VCRUNTIME140.dll` and `VCRUNTIME140_1.dll` ship with Python itself, so that one file is usually the whole problem. Installing the redistributable fixes it. Without admin rights, copying `MSVCP140.dll` next to `_RNA*.pyd` in `site-packages/RNA/` also works, which is the same vendoring numpy and scikit-learn already do. Two test modules cannot run until this is sorted.
+
 ## Running it
 
 ```
 python scripts/phase5_identify.py --run <ACCESSION>          # do this first
+python scripts/phase6_hunt.py --accessions runs.txt          # accession -> candidates
 python scripts/phase1_reproduce.py
 python scripts/phase2_calibrate.py
 python scripts/phase3_sweep.py --demo --outdir results/sweep_demo
@@ -82,7 +93,7 @@ Each phase drops its outputs in `results/`, one markdown report and one JSON.
 
 ```
 src/rnasig/     library
-scripts/        the five phase runners
+scripts/        the six phase runners
 tests/          pytest
 data/reference/ VNom's original code + test data, verbatim
 data/motifs/    empty on purpose; motifs are generated in code
