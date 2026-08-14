@@ -1,0 +1,9 @@
+[
+  {
+    "accession": "SRR23637081",
+    "library": "SRR23637081: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (permafrost metagenome)",
+    "compatible": true,
+    "sample": "permafrost metagenome",
+    "error": "stream failed: Compressed file ended before the end-of-stream marker was reached"
+  }
+]

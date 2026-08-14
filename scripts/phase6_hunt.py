@@ -81,21 +81,37 @@ def fastq_urls(accession: str, timeout: float = 30.0) -> list[str]:
     return [f"https://{p}" for p in paths if p.strip()]
 
 
-def stream_reads(url: str, limit: int, timeout: float = 300.0):
+def stream_reads(url: str, limit: int, timeout: float = 300.0, min_useful: int = 100_000):
     """Yield sequences from a remote gzipped FASTQ, stopping at limit.
 
     The connection is closed as soon as enough reads have been seen, so a
     12 GB run costs only the first few hundred MB of transfer.
+
+    A deep subset means a transfer of hundreds of MB, and those drop: the
+    server closes early, gzip hits the end of its data without a trailer,
+    and raises. Treating that as a failed run throws away everything already
+    received, which on the first deep run was most of a 280 MB download. So
+    a truncated stream ends the iteration instead, and the caller assembles
+    whatever arrived. Anything shorter than min_useful is re-raised, since
+    that is a genuinely failed fetch rather than a short one.
     """
     req = urllib.request.Request(url, headers={"User-Agent": "rnasig phase6"})
+    seen = 0
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         with gzip.GzipFile(fileobj=resp) as gz:
             text = io.TextIOWrapper(gz, encoding="utf-8", errors="replace")
-            for i, line in enumerate(text):
-                if i % 4 == 1:
-                    yield line.strip()
-                    if (i // 4) + 1 >= limit:
-                        return
+            try:
+                for i, line in enumerate(text):
+                    if i % 4 == 1:
+                        seen += 1
+                        yield line.strip()
+                        if seen >= limit:
+                            return
+            except (EOFError, OSError) as exc:
+                if seen < min_useful:
+                    raise
+                print(f"      (stream truncated after {seen} reads: {exc}; assembling those)")
+                return
 
 
 def hunt_one(

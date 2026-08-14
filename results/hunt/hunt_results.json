@@ -75,5 +75,70 @@
       "stream_s": 41,
       "assemble_s": 159
     }
+  },
+  {
+    "accession": "SRR32700093",
+    "library": "SRR32700093: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (hot springs metagenome)",
+    "compatible": true,
+    "sample": "hot springs metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 6403417->757467 kept | contigs=1507 total=489265bp N50=363 max=7710 circular=0",
+    "n_circular": 1,
+    "circular": [
+      {
+        "contig": "contig_3",
+        "length": 2436,
+        "unit_length": 1615,
+        "n_copies": 1.51,
+        "coverage": 32.9,
+        "gc": 0.432
+      }
+    ],
+    "timing": {
+      "stream_s": 108,
+      "assemble_s": 157
+    }
+  },
+  {
+    "accession": "SRR31152997",
+    "library": "SRR31152997: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (peat metagenome)",
+    "compatible": true,
+    "sample": "peat metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 10338839->676335 kept | contigs=1574 total=396498bp N50=248 max=2916 circular=0",
+    "n_circular": 2,
+    "circular": [
+      {
+        "contig": "contig_112",
+        "length": 489,
+        "unit_length": 171,
+        "n_copies": 2.86,
+        "coverage": 83.8,
+        "gc": 0.579
+      },
+      {
+        "contig": "contig_48",
+        "length": 668,
+        "unit_length": 446,
+        "n_copies": 1.5,
+        "coverage": 31.9,
+        "gc": 0.626
+      }
+    ],
+    "timing": {
+      "stream_s": 27,
+      "assemble_s": 232
+    }
+  },
+  {
+    "accession": "SRR23214415",
+    "library": "SRR23214415: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (peat metagenome)",
+    "compatible": true,
+    "sample": "peat metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 10695032->432841 kept | contigs=715 total=157156bp N50=212 max=1249 circular=0",
+    "n_circular": 0,
+    "circular": [],
+    "timing": {
+      "stream_s": 27,
+      "assemble_s": 360
+    }
   }
 ]
