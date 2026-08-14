@@ -140,5 +140,13 @@
       "stream_s": 27,
       "assemble_s": 360
     }
+  },
+  {
+    "accession": "SRR23214439",
+    "library": "SRR23214439: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
   }
 ]

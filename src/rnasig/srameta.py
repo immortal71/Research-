@@ -26,6 +26,7 @@ fails soft so an offline run degrades to "unknown" instead of crashing.
 from __future__ import annotations
 
 import json
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -126,19 +127,33 @@ def assess_library(meta: RunMetadata) -> LibraryVerdict:
     return LibraryVerdict(accession=meta.accession, compatible=not reasons, reasons=reasons)
 
 
-def fetch_run_metadata(accession: str, timeout: float = 30.0) -> RunMetadata:
+def fetch_run_metadata(accession: str, timeout: float = 30.0, attempts: int = 3) -> RunMetadata:
     """Pull library metadata for an SRA/ENA run accession from the ENA portal.
 
-    Fails soft: any network or parse problem returns an unfetched
-    RunMetadata, which assess_library then reports as unknown.
+    Retries before giving up. A single dropped request is indistinguishable
+    from a run with no metadata once it reaches assess_library, and both are
+    refused, so a transient failure silently costs a run that would have
+    passed. That happened three times over one sweep of two dozen
+    accessions, which is often enough to be worth a retry.
+
+    Fails soft after the last attempt: any network or parse problem returns
+    an unfetched RunMetadata, which assess_library reports as unknown and
+    refuses. Absent metadata is never treated as permission.
     """
     query = urllib.parse.urlencode(
         {"accession": accession, "result": "read_run", "fields": _FIELDS, "format": "tsv"}
     )
-    try:
-        with urllib.request.urlopen(f"{ENA_PORTAL}?{query}", timeout=timeout) as resp:
-            text = resp.read().decode("utf-8", "replace")
-    except (urllib.error.URLError, OSError, ValueError):
+    text = None
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(f"{ENA_PORTAL}?{query}", timeout=timeout) as resp:
+                text = resp.read().decode("utf-8", "replace")
+            break
+        except (urllib.error.URLError, OSError, ValueError):
+            if attempt == attempts - 1:
+                return RunMetadata(accession=accession)
+            time.sleep(2.0 * (attempt + 1))
+    if text is None:
         return RunMetadata(accession=accession)
 
     lines = [ln for ln in text.splitlines() if ln.strip()]
