@@ -4,6 +4,48 @@
     "library": "SRR23637081: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (permafrost metagenome)",
     "compatible": true,
     "sample": "permafrost metagenome",
-    "error": "stream failed: Compressed file ended before the end-of-stream marker was reached"
+    "stats": "reads=2000000 k=25 min_count=4 kmers 9240980->2081001 kept | contigs=2223 total=505655bp N50=215 max=2854 circular=0",
+    "n_circular": 0,
+    "n_structured": 0,
+    "circular": [],
+    "timing": {
+      "stream_and_assemble_s": 574
+    }
+  },
+  {
+    "accession": "SRR23637102",
+    "library": "SRR23637102: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (permafrost metagenome)",
+    "compatible": true,
+    "sample": "permafrost metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 12462443->3049134 kept | contigs=2517 total=537935bp N50=205 max=1438 circular=0",
+    "n_circular": 2,
+    "n_structured": 0,
+    "circular": [
+      {
+        "contig": "contig_14",
+        "length": 627,
+        "unit_length": 511,
+        "n_copies": 1.23,
+        "coverage": 516.8,
+        "gc": 0.534,
+        "struct_z": -0.23,
+        "orphan": 0.68,
+        "longest_orf_nt": 111
+      },
+      {
+        "contig": "contig_53",
+        "length": 449,
+        "unit_length": 237,
+        "n_copies": 1.89,
+        "coverage": 281.3,
+        "gc": 0.565,
+        "struct_z": -0.54,
+        "orphan": 0.67,
+        "longest_orf_nt": 84
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 697
+    }
   }
 ]

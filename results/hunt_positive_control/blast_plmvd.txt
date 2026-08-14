@@ -1,0 +1,102 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and
+Webb Miller (2000), "A greedy algorithm for aligning DNA
+sequences", J Comput Biol 2000; 7(1-2):203-14.
+
+
+Reference for database indexing: Aleksandr Morgulis, George
+Coulouris, Yan Raytselis, Thomas L. Madden, Richa Agarwala,
+Alejandro A. Schaffer (2008), "Database Indexing for
+Production MegaBLAST Searches", Bioinformatics 24:1757-1764.
+
+
+RID: 7X9AHE8J014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= SRR11060618_contig_215 unit=337 cov=161.3
+
+Length=337
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+LC579907.1 Peach latent mosaic viroid AP03 RNA, complete genome    460     5e-125  96%       
+MW046338.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_2, ...  457     6e-124  96%       
+MW046337.1 Peach latent mosaic viroid isolate HUEI_Ob166/1_1, ...  453     8e-123  96%       
+PP350274.1 Peach latent mosaic viroid isolate Hatay12, partial...  425     2e-114  95%       
+LC643025.1 Peach latent mosaic viroid KPp RNA, complete genome     424     7e-114  94%       
+
+ALIGNMENTS
+>LC579907.1 Peach latent mosaic viroid AP03 RNA, complete genome
+Length=337
+
+ Score = 460 bits (249),  Expect = 5e-125
+ Identities = 271/282 (96%), Gaps = 0/282 (0%)
+ Strand=Plus/Plus
+
+Query  56   GACGCCTACCCGGGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTG  115
+            |||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1    GACGTCTACCCGGGATTCAAACCCGGTCCCCCTCAGAGGTGACTCTGAGTGAAAGGTCTG  60
+
+Query  116  CGCTAAGCGCACTGATGAGTTCCTGAAATGGAACGAAACCTTTCTCATCCATAAGTTTCG  175
+             | ||||| |||||||||||||||||||||||||||||||||||||||| ||||||||||
+Sbjct  61   TGTTAAGCACACTGATGAGTTCCTGAAATGGAACGAAACCTTTCTCATCAATAAGTTTCG  120
+
+Query  176  TCGCATCGCAGCGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAGTGATGACCTCT  235
+            |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||
+Sbjct  121  TCGCATCGCAGCGACTCATCAGTGGGCTTAGCCCAGACTTATGAGAGAATGATGACCTCT  180
+
+Query  236  CAGCCCCTCCACCTTGGGGTGCCCTATCCGAAGCACTGCAGTTTCGGTAGAAAGGCTAAG  295
+            ||||||||||||||||||||||||||  |||||||||||||||||| | |||||||||||
+Sbjct  181  CAGCCCCTCCACCTTGGGGTGCCCTAATCGAAGCACTGCAGTTTCGATGGAAAGGCTAAG  240
+
+Query  296  AACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTG  337
+             |||||||||||||||||||||||||||||||||||||||||
+Sbjct  241  CACGTCGCAATGACGTAAGGTGGGACTTTTCCCTAGGGTTTG  282
+
+
+  Database: Core nucleotide BLAST database
+    Posted date:  Jul 18, 2026  1:17 AM
+  Number of letters in database: 948,086,538,397
+  Number of sequences in database:  128,547,243
+
+Lambda      K        H
+    1.33    0.621     1.12 
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+Matrix: blastn matrix:1 -2
+Gap Penalties: Existence: 0, Extension: 0
+Number of Sequences: 128547243
+Number of Hits to DB: 0
+Number of extensions: 0
+Number of successful extensions: 0
+Number of sequences better than 10: 267
+Number of HSP's better than 10 without gapping: 0
+Number of HSP's gapped: 487
+Number of HSP's successfully gapped: 486
+Length of query: 337
+Length of database: 948086538397
+Length adjustment: 36
+Effective length of query: 301
+Effective length of database: 943458837649
+Effective search space: 283981110132349
+Effective search space used: 283981110132349
+A: 0
+X1: 13 (25.0 bits)
+X2: 32 (59.1 bits)
+X3: 54 (99.7 bits)
+S1: 13 (25.1 bits)
+S2: 24 (45.4 bits)
+
+

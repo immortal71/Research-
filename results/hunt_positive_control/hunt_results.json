@@ -1,0 +1,93 @@
+[
+  {
+    "accession": "SRR11060618",
+    "library": "SRR11060618: strategy=RNA-Seq selection=Oligo-dT source=TRANSCRIPTOMIC (Prunus persica)",
+    "compatible": true,
+    "sample": "Prunus persica",
+    "stats": "reads=300000 k=21 min_count=8 kmers 17738187->362065 kept | contigs=685 total=298186bp N50=641 max=6833 circular=0",
+    "n_circular": 7,
+    "n_structured": 1,
+    "circular": [
+      {
+        "contig": "contig_215",
+        "length": 358,
+        "unit_length": 337,
+        "n_copies": 1.06,
+        "coverage": 161.3,
+        "gc": 0.549,
+        "struct_z": 9.78,
+        "orphan": 0.63,
+        "longest_orf_nt": 123
+      },
+      {
+        "contig": "contig_7",
+        "length": 3165,
+        "unit_length": 955,
+        "n_copies": 3.31,
+        "coverage": 45.9,
+        "gc": 0.399,
+        "struct_z": 1.69,
+        "orphan": 0.29,
+        "longest_orf_nt": 801
+      },
+      {
+        "contig": "contig_40",
+        "length": 1208,
+        "unit_length": 916,
+        "n_copies": 1.32,
+        "coverage": 26.1,
+        "gc": 0.354,
+        "struct_z": 1.46,
+        "orphan": 0.65,
+        "longest_orf_nt": 213
+      },
+      {
+        "contig": "contig_9",
+        "length": 2976,
+        "unit_length": 1780,
+        "n_copies": 1.67,
+        "coverage": 58.1,
+        "gc": 0.483,
+        "struct_z": 1.19,
+        "orphan": 0.69,
+        "longest_orf_nt": 336
+      },
+      {
+        "contig": "contig_112",
+        "length": 632,
+        "unit_length": 516,
+        "n_copies": 1.22,
+        "coverage": 15.0,
+        "gc": 0.364,
+        "struct_z": 0.94,
+        "orphan": 0.65,
+        "longest_orf_nt": 126
+      },
+      {
+        "contig": "contig_79",
+        "length": 768,
+        "unit_length": 291,
+        "n_copies": 2.64,
+        "coverage": 20.9,
+        "gc": 0.292,
+        "struct_z": 0.31,
+        "orphan": 0.65,
+        "longest_orf_nt": 102
+      },
+      {
+        "contig": "contig_222",
+        "length": 348,
+        "unit_length": 228,
+        "n_copies": 1.53,
+        "coverage": 40.6,
+        "gc": 0.548,
+        "struct_z": -0.87,
+        "orphan": 0.74,
+        "longest_orf_nt": 9
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 113
+    }
+  }
+]

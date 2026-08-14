@@ -148,5 +148,169 @@
     "skipped": [
       "no library metadata available; cannot confirm this is shotgun RNA"
     ]
+  },
+  {
+    "accession": "SRR23637100",
+    "library": "SRR23637100: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (permafrost metagenome)",
+    "compatible": true,
+    "sample": "permafrost metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 3167237->587456 kept | contigs=666 total=159722bp N50=229 max=2554 circular=0",
+    "n_circular": 1,
+    "circular": [
+      {
+        "contig": "contig_52",
+        "length": 372,
+        "unit_length": 289,
+        "n_copies": 1.29,
+        "coverage": 294.9,
+        "gc": 0.578
+      }
+    ],
+    "timing": {
+      "stream_s": 19,
+      "assemble_s": 237
+    }
+  },
+  {
+    "accession": "SRR23637102",
+    "library": "SRR23637102: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (permafrost metagenome)",
+    "compatible": true,
+    "sample": "permafrost metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 4309777->789122 kept | contigs=661 total=148782bp N50=216 max=1334 circular=0",
+    "n_circular": 1,
+    "circular": [
+      {
+        "contig": "contig_100",
+        "length": 296,
+        "unit_length": 168,
+        "n_copies": 1.76,
+        "coverage": 70.7,
+        "gc": 0.542
+      }
+    ],
+    "timing": {
+      "stream_s": 18,
+      "assemble_s": 245
+    }
+  },
+  {
+    "accession": "SRR23637081",
+    "library": "SRR23637081: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (permafrost metagenome)",
+    "compatible": true,
+    "sample": "permafrost metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 3121662->564070 kept | contigs=708 total=167624bp N50=223 max=2828 circular=0",
+    "n_circular": 0,
+    "circular": [],
+    "timing": {
+      "stream_s": 24,
+      "assemble_s": 252
+    }
+  },
+  {
+    "accession": "SRR36875874",
+    "library": "SRR36875874: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (plant metagenome)",
+    "compatible": true,
+    "sample": "plant metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 1986933->67043 kept | contigs=63 total=29796bp N50=725 max=1849 circular=0",
+    "n_circular": 0,
+    "circular": [],
+    "timing": {
+      "stream_s": 24,
+      "assemble_s": 135
+    }
+  },
+  {
+    "accession": "SRR36875871",
+    "library": "SRR36875871: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (plant metagenome)",
+    "compatible": true,
+    "sample": "plant metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 1208246->61724 kept | contigs=60 total=30793bp N50=902 max=1840 circular=0",
+    "n_circular": 1,
+    "circular": [
+      {
+        "contig": "contig_2",
+        "length": 1531,
+        "unit_length": 1401,
+        "n_copies": 1.09,
+        "coverage": 111.1,
+        "gc": 0.716
+      }
+    ],
+    "timing": {
+      "stream_s": 39,
+      "assemble_s": 83
+    }
+  },
+  {
+    "accession": "SRR36875867",
+    "library": "SRR36875867: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR29632557",
+    "library": "SRR29632557: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR29632550",
+    "library": "SRR29632550: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR2542011",
+    "library": "SRR2542011: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR25455284",
+    "library": "SRR25455284: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR25455296",
+    "library": "SRR25455296: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR12632511",
+    "library": "SRR12632511: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR12632506",
+    "library": "SRR12632506: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  },
+  {
+    "accession": "SRR12632522",
+    "library": "SRR12632522: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
   }
 ]

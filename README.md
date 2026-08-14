@@ -44,6 +44,10 @@ python scripts/phase5_identify.py --run SRR13291825
 python scripts/phase6_hunt.py --accessions runs.txt --outdir results/hunt
 ```
 
+It works, and that is checked rather than assumed. Pointed at `SRR11060618` with no other input, it streams 300k reads, assembles 685 contigs, finds 7 circular, and shortlists exactly one: a 337 nt unit at z=9.78, which blastn confirms as **Peach latent mosaic viroid at 96% identity** (E=5e-125). The six circular contigs it rejected scored 0.94 to 1.69, no better than their own shuffles. That is the whole signature working end to end, from an accession to a confirmed molecule, with nobody choosing the answer.
+
+Pointed at twelve runs across freshwater, permafrost, peat, hot springs and plant metatranscriptomes, it found nothing: 8 circular contigs, none structured. `results/phase6_hunt_report.md` says what that negative is and is not worth.
+
 That closes a gap that mattered more than it looked. Every earlier sweep began with a file someone had already downloaded, because getting contigs meant MEGAHIT or rnaSPAdes and neither has a Windows build. `src/rnasig/assemble.py` removes that dependency for the case this pipeline targets: small, high-copy-number RNA elements. It is not a general transcriptome assembler and the module says so at length. It was validated by streaming 300k reads of SRR11060618 and checking that Peach latent mosaic viroid comes back as a circular contig resolving to a 337 nt unit, its exact genome length.
 
 Everything under `src/rnasig/` is the library. `tests/` has 68 pytest tests that run in about ten seconds.
