@@ -124,17 +124,21 @@ def hunt_one(
         print(f"  SKIP {accession}: no FASTQ url")
         return record
 
+    # Stream straight into the counter rather than materialising the reads.
+    # A 3M-read subset held as a list is several hundred MB before the k-mer
+    # table is even allocated, and deep subsets are the whole point: a
+    # 300k-read slice of a 100M-read run only reaches elements above ~2000x,
+    # which is far above where a replicon is likely to sit.
     t0 = time.time()
     try:
-        reads = list(stream_reads(urls[0], n_reads))
+        asm = assemble(
+            stream_reads(urls[0], n_reads),
+            k=k, min_count=min_count, min_contig_len=MIN_UNIT, max_table=max_table,
+        )
     except (urllib.error.URLError, OSError, EOFError) as exc:
         record["error"] = f"stream failed: {exc}"
         print(f"  FAIL {accession}: stream failed ({exc})")
         return record
-    t_stream = time.time() - t0
-
-    t0 = time.time()
-    asm = assemble(reads, k=k, min_count=min_count, min_contig_len=MIN_UNIT, max_table=max_table)
     t_asm = time.time() - t0
     record["stats"] = asm.stats.summary()
 
@@ -169,13 +173,13 @@ def hunt_one(
     record["n_circular"] = len(hits)
     record["n_structured"] = len(shortlist)
     record["circular"] = [{kk: v for kk, v in h.items() if kk != "monomer"} for h in hits[:25]]
-    record["timing"] = {"stream_s": round(t_stream), "assemble_s": round(t_asm)}
+    record["timing"] = {"stream_and_assemble_s": round(t_asm)}
 
     print(
-        f"  {accession} [{meta.scientific_name}] {len(reads)} reads "
+        f"  {accession} [{meta.scientific_name}] {asm.stats.n_reads} reads "
         f"-> {asm.stats.n_contigs} contigs, {len(hits)} circular, "
         f"{len(shortlist)} with z>={MIN_STRUCT_Z} "
-        f"({t_stream:.0f}s stream, {t_asm:.0f}s asm)"
+        f"({t_asm:.0f}s stream+asm)"
     )
     for h in hits[:5]:
         mark = "  <== SHORTLIST" if h["struct_z"] >= MIN_STRUCT_Z else ""
