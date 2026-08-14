@@ -62,5 +62,18 @@
     "skipped": [
       "no library metadata available; cannot confirm this is shotgun RNA"
     ]
+  },
+  {
+    "accession": "SRR21619496",
+    "library": "SRR21619496: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (hot springs metagenome)",
+    "compatible": true,
+    "sample": "hot springs metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 6499435->402858 kept | contigs=724 total=181775bp N50=237 max=2518 circular=0",
+    "n_circular": 0,
+    "circular": [],
+    "timing": {
+      "stream_s": 41,
+      "assemble_s": 159
+    }
   }
 ]

@@ -14,11 +14,12 @@ For each accession it:
      which matters because these files are 5-15 GB each,
   3. assembles the abundant fraction (assemble),
   4. keeps contigs that look circular in the size range where viroids and
-     obelisks live.
+     obelisks live, then scores each one's structure and coding potential
+     and shortlists only those folding better than shuffled sequence.
 
-Survivors are written per-run for `phase3_sweep.py` to score and
-`phase5_identify.py --input` to resolve. Nothing here decides that anything
-is novel; that takes a database, and Phase 5 is where it happens.
+Survivors are written per-run for `phase5_identify.py --input` to resolve.
+Nothing here decides that anything is novel; that takes a database, and
+Phase 5 is where it happens.
 
 Usage:
     python scripts/phase6_hunt.py --accessions accs.txt --outdir results/hunt
@@ -41,8 +42,10 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from rnasig.assemble import assemble
 from rnasig.circularity import find_circularity
+from rnasig.orphan import orphan_score
 from rnasig.seqio import Record, gc_content, write_fasta
 from rnasig.srameta import assess_library, fetch_run_metadata
+from rnasig.structure import structure_zscore
 
 ENA_PORTAL = "https://www.ebi.ac.uk/ena/portal/api/filereport"
 
@@ -50,6 +53,18 @@ ENA_PORTAL = "https://www.ebi.ac.uk/ena/portal/api/filereport"
 # signal is far more likely to be a repeat or an assembly artifact.
 MIN_UNIT = 150
 MAX_UNIT = 2500
+
+# Circularity on its own is close to worthless as evidence, which the first
+# version of this script got wrong. A de Bruijn graph cycles wherever a
+# low-complexity repeat does, so an AT-rich tandem repeat looks exactly like
+# a circular molecule to the terminal-repeat test. The first hot-springs run
+# swept here returned six "circular" contigs scoring structure z of -0.55 to
+# 1.51, i.e. no more structured than shuffled sequence.
+#
+# Structure is what separates them. PLMVd, the one known replicon this
+# pipeline has recovered from real data, scores z=17.13. A candidate has to
+# clear this bar before it is worth a database lookup.
+MIN_STRUCT_Z = 3.0
 
 
 def fastq_urls(accession: str, timeout: float = 30.0) -> list[str]:
@@ -90,6 +105,7 @@ def hunt_one(
     min_count: int,
     outdir: Path,
     max_table: int,
+    n_shuffles: int = 200,
 ) -> dict:
     record: dict = {"accession": accession}
     meta = fetch_run_metadata(accession)
@@ -129,6 +145,9 @@ def hunt_one(
             continue
         if not (MIN_UNIT <= circ.unit_length <= MAX_UNIT):
             continue
+        monomer = circ.monomer or contig.seq
+        stability = structure_zscore(monomer, n_shuffles=n_shuffles)
+        orphan = orphan_score(monomer)
         cov = float(contig.id.split("multi=")[1].split()[0])
         hits.append(
             {
@@ -137,28 +156,39 @@ def hunt_one(
                 "unit_length": circ.unit_length,
                 "n_copies": round(circ.n_copies or 0, 2),
                 "coverage": round(cov, 1),
-                "gc": round(gc_content(circ.monomer or contig.seq), 3),
-                "monomer": circ.monomer,
+                "gc": round(gc_content(monomer), 3),
+                "struct_z": round(stability.z_score, 2),
+                "orphan": round(orphan.orphan_score, 2),
+                "longest_orf_nt": orphan.longest_orf_nt,
+                "monomer": monomer,
             }
         )
-    hits.sort(key=lambda h: -h["coverage"])
+
+    hits.sort(key=lambda h: -h["struct_z"])
+    shortlist = [h for h in hits if h["struct_z"] >= MIN_STRUCT_Z]
     record["n_circular"] = len(hits)
+    record["n_structured"] = len(shortlist)
     record["circular"] = [{kk: v for kk, v in h.items() if kk != "monomer"} for h in hits[:25]]
     record["timing"] = {"stream_s": round(t_stream), "assemble_s": round(t_asm)}
 
     print(
         f"  {accession} [{meta.scientific_name}] {len(reads)} reads "
-        f"-> {asm.stats.n_contigs} contigs, {len(hits)} circular "
+        f"-> {asm.stats.n_contigs} contigs, {len(hits)} circular, "
+        f"{len(shortlist)} with z>={MIN_STRUCT_Z} "
         f"({t_stream:.0f}s stream, {t_asm:.0f}s asm)"
     )
     for h in hits[:5]:
-        print(f"      unit={h['unit_length']:5d} cov={h['coverage']:8.1f} GC={h['gc']:.2f} copies={h['n_copies']}")
+        mark = "  <== SHORTLIST" if h["struct_z"] >= MIN_STRUCT_Z else ""
+        print(
+            f"      unit={h['unit_length']:5d} cov={h['coverage']:8.1f} GC={h['gc']:.2f} "
+            f"z={h['struct_z']:6.2f} orphan={h['orphan']:.2f}{mark}"
+        )
 
-    if hits:
+    if shortlist:
         outdir.mkdir(parents=True, exist_ok=True)
         recs = [
             Record(f"{accession}_{h['contig']} unit={h['unit_length']} cov={h['coverage']}", h["monomer"])
-            for h in hits
+            for h in shortlist
             if h["monomer"]
         ]
         write_fasta(str(outdir / f"{accession}_circular.fasta"), recs)
@@ -173,6 +203,8 @@ def main() -> int:
     ap.add_argument("--k", type=int, default=25)
     ap.add_argument("--min-count", type=int, default=5)
     ap.add_argument("--max-table", type=int, default=12_000_000)
+    ap.add_argument("--shuffles", type=int, default=200,
+                    help="shuffles per structure z-score")
     ap.add_argument("--outdir", default="results/hunt")
     args = ap.parse_args()
 
@@ -188,7 +220,8 @@ def main() -> int:
     for i, acc in enumerate(accessions, 1):
         print(f"[{i}/{len(accessions)}]")
         try:
-            results.append(hunt_one(acc, args.reads, args.k, args.min_count, outdir, args.max_table))
+            results.append(hunt_one(acc, args.reads, args.k, args.min_count, outdir,
+                                    args.max_table, args.shuffles))
         except KeyboardInterrupt:
             raise
         except Exception as exc:  # a bad run must not end the sweep
