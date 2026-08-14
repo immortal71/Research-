@@ -1,0 +1,609 @@
+{
+  "source": "results/phase5_identification/phase5_queries.fasta",
+  "results": [
+    {
+      "query_id": "k141_3",
+      "length": 311,
+      "verdict": "protein-coding: MBL fold metallo-hydrolase [Tepidisphaeraceae bacte... at 73% aa identity",
+      "nt_hits": [
+        {
+          "accession": "CP063458.1",
+          "description": "Humisphaera borealis strain M1803 chromosome, compl...",
+          "score": 154.0,
+          "evalue": 8e-33,
+          "identity": 74.0
+        },
+        {
+          "accession": "OZ490322.1",
+          "description": "MAG: uncultured Phycisphaerales bacterium isolate M...",
+          "score": 153.0,
+          "evalue": 3e-32,
+          "identity": 75.0
+        },
+        {
+          "accession": "OY969783.1",
+          "description": "MAG: Tepidisphaeraceae bacterium isolate MFD04580.b...",
+          "score": 135.0,
+          "evalue": 7e-27,
+          "identity": 72.0
+        },
+        {
+          "accession": "CP191258.1",
+          "description": "Fontivita pretiosa strain B-254 chromosome, complet...",
+          "score": 113.0,
+          "evalue": 2e-20,
+          "identity": 71.0
+        },
+        {
+          "accession": "OZ490605.1",
+          "description": "MAG: uncultured Acidobacteriota bacterium isolate M...",
+          "score": 87.8,
+          "evalue": 9e-13,
+          "identity": 68.0
+        },
+        {
+          "accession": "OZ490371.1",
+          "description": "MAG: uncultured Acidobacteriota bacterium isolate M...",
+          "score": 86.0,
+          "evalue": 3e-12,
+          "identity": 69.0
+        },
+        {
+          "accession": "OZ375161.1",
+          "description": "MAG: uncultured Gemmatimonadota bacterium isolate M...",
+          "score": 83.3,
+          "evalue": 4e-11,
+          "identity": 70.0
+        },
+        {
+          "accession": "OZ490332.1",
+          "description": "MAG: Vicinamibacterales bacterium isolate MFD02979....",
+          "score": 80.6,
+          "evalue": 1e-10,
+          "identity": 68.0
+        },
+        {
+          "accession": "OZ490427.1",
+          "description": "MAG: uncultured Acidobacteriota bacterium isolate M...",
+          "score": 78.8,
+          "evalue": 5e-10,
+          "identity": 69.0
+        },
+        {
+          "accession": "OZ490473.1",
+          "description": "MAG: uncultured Gemmatimonadaceae bacterium isolate...",
+          "score": 77.0,
+          "evalue": 2e-09,
+          "identity": 68.0
+        }
+      ],
+      "protein_hits": [
+        {
+          "accession": "HSV15697.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bacte...",
+          "score": 139.0,
+          "evalue": 5e-38,
+          "identity": 73.0
+        },
+        {
+          "accession": "HEX3358390.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 135.0,
+          "evalue": 2e-36,
+          "identity": 71.0
+        },
+        {
+          "accession": "HEY8751357.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 135.0,
+          "evalue": 2e-36,
+          "identity": 72.0
+        },
+        {
+          "accession": "MGD0540694.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 134.0,
+          "evalue": 6e-36,
+          "identity": 68.0
+        },
+        {
+          "accession": "HEY1683189.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 134.0,
+          "evalue": 8e-36,
+          "identity": 70.0
+        },
+        {
+          "accession": "HEY1923499.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 133.0,
+          "evalue": 1e-35,
+          "identity": 67.0
+        },
+        {
+          "accession": "HET6246185.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 133.0,
+          "evalue": 1e-35,
+          "identity": 71.0
+        },
+        {
+          "accession": "MGA2442540.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 133.0,
+          "evalue": 1e-35,
+          "identity": 68.0
+        },
+        {
+          "accession": "MGA2230917.1",
+          "description": "MBL fold metallo-hydrolase [Tepidisphaeraceae bac...",
+          "score": 133.0,
+          "evalue": 1e-35,
+          "identity": 70.0
+        },
+        {
+          "accession": "MEA2711189.1",
+          "description": "phosphoribosyl 1,2-cyclic phosphate phosphodieste...",
+          "score": 133.0,
+          "evalue": 2e-35,
+          "identity": 72.0
+        }
+      ],
+      "rfam_hits": [],
+      "errors": []
+    },
+    {
+      "query_id": "k141_10",
+      "length": 422,
+      "verdict": "protein-coding: DUF2007 domain-containing protein [Acidobacteriot... at 88% aa identity",
+      "nt_hits": [
+        {
+          "accession": "CP101156.1",
+          "description": "Natronosalvus amylolyticus strain WLHSJ1 chromosome...",
+          "score": 49.1,
+          "evalue": 1.1,
+          "identity": 80.0
+        },
+        {
+          "accession": "CP191906.1",
+          "description": "Kutzneria sp. CA-250172 chromosome, complete genome",
+          "score": 49.1,
+          "evalue": 1.1,
+          "identity": 87.0
+        },
+        {
+          "accession": "CP117781.1",
+          "description": "Burkholderia sp. FERM BP-3421 chromosome 2, complet...",
+          "score": 47.3,
+          "evalue": 4.0,
+          "identity": 91.0
+        },
+        {
+          "accession": "OZ489579.1",
+          "description": "MAG: uncultured actinomycete isolate MFD00991.bin.2...",
+          "score": 47.3,
+          "evalue": 4.0,
+          "identity": 79.0
+        },
+        {
+          "accession": "XM_056605265.1",
+          "description": "PREDICTED: Gadus chalcogrammus negative elongat...",
+          "score": 47.3,
+          "evalue": 4.0,
+          "identity": 87.0
+        },
+        {
+          "accession": "XM_060069112.1",
+          "description": "PREDICTED: Gadus macrocephalus negative elongat...",
+          "score": 47.3,
+          "evalue": 4.0,
+          "identity": 87.0
+        },
+        {
+          "accession": "AP023358.1",
+          "description": "Micromonospora endophytica (Xie et al. 2001) Li et ...",
+          "score": 46.4,
+          "evalue": 4.0,
+          "identity": 86.0
+        },
+        {
+          "accession": "AM180088.1",
+          "description": "Haloquadratum walsbyi DSM 16790 complete genome",
+          "score": 46.4,
+          "evalue": 4.0,
+          "identity": 93.0
+        },
+        {
+          "accession": "CP148049.1",
+          "description": "Micromonospora sp. SH-82 chromosome, complete genome",
+          "score": 46.4,
+          "evalue": 4.0,
+          "identity": 83.0
+        },
+        {
+          "accession": "FR746099.1",
+          "description": "Haloquadratum walsbyi C23 complete genome",
+          "score": 46.4,
+          "evalue": 4.0,
+          "identity": 93.0
+        }
+      ],
+      "protein_hits": [
+        {
+          "accession": "MDQ2949988.1",
+          "description": "DUF2007 domain-containing protein [Acidobacteriot...",
+          "score": 185.0,
+          "evalue": 2e-56,
+          "identity": 88.0
+        },
+        {
+          "accession": "MGI8742651.1",
+          "description": "putative signal transducing protein [Bryobacterac...",
+          "score": 168.0,
+          "evalue": 1e-49,
+          "identity": 79.0
+        },
+        {
+          "accession": "MHH6613526.1",
+          "description": "putative signal transducing protein [Bryobacterac...",
+          "score": 140.0,
+          "evalue": 1e-38,
+          "identity": 77.0
+        },
+        {
+          "accession": "HXA65108.1",
+          "description": "DUF2007 domain-containing protein [Bryobacteraceae ...",
+          "score": 131.0,
+          "evalue": 3e-35,
+          "identity": 63.0
+        },
+        {
+          "accession": "HLK17956.1",
+          "description": "hypothetical protein [Bryobacteraceae bacterium]",
+          "score": 129.0,
+          "evalue": 4e-34,
+          "identity": 61.0
+        },
+        {
+          "accession": "MGD0300053.1",
+          "description": "hypothetical protein [Bryobacteraceae bacterium]",
+          "score": 128.0,
+          "evalue": 6e-34,
+          "identity": 61.0
+        },
+        {
+          "accession": "HLJ49760.1",
+          "description": "DUF2007 domain-containing protein [Bryobacteraceae ...",
+          "score": 127.0,
+          "evalue": 1e-33,
+          "identity": 65.0
+        },
+        {
+          "accession": "HEX4596018.1",
+          "description": "DUF2007 domain-containing protein [Bryobacteracea...",
+          "score": 125.0,
+          "evalue": 8e-33,
+          "identity": 60.0
+        },
+        {
+          "accession": "HWY46677.1",
+          "description": "DUF2007 domain-containing protein [Bryobacteraceae ...",
+          "score": 125.0,
+          "evalue": 9e-33,
+          "identity": 60.0
+        },
+        {
+          "accession": "MGA2599259.1",
+          "description": "DUF2007 domain-containing protein [Bryobacteracea...",
+          "score": 125.0,
+          "evalue": 1e-32,
+          "identity": 63.0
+        }
+      ],
+      "rfam_hits": [],
+      "errors": []
+    },
+    {
+      "query_id": "k141_25",
+      "length": 327,
+      "verdict": "protein-coding: FAD-dependent oxidoreductase [Pseudolabrys sp.] at 79% aa identity",
+      "nt_hits": [
+        {
+          "accession": "OZ375105.1",
+          "description": "MAG: uncultured Alphaproteobacteria bacterium isola...",
+          "score": 123.0,
+          "evalue": 1e-23,
+          "identity": 79.0
+        },
+        {
+          "accession": "OZ253937.1",
+          "description": "MAG: Alphaproteobacteria bacterium isolate 26bd64c0...",
+          "score": 108.0,
+          "evalue": 1e-18,
+          "identity": 73.0
+        },
+        {
+          "accession": "OZ490498.1",
+          "description": "MAG: uncultured Alphaproteobacteria bacterium isola...",
+          "score": 107.0,
+          "evalue": 1e-18,
+          "identity": 79.0
+        },
+        {
+          "accession": "OY969766.1",
+          "description": "MAG: uncultured Alphaproteobacteria bacterium isola...",
+          "score": 107.0,
+          "evalue": 1e-18,
+          "identity": 79.0
+        },
+        {
+          "accession": "CP103869.1",
+          "description": "Novosphingobium humi strain G5 plasmid unnamed1, co...",
+          "score": 53.6,
+          "evalue": 0.02,
+          "identity": 90.0
+        },
+        {
+          "accession": "CP023714.1",
+          "description": "Rhodococcus ruber strain YC-YT1 chromosome, complet...",
+          "score": 51.8,
+          "evalue": 0.07,
+          "identity": 76.0
+        },
+        {
+          "accession": "CP129899.1",
+          "description": "Rhodococcus ruber strain Y14 chromosome, complete g...",
+          "score": 51.8,
+          "evalue": 0.07,
+          "identity": 76.0
+        },
+        {
+          "accession": "CP126458.1",
+          "description": "Rhodococcus sp. AH-ZY2 chromosome, complete genome",
+          "score": 51.8,
+          "evalue": 0.07,
+          "identity": 76.0
+        },
+        {
+          "accession": "CP145319.1",
+          "description": "Rhodococcus ruber strain MSA14 chromosome, complete...",
+          "score": 51.8,
+          "evalue": 0.07,
+          "identity": 76.0
+        },
+        {
+          "accession": "CP038030.2",
+          "description": "Rhodococcus ruber strain R1 chromosome, complete ge...",
+          "score": 51.8,
+          "evalue": 0.07,
+          "identity": 76.0
+        }
+      ],
+      "protein_hits": [
+        {
+          "accession": "MHH8676181.1",
+          "description": "FAD-dependent oxidoreductase [Pseudolabrys sp.]",
+          "score": 131.0,
+          "evalue": 1e-32,
+          "identity": 79.0
+        },
+        {
+          "accession": "HEY6023433.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 130.0,
+          "evalue": 2e-32,
+          "identity": 79.0
+        },
+        {
+          "accession": "GAC3074910.1",
+          "description": "hypothetical protein [Pseudolabrys sp.]",
+          "score": 127.0,
+          "evalue": 4e-32,
+          "identity": 91.0
+        },
+        {
+          "accession": "MHH8797386.1",
+          "description": "hypothetical protein [Xanthobacteraceae bacterium]",
+          "score": 126.0,
+          "evalue": 5e-32,
+          "identity": 88.0
+        },
+        {
+          "accession": "HTM75234.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 129.0,
+          "evalue": 8e-32,
+          "identity": 78.0
+        },
+        {
+          "accession": "MFY9685554.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 129.0,
+          "evalue": 1e-31,
+          "identity": 77.0
+        },
+        {
+          "accession": "HET7190353.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 128.0,
+          "evalue": 2e-31,
+          "identity": 92.0
+        },
+        {
+          "accession": "MHH8700750.1",
+          "description": "FAD-dependent oxidoreductase [Pseudolabrys sp.]",
+          "score": 128.0,
+          "evalue": 2e-31,
+          "identity": 92.0
+        },
+        {
+          "accession": "HTL64907.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 127.0,
+          "evalue": 3e-31,
+          "identity": 77.0
+        },
+        {
+          "accession": "HMF21886.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 126.0,
+          "evalue": 6e-31,
+          "identity": 77.0
+        }
+      ],
+      "rfam_hits": [],
+      "errors": []
+    },
+    {
+      "query_id": "k141_25_monomer_186nt",
+      "length": 186,
+      "verdict": "protein-coding: FAD-binding protein [Pseudolabrys sp.] at 97% aa identity",
+      "nt_hits": [
+        {
+          "accession": "OZ375105.1",
+          "description": "MAG: uncultured Alphaproteobacteria bacterium isola...",
+          "score": 94.2,
+          "evalue": 1e-14,
+          "identity": 78.0
+        },
+        {
+          "accession": "OZ253937.1",
+          "description": "MAG: Alphaproteobacteria bacterium isolate 26bd64c0...",
+          "score": 83.3,
+          "evalue": 2e-11,
+          "identity": 79.0
+        },
+        {
+          "accession": "OZ490498.1",
+          "description": "MAG: uncultured Alphaproteobacteria bacterium isola...",
+          "score": 77.9,
+          "evalue": 9e-10,
+          "identity": 81.0
+        },
+        {
+          "accession": "OY969766.1",
+          "description": "MAG: uncultured Alphaproteobacteria bacterium isola...",
+          "score": 77.9,
+          "evalue": 9e-10,
+          "identity": 81.0
+        },
+        {
+          "accession": "CP103869.1",
+          "description": "Novosphingobium humi strain G5 plasmid unnamed1, co...",
+          "score": 53.6,
+          "evalue": 0.01,
+          "identity": 90.0
+        },
+        {
+          "accession": "CP127295.1",
+          "description": "Amycolatopsis mongoliensis strain 4-36 chromosome, ...",
+          "score": 49.1,
+          "evalue": 0.44,
+          "identity": 91.0
+        },
+        {
+          "accession": "CP033334.1",
+          "description": "Mesorhizobium loti strain NZP2042 chromosome, compl...",
+          "score": 49.1,
+          "evalue": 0.44,
+          "identity": 91.0
+        },
+        {
+          "accession": "CP033364.1",
+          "description": "Mesorhizobium sp. NZP2234 chromosome, complete genome",
+          "score": 49.1,
+          "evalue": 0.44,
+          "identity": 91.0
+        },
+        {
+          "accession": "CP030353.1",
+          "description": "Novosphingobium sp. P6W chromosome 2, complete sequ...",
+          "score": 49.1,
+          "evalue": 0.44,
+          "identity": 87.0
+        },
+        {
+          "accession": "AP024335.1",
+          "description": "Microbacterium sp. SW12 DNA, complete genome",
+          "score": 49.1,
+          "evalue": 0.44,
+          "identity": 87.0
+        }
+      ],
+      "protein_hits": [
+        {
+          "accession": "HZP76702.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 73.6,
+          "evalue": 8e-13,
+          "identity": 97.0
+        },
+        {
+          "accession": "MHH8797386.1",
+          "description": "hypothetical protein [Xanthobacteraceae bacterium]",
+          "score": 73.2,
+          "evalue": 9e-13,
+          "identity": 94.0
+        },
+        {
+          "accession": "HEV8464776.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 73.2,
+          "evalue": 1e-12,
+          "identity": 97.0
+        },
+        {
+          "accession": "MGE5166007.1",
+          "description": "FAD-dependent oxidoreductase [Sphingobacteriales ...",
+          "score": 73.2,
+          "evalue": 1e-12,
+          "identity": 97.0
+        },
+        {
+          "accession": "HEY6023433.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 72.4,
+          "evalue": 2e-12,
+          "identity": 94.0
+        },
+        {
+          "accession": "HEY8441577.1",
+          "description": "FAD-binding protein [Xanthobacteraceae bacterium]",
+          "score": 71.2,
+          "evalue": 5e-12,
+          "identity": 60.0
+        },
+        {
+          "accession": "HLX15684.1",
+          "description": "FAD-binding protein [Bradyrhizobium sp.]",
+          "score": 71.2,
+          "evalue": 6e-12,
+          "identity": 94.0
+        },
+        {
+          "accession": "MGC1563225.1",
+          "description": "FAD-binding protein [Bradyrhizobium sp.]",
+          "score": 70.9,
+          "evalue": 6e-12,
+          "identity": 87.0
+        },
+        {
+          "accession": "HET7190353.1",
+          "description": "FAD-binding protein [Pseudolabrys sp.]",
+          "score": 70.9,
+          "evalue": 7e-12,
+          "identity": 91.0
+        },
+        {
+          "accession": "MHH8700750.1",
+          "description": "FAD-dependent oxidoreductase [Pseudolabrys sp.]",
+          "score": 70.9,
+          "evalue": 7e-12,
+          "identity": 91.0
+        }
+      ],
+      "rfam_hits": [],
+      "errors": []
+    }
+  ]
+}
