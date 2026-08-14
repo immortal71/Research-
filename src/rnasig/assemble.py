@@ -92,15 +92,24 @@ def count_kmers(
     n_reads = 0
     pruned = 0
     floor = 1
+    valid = set(_BASES)
     for seq in reads:
         seq = seq.strip().upper()
         n_reads += 1
         if len(seq) < k:
             continue
-        for i in range(len(seq) - k + 1):
-            kmer = seq[i : i + k]
-            if kmer.count("A") + kmer.count("C") + kmer.count("G") + kmer.count("T") == k:
-                counts[kmer] += 1
+        # Validate the read once rather than every k-mer. Checking each k-mer
+        # individually costs four string scans per position, which dominated
+        # runtime and put deep subsets out of reach; a clean read means every
+        # one of its k-mers is clean.
+        if valid.issuperset(seq):
+            segments = (seq,)
+        else:
+            segments = tuple(
+                s for s in "".join(c if c in valid else " " for c in seq).split() if len(s) >= k
+            )
+        for segment in segments:
+            counts.update(segment[i : i + k] for i in range(len(segment) - k + 1))
         if max_table is not None and len(counts) > max_table:
             before = len(counts)
             counts = Counter({km: c for km, c in counts.items() if c > floor})

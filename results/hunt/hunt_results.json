@@ -1,0 +1,66 @@
+[
+  {
+    "accession": "SRR13151499",
+    "library": "SRR13151499: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (freshwater metagenome)",
+    "compatible": true,
+    "sample": "freshwater metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 13104558->518387 kept | contigs=856 total=194175bp N50=212 max=1491 circular=0",
+    "n_circular": 0,
+    "circular": [],
+    "timing": {
+      "stream_s": 28,
+      "assemble_s": 217
+    }
+  },
+  {
+    "accession": "SRR5256713",
+    "library": "SRR5256713: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (freshwater metagenome)",
+    "compatible": true,
+    "sample": "freshwater metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 2542411->82526 kept | contigs=167 total=49279bp N50=330 max=1294 circular=0",
+    "n_circular": 2,
+    "circular": [
+      {
+        "contig": "contig_12",
+        "length": 612,
+        "unit_length": 587,
+        "n_copies": 1.04,
+        "coverage": 173.5,
+        "gc": 0.451
+      },
+      {
+        "contig": "contig_100",
+        "length": 202,
+        "unit_length": 177,
+        "n_copies": 1.14,
+        "coverage": 17.2,
+        "gc": 0.424
+      }
+    ],
+    "timing": {
+      "stream_s": 17,
+      "assemble_s": 48
+    }
+  },
+  {
+    "accession": "SRR23875466",
+    "library": "SRR23875466: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (freshwater metagenome)",
+    "compatible": true,
+    "sample": "freshwater metagenome",
+    "stats": "reads=300000 k=25 min_count=5 kmers 6901102->294379 kept | contigs=492 total=132558bp N50=260 max=4803 circular=0",
+    "n_circular": 0,
+    "circular": [],
+    "timing": {
+      "stream_s": 24,
+      "assemble_s": 154
+    }
+  },
+  {
+    "accession": "SRR4436415",
+    "library": "SRR4436415: strategy=? selection=? source=? (unknown sample)",
+    "compatible": false,
+    "skipped": [
+      "no library metadata available; cannot confirm this is shotgun RNA"
+    ]
+  }
+]
