@@ -1,0 +1,206 @@
+#!/usr/bin/env python3
+"""Phase 6: sweep public metatranscriptomes for circular RNA candidates.
+
+This is the run the repo never actually did. Phases 1 to 5 built and
+validated the parts; this points them at data chosen on purpose rather than
+on availability, and it is the only script here that starts from an
+accession instead of a file someone already downloaded.
+
+For each accession it:
+
+  1. preflights the library type (srameta) and skips anything that is not
+     shotgun RNA,
+  2. streams a read subset straight from ENA without saving the full run,
+     which matters because these files are 5-15 GB each,
+  3. assembles the abundant fraction (assemble),
+  4. keeps contigs that look circular in the size range where viroids and
+     obelisks live.
+
+Survivors are written per-run for `phase3_sweep.py` to score and
+`phase5_identify.py --input` to resolve. Nothing here decides that anything
+is novel; that takes a database, and Phase 5 is where it happens.
+
+Usage:
+    python scripts/phase6_hunt.py --accessions accs.txt --outdir results/hunt
+    python scripts/phase6_hunt.py --accessions SRR4436415 --reads 400000
+"""
+from __future__ import annotations
+
+import argparse
+import gzip
+import io
+import json
+import sys
+import time
+import urllib.error
+import urllib.request
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from rnasig.assemble import assemble
+from rnasig.circularity import find_circularity
+from rnasig.seqio import Record, gc_content, write_fasta
+from rnasig.srameta import assess_library, fetch_run_metadata
+
+ENA_PORTAL = "https://www.ebi.ac.uk/ena/portal/api/filereport"
+
+# Viroids run ~250-400 nt, obelisks ~1 kb. Outside this band a circular
+# signal is far more likely to be a repeat or an assembly artifact.
+MIN_UNIT = 150
+MAX_UNIT = 2500
+
+
+def fastq_urls(accession: str, timeout: float = 30.0) -> list[str]:
+    query = f"?accession={accession}&result=read_run&fields=fastq_ftp&format=tsv"
+    try:
+        with urllib.request.urlopen(ENA_PORTAL + query, timeout=timeout) as resp:
+            text = resp.read().decode("utf-8", "replace")
+    except (urllib.error.URLError, OSError):
+        return []
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    if len(lines) < 2:
+        return []
+    paths = lines[1].split("\t")[-1].split(";")
+    return [f"https://{p}" for p in paths if p.strip()]
+
+
+def stream_reads(url: str, limit: int, timeout: float = 300.0):
+    """Yield sequences from a remote gzipped FASTQ, stopping at limit.
+
+    The connection is closed as soon as enough reads have been seen, so a
+    12 GB run costs only the first few hundred MB of transfer.
+    """
+    req = urllib.request.Request(url, headers={"User-Agent": "rnasig phase6"})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with gzip.GzipFile(fileobj=resp) as gz:
+            text = io.TextIOWrapper(gz, encoding="utf-8", errors="replace")
+            for i, line in enumerate(text):
+                if i % 4 == 1:
+                    yield line.strip()
+                    if (i // 4) + 1 >= limit:
+                        return
+
+
+def hunt_one(
+    accession: str,
+    n_reads: int,
+    k: int,
+    min_count: int,
+    outdir: Path,
+    max_table: int,
+) -> dict:
+    record: dict = {"accession": accession}
+    meta = fetch_run_metadata(accession)
+    verdict = assess_library(meta)
+    record["library"] = meta.summary
+    record["compatible"] = verdict.compatible
+    if not verdict.compatible:
+        record["skipped"] = verdict.reasons
+        print(f"  SKIP {accession}: {verdict.reasons[0][:80]}")
+        return record
+    record["sample"] = meta.scientific_name
+
+    urls = fastq_urls(accession)
+    if not urls:
+        record["error"] = "no fastq url"
+        print(f"  SKIP {accession}: no FASTQ url")
+        return record
+
+    t0 = time.time()
+    try:
+        reads = list(stream_reads(urls[0], n_reads))
+    except (urllib.error.URLError, OSError, EOFError) as exc:
+        record["error"] = f"stream failed: {exc}"
+        print(f"  FAIL {accession}: stream failed ({exc})")
+        return record
+    t_stream = time.time() - t0
+
+    t0 = time.time()
+    asm = assemble(reads, k=k, min_count=min_count, min_contig_len=MIN_UNIT, max_table=max_table)
+    t_asm = time.time() - t0
+    record["stats"] = asm.stats.summary()
+
+    hits = []
+    for contig in asm.contigs:
+        circ = find_circularity(contig.seq, k=12, max_mismatch=1)
+        if not circ.is_circular or circ.unit_length is None:
+            continue
+        if not (MIN_UNIT <= circ.unit_length <= MAX_UNIT):
+            continue
+        cov = float(contig.id.split("multi=")[1].split()[0])
+        hits.append(
+            {
+                "contig": contig.id.split()[0],
+                "length": len(contig.seq),
+                "unit_length": circ.unit_length,
+                "n_copies": round(circ.n_copies or 0, 2),
+                "coverage": round(cov, 1),
+                "gc": round(gc_content(circ.monomer or contig.seq), 3),
+                "monomer": circ.monomer,
+            }
+        )
+    hits.sort(key=lambda h: -h["coverage"])
+    record["n_circular"] = len(hits)
+    record["circular"] = [{kk: v for kk, v in h.items() if kk != "monomer"} for h in hits[:25]]
+    record["timing"] = {"stream_s": round(t_stream), "assemble_s": round(t_asm)}
+
+    print(
+        f"  {accession} [{meta.scientific_name}] {len(reads)} reads "
+        f"-> {asm.stats.n_contigs} contigs, {len(hits)} circular "
+        f"({t_stream:.0f}s stream, {t_asm:.0f}s asm)"
+    )
+    for h in hits[:5]:
+        print(f"      unit={h['unit_length']:5d} cov={h['coverage']:8.1f} GC={h['gc']:.2f} copies={h['n_copies']}")
+
+    if hits:
+        outdir.mkdir(parents=True, exist_ok=True)
+        recs = [
+            Record(f"{accession}_{h['contig']} unit={h['unit_length']} cov={h['coverage']}", h["monomer"])
+            for h in hits
+            if h["monomer"]
+        ]
+        write_fasta(str(outdir / f"{accession}_circular.fasta"), recs)
+    return record
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--accessions", required=True,
+                    help="file of run accessions (one per line), or a single accession")
+    ap.add_argument("--reads", type=int, default=300_000, help="reads to stream per run")
+    ap.add_argument("--k", type=int, default=25)
+    ap.add_argument("--min-count", type=int, default=5)
+    ap.add_argument("--max-table", type=int, default=12_000_000)
+    ap.add_argument("--outdir", default="results/hunt")
+    args = ap.parse_args()
+
+    path = Path(args.accessions)
+    accessions = ([ln.strip() for ln in path.read_text().splitlines() if ln.strip()]
+                  if path.exists() else [args.accessions])
+
+    outdir = Path(args.outdir)
+    outdir.mkdir(parents=True, exist_ok=True)
+    print(f"hunting {len(accessions)} run(s), {args.reads} reads each, k={args.k} min_count={args.min_count}\n")
+
+    results = []
+    for i, acc in enumerate(accessions, 1):
+        print(f"[{i}/{len(accessions)}]")
+        try:
+            results.append(hunt_one(acc, args.reads, args.k, args.min_count, outdir, args.max_table))
+        except KeyboardInterrupt:
+            raise
+        except Exception as exc:  # a bad run must not end the sweep
+            print(f"  ERROR {acc}: {type(exc).__name__}: {exc}")
+            results.append({"accession": acc, "error": f"{type(exc).__name__}: {exc}"})
+        (outdir / "hunt_results.json").write_text(json.dumps(results, indent=2))
+
+    total = sum(r.get("n_circular", 0) for r in results)
+    print(f"\ndone: {total} circular candidates across {len(results)} runs")
+    print(f"wrote {outdir / 'hunt_results.json'}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
