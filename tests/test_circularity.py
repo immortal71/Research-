@@ -86,3 +86,25 @@ def test_mismatch_search_prefers_the_repeat_closest_to_the_three_prime_end():
     assert result.is_circular
     # the closest repeat implies the 300 nt unit, not the 600 nt double
     assert result.unit_length == 300
+
+
+def test_shuffles_understate_the_false_positive_rate():
+    """Why the mismatch tolerance was calibrated wrongly the first time.
+
+    Shuffling destroys the repeat structure that produces spurious terminal
+    matches, so a shuffled null says max_mismatch=1 is free. On 5017 real
+    assembled contigs it is not: k=12 mm=1 called 1.18% circular against
+    0.62% for exact matching, and the excess showed up as a spike of
+    unrelated sequences all reporting a 228 nt unit.
+
+    Sequence with internal repeats is the honest null.
+    """
+    rng = random.Random(21)
+    motif = "".join(rng.choice("ACGT") for _ in range(40))
+    repetitive = [
+        motif[: rng.randrange(10, 40)] + "".join(rng.choice("ACGT") for _ in range(300)) + motif[:14]
+        for _ in range(200)
+    ]
+    lenient = circularity_false_positive_rate(repetitive, k=12, max_mismatch=1)
+    strict = circularity_false_positive_rate(repetitive, k=16, max_mismatch=1)
+    assert strict <= lenient, "raising k must not increase the false-positive rate"

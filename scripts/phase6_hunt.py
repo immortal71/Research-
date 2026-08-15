@@ -56,6 +56,20 @@ ENA_PORTAL = "https://www.ebi.ac.uk/ena/portal/api/filereport"
 MIN_UNIT = 150
 MAX_UNIT = 2500
 
+# Terminal-repeat length for the circularity test. Measured on 5017 real
+# assembled contigs rather than on shuffles, which understate the rate
+# badly: k=12 with one mismatch calls 1.18% of contigs circular, k=16 calls
+# 0.70%, and exact matching at k=12 calls 0.62% but loses both of the real
+# PLMVd contigs that motivated allowing a mismatch at all. k=16 with one
+# mismatch keeps those two and roughly halves the false-positive rate.
+#
+# This matters: at k=12 a spike of spurious 228 nt "circular" units appeared
+# across plants, human oral samples and a bacterium, and the sequences
+# behind it share no 20-mers with each other. Same length, unrelated
+# sequence, which is what a detector artifact looks like.
+CIRC_K = 16
+CIRC_MISMATCH = 1
+
 # Circularity on its own is close to worthless as evidence, which the first
 # version of this script got wrong. A de Bruijn graph cycles wherever a
 # low-complexity repeat does, so an AT-rich tandem repeat looks exactly like
@@ -189,7 +203,7 @@ def hunt_one(
 
     hits = []
     for contig in asm.contigs:
-        circ = find_circularity(contig.seq, k=12, max_mismatch=1)
+        circ = find_circularity(contig.seq, k=CIRC_K, max_mismatch=CIRC_MISMATCH)
         if not circ.is_circular or circ.unit_length is None:
             continue
         if not (MIN_UNIT <= circ.unit_length <= MAX_UNIT):
