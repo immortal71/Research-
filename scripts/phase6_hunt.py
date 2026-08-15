@@ -66,6 +66,18 @@ MAX_UNIT = 2500
 # Structure is what separates them. PLMVd, the one known replicon this
 # pipeline has recovered from real data, scores z=17.13. A candidate has to
 # clear this bar before it is worth a database lookup.
+# Structure z is no longer a gate. It was calibrated on PLMVd alone (z=9.4)
+# and tested badly against the wider panel: z >= 3 rejects Apple scar skin
+# viroid (3.06 borderline), Pear blister canker viroid (-0.02) and Avocado
+# sunblotch viroid. Viroid base composition is itself self-complementary, so
+# a dinucleotide shuffle folds about as well as the molecule and the z-score
+# collapses. Three of seven real viroids failed that gate.
+#
+# rodlike now carries the whole job: paired fraction and MFE/nt for rod
+# shape, sequence complexity for the repeat rejection z used to provide.
+# Against nine described viroids and five repeat decoys that combination is
+# 9/9 and 0/5. z is still computed and reported, for ranking and for the
+# record, but it no longer excludes anything.
 MIN_STRUCT_Z = 3.0
 
 # Structure alone was still not enough. Two further filters, both added
@@ -200,6 +212,7 @@ def hunt_one(
                 "orphan": round(orphan.orphan_score, 2),
                 "paired_fraction": round(rod.paired_fraction, 3),
                 "mfe_per_nt": round(rod.mfe_per_nt, 3),
+                "complexity": round(rod.complexity, 3),
                 "rodlike": rod.is_rodlike,
                 "rrna_fraction": round(rrna, 3),
                 "longest_orf_nt": orphan.longest_orf_nt,
@@ -207,9 +220,9 @@ def hunt_one(
             }
         )
 
-    hits.sort(key=lambda h: -h["struct_z"])
-    shortlist = [h for h in hits if h["struct_z"] >= MIN_STRUCT_Z
-                 and h["rodlike"] and h["rrna_fraction"] < MAX_RRNA_FRACTION]
+    hits.sort(key=lambda h: -h["paired_fraction"])
+    shortlist = [h for h in hits
+                 if h["rodlike"] and h["rrna_fraction"] < MAX_RRNA_FRACTION]
     record["n_circular"] = len(hits)
     record["n_structured"] = len(shortlist)
     record["circular"] = [{kk: v for kk, v in h.items() if kk != "monomer"} for h in hits[:25]]
@@ -218,7 +231,7 @@ def hunt_one(
     print(
         f"  {accession} [{meta.scientific_name}] {asm.stats.n_reads} reads "
         f"-> {asm.stats.n_contigs} contigs, {len(hits)} circular, "
-        f"{len(shortlist)} with z>={MIN_STRUCT_Z} "
+        f"{len(shortlist)} rod-like non-rRNA "
         f"({t_asm:.0f}s stream+asm)"
     )
     for h in hits[:5]:
@@ -226,24 +239,39 @@ def hunt_one(
             mark = "  (rRNA)"
         elif not h["rodlike"]:
             mark = "  (not rod-like)"
-        elif h["struct_z"] < MIN_STRUCT_Z:
-            mark = ""
         else:
             mark = "  <== SHORTLIST"
         print(
             f"      unit={h['unit_length']:5d} cov={h['coverage']:8.1f} GC={h['gc']:.2f} "
             f"z={h['struct_z']:6.2f} paired={h['paired_fraction']:.0%} "
+            f"cplx={h.get('complexity',0):.2f} "
             f"rRNA={h['rrna_fraction']:.2f}{mark}"
         )
 
-    if shortlist:
+    if hits:
         outdir.mkdir(parents=True, exist_ok=True)
-        recs = [
-            Record(f"{accession}_{h['contig']} unit={h['unit_length']} cov={h['coverage']}", h["monomer"])
-            for h in shortlist
-            if h["monomer"]
-        ]
-        write_fasta(str(outdir / f"{accession}_circular.fasta"), recs)
+
+        def to_records(group):
+            return [
+                Record(
+                    f"{accession}_{h['contig']} unit={h['unit_length']} cov={h['coverage']} "
+                    f"z={h['struct_z']} paired={h['paired_fraction']}",
+                    h["monomer"],
+                )
+                for h in group
+                if h["monomer"]
+            ]
+
+        # Every circular monomer is written, not only the shortlist. Thresholds
+        # here are calibrated estimates and have already been wrong once: z>=3
+        # rejects Apple scar skin viroid (z=2.19) and Pear blister canker
+        # viroid (z=-0.03), both real, because viroid base composition is
+        # itself self-complementary so a shuffle folds about as well. Discarding
+        # sequence on a cutoff that may move means re-running the sweep to
+        # change one number, which is far more expensive than the disk.
+        write_fasta(str(outdir / f"{accession}_all_circular.fasta"), to_records(hits))
+        if shortlist:
+            write_fasta(str(outdir / f"{accession}_circular.fasta"), to_records(shortlist))
     return record
 
 
