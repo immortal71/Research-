@@ -1,0 +1,1283 @@
+[
+  {
+    "accession": "SRR5949183",
+    "library": "SRR5949183: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human gut metagenome)",
+    "compatible": true,
+    "sample": "human gut metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 19626608->1568948 kept | contigs=2046 total=516056bp N50=245 max=3912 circular=0",
+    "n_circular": 3,
+    "n_structured": 2,
+    "circular": [
+      {
+        "contig": "contig_204",
+        "length": 379,
+        "unit_length": 306,
+        "n_copies": 1.24,
+        "coverage": 19.1,
+        "gc": 0.301,
+        "struct_z": 5.52,
+        "orphan": 0.64,
+        "longest_orf_nt": 111
+      },
+      {
+        "contig": "contig_31",
+        "length": 824,
+        "unit_length": 453,
+        "n_copies": 1.82,
+        "coverage": 15.6,
+        "gc": 0.618,
+        "struct_z": 3.07,
+        "orphan": 0.59,
+        "longest_orf_nt": 114
+      },
+      {
+        "contig": "contig_275",
+        "length": 340,
+        "unit_length": 246,
+        "n_copies": 1.38,
+        "coverage": 10.2,
+        "gc": 0.577,
+        "struct_z": -0.55,
+        "orphan": 0.39,
+        "longest_orf_nt": 162
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 370
+    }
+  },
+  {
+    "accession": "SRR29371075",
+    "library": "SRR29371075: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human gut metagenome)",
+    "compatible": true,
+    "sample": "human gut metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 1448873->185015 kept | contigs=29 total=6440bp N50=209 max=498 circular=0",
+    "n_circular": 0,
+    "n_structured": 0,
+    "circular": [],
+    "timing": {
+      "stream_and_assemble_s": 283
+    }
+  },
+  {
+    "accession": "SRR5950314",
+    "library": "SRR5950314: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human gut metagenome)",
+    "compatible": true,
+    "sample": "human gut metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 8243125->979928 kept | contigs=1316 total=338944bp N50=252 max=2164 circular=0",
+    "n_circular": 1,
+    "n_structured": 0,
+    "circular": [
+      {
+        "contig": "contig_130",
+        "length": 402,
+        "unit_length": 279,
+        "n_copies": 1.44,
+        "coverage": 36.8,
+        "gc": 0.466,
+        "struct_z": 1.66,
+        "orphan": 0.63,
+        "longest_orf_nt": 93
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 327
+    }
+  },
+  {
+    "accession": "SRR5949380",
+    "library": "SRR5949380: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human gut metagenome)",
+    "compatible": true,
+    "sample": "human gut metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 28501768->1935975 kept | contigs=2883 total=767541bp N50=257 max=3126 circular=0",
+    "n_circular": 6,
+    "n_structured": 0,
+    "circular": [
+      {
+        "contig": "contig_481",
+        "length": 329,
+        "unit_length": 226,
+        "n_copies": 1.46,
+        "coverage": 21.9,
+        "gc": 0.491,
+        "struct_z": 2.74,
+        "orphan": 0.73,
+        "longest_orf_nt": 33
+      },
+      {
+        "contig": "contig_652",
+        "length": 289,
+        "unit_length": 264,
+        "n_copies": 1.09,
+        "coverage": 15.0,
+        "gc": 0.398,
+        "struct_z": 2.22,
+        "orphan": 0.53,
+        "longest_orf_nt": 159
+      },
+      {
+        "contig": "contig_1533",
+        "length": 197,
+        "unit_length": 177,
+        "n_copies": 1.11,
+        "coverage": 32.4,
+        "gc": 0.486,
+        "struct_z": 2.07,
+        "orphan": 0.71,
+        "longest_orf_nt": 42
+      },
+      {
+        "contig": "contig_113",
+        "length": 616,
+        "unit_length": 248,
+        "n_copies": 2.48,
+        "coverage": 73.6,
+        "gc": 0.403,
+        "struct_z": 1.57,
+        "orphan": 0.69,
+        "longest_orf_nt": 24
+      },
+      {
+        "contig": "contig_1096",
+        "length": 229,
+        "unit_length": 155,
+        "n_copies": 1.48,
+        "coverage": 208.1,
+        "gc": 0.355,
+        "struct_z": 1.2,
+        "orphan": 0.76,
+        "longest_orf_nt": 27
+      },
+      {
+        "contig": "contig_1531",
+        "length": 197,
+        "unit_length": 172,
+        "n_copies": 1.15,
+        "coverage": 115.2,
+        "gc": 0.395,
+        "struct_z": -0.03,
+        "orphan": 0.75,
+        "longest_orf_nt": 27
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 538
+    }
+  },
+  {
+    "accession": "SRR5950267",
+    "library": "SRR5950267: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human gut metagenome)",
+    "compatible": true,
+    "sample": "human gut metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 10811529->1399998 kept | contigs=2142 total=537281bp N50=239 max=13042 circular=0",
+    "n_circular": 1,
+    "n_structured": 0,
+    "circular": [
+      {
+        "contig": "contig_87",
+        "length": 528,
+        "unit_length": 231,
+        "n_copies": 2.29,
+        "coverage": 18.4,
+        "gc": 0.472,
+        "struct_z": -0.79,
+        "orphan": 0.75,
+        "longest_orf_nt": 9
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 417
+    }
+  },
+  {
+    "accession": "SRR8204361",
+    "library": "SRR8204361: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human gut metagenome)",
+    "compatible": true,
+    "sample": "human gut metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 32125462->4389211 kept | contigs=8539 total=3529821bp N50=542 max=7599 circular=0",
+    "n_circular": 31,
+    "n_structured": 2,
+    "circular": [
+      {
+        "contig": "contig_629",
+        "length": 1003,
+        "unit_length": 929,
+        "n_copies": 1.08,
+        "coverage": 22.8,
+        "gc": 0.527,
+        "struct_z": 4.63,
+        "orphan": 0.18,
+        "longest_orf_nt": 852
+      },
+      {
+        "contig": "contig_194",
+        "length": 1796,
+        "unit_length": 1481,
+        "n_copies": 1.21,
+        "coverage": 37.5,
+        "gc": 0.655,
+        "struct_z": 4.54,
+        "orphan": 0.39,
+        "longest_orf_nt": 780
+      },
+      {
+        "contig": "contig_664",
+        "length": 971,
+        "unit_length": 631,
+        "n_copies": 1.54,
+        "coverage": 86.1,
+        "gc": 0.713,
+        "struct_z": 2.63,
+        "orphan": 0.32,
+        "longest_orf_nt": 435
+      },
+      {
+        "contig": "contig_3075",
+        "length": 330,
+        "unit_length": 258,
+        "n_copies": 1.28,
+        "coverage": 27.2,
+        "gc": 0.384,
+        "struct_z": 2.12,
+        "orphan": 0.58,
+        "longest_orf_nt": 75
+      },
+      {
+        "contig": "contig_2793",
+        "length": 356,
+        "unit_length": 195,
+        "n_copies": 1.83,
+        "coverage": 8.0,
+        "gc": 0.641,
+        "struct_z": 2.09,
+        "orphan": 0.65,
+        "longest_orf_nt": 51
+      },
+      {
+        "contig": "contig_157",
+        "length": 1979,
+        "unit_length": 498,
+        "n_copies": 3.97,
+        "coverage": 117.9,
+        "gc": 0.633,
+        "struct_z": 1.95,
+        "orphan": 0.46,
+        "longest_orf_nt": 180
+      },
+      {
+        "contig": "contig_1607",
+        "length": 533,
+        "unit_length": 246,
+        "n_copies": 2.17,
+        "coverage": 516.2,
+        "gc": 0.695,
+        "struct_z": 1.82,
+        "orphan": 0.4,
+        "longest_orf_nt": 174
+      },
+      {
+        "contig": "contig_517",
+        "length": 1108,
+        "unit_length": 1083,
+        "n_copies": 1.02,
+        "coverage": 27.9,
+        "gc": 0.66,
+        "struct_z": 1.78,
+        "orphan": 0.45,
+        "longest_orf_nt": 306
+      },
+      {
+        "contig": "contig_189",
+        "length": 1820,
+        "unit_length": 264,
+        "n_copies": 6.89,
+        "coverage": 32.5,
+        "gc": 0.617,
+        "struct_z": 1.75,
+        "orphan": 0.63,
+        "longest_orf_nt": 87
+      },
+      {
+        "contig": "contig_342",
+        "length": 1350,
+        "unit_length": 615,
+        "n_copies": 2.2,
+        "coverage": 13.7,
+        "gc": 0.659,
+        "struct_z": 1.31,
+        "orphan": 0.35,
+        "longest_orf_nt": 405
+      },
+      {
+        "contig": "contig_3822",
+        "length": 277,
+        "unit_length": 156,
+        "n_copies": 1.78,
+        "coverage": 8.0,
+        "gc": 0.603,
+        "struct_z": 1.11,
+        "orphan": 0.8,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_380",
+        "length": 1264,
+        "unit_length": 342,
+        "n_copies": 3.7,
+        "coverage": 15.4,
+        "gc": 0.62,
+        "struct_z": 1.02,
+        "orphan": 0.51,
+        "longest_orf_nt": 189
+      },
+      {
+        "contig": "contig_1188",
+        "length": 667,
+        "unit_length": 594,
+        "n_copies": 1.12,
+        "coverage": 12.8,
+        "gc": 0.653,
+        "struct_z": 1.0,
+        "orphan": 0.56,
+        "longest_orf_nt": 102
+      },
+      {
+        "contig": "contig_2273",
+        "length": 414,
+        "unit_length": 171,
+        "n_copies": 2.42,
+        "coverage": 10.4,
+        "gc": 0.684,
+        "struct_z": 0.94,
+        "orphan": 0.74,
+        "longest_orf_nt": 30
+      },
+      {
+        "contig": "contig_419",
+        "length": 1210,
+        "unit_length": 738,
+        "n_copies": 1.64,
+        "coverage": 48.2,
+        "gc": 0.562,
+        "struct_z": 0.93,
+        "orphan": 0.4,
+        "longest_orf_nt": 549
+      },
+      {
+        "contig": "contig_949",
+        "length": 781,
+        "unit_length": 756,
+        "n_copies": 1.03,
+        "coverage": 34.8,
+        "gc": 0.59,
+        "struct_z": 0.89,
+        "orphan": 0.62,
+        "longest_orf_nt": 93
+      },
+      {
+        "contig": "contig_3817",
+        "length": 277,
+        "unit_length": 189,
+        "n_copies": 1.47,
+        "coverage": 11.2,
+        "gc": 0.709,
+        "struct_z": 0.78,
+        "orphan": 0.74,
+        "longest_orf_nt": 24
+      },
+      {
+        "contig": "contig_984",
+        "length": 760,
+        "unit_length": 186,
+        "n_copies": 4.09,
+        "coverage": 43.8,
+        "gc": 0.575,
+        "struct_z": 0.64,
+        "orphan": 0.8,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_1893",
+        "length": 475,
+        "unit_length": 303,
+        "n_copies": 1.57,
+        "coverage": 8.0,
+        "gc": 0.663,
+        "struct_z": 0.58,
+        "orphan": 0.67,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_1872",
+        "length": 479,
+        "unit_length": 387,
+        "n_copies": 1.24,
+        "coverage": 10.0,
+        "gc": 0.61,
+        "struct_z": 0.46,
+        "orphan": 0.4,
+        "longest_orf_nt": 222
+      },
+      {
+        "contig": "contig_1647",
+        "length": 525,
+        "unit_length": 450,
+        "n_copies": 1.17,
+        "coverage": 10.8,
+        "gc": 0.591,
+        "struct_z": 0.36,
+        "orphan": 0.46,
+        "longest_orf_nt": 177
+      },
+      {
+        "contig": "contig_1404",
+        "length": 591,
+        "unit_length": 181,
+        "n_copies": 3.27,
+        "coverage": 8.9,
+        "gc": 0.696,
+        "struct_z": 0.35,
+        "orphan": 0.4,
+        "longest_orf_nt": 135
+      },
+      {
+        "contig": "contig_231",
+        "length": 1664,
+        "unit_length": 1448,
+        "n_copies": 1.15,
+        "coverage": 26.1,
+        "gc": 0.658,
+        "struct_z": 0.2,
+        "orphan": 0.49,
+        "longest_orf_nt": 474
+      },
+      {
+        "contig": "contig_989",
+        "length": 759,
+        "unit_length": 513,
+        "n_copies": 1.48,
+        "coverage": 20.0,
+        "gc": 0.723,
+        "struct_z": 0.12,
+        "orphan": 0.55,
+        "longest_orf_nt": 138
+      },
+      {
+        "contig": "contig_429",
+        "length": 1203,
+        "unit_length": 525,
+        "n_copies": 2.29,
+        "coverage": 15.9,
+        "gc": 0.669,
+        "struct_z": -0.05,
+        "orphan": 0.36,
+        "longest_orf_nt": 321
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 728
+    }
+  },
+  {
+    "accession": "SRR19432479",
+    "library": "SRR19432479: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human oral metagenome)",
+    "compatible": true,
+    "sample": "human oral metagenome",
+    "error": "stream failed: The read operation timed out"
+  },
+  {
+    "accession": "SRR19432626",
+    "library": "SRR19432626: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human oral metagenome)",
+    "compatible": true,
+    "sample": "human oral metagenome",
+    "error": "no fastq url"
+  },
+  {
+    "accession": "SRR19432628",
+    "library": "SRR19432628: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human oral metagenome)",
+    "compatible": true,
+    "sample": "human oral metagenome",
+    "error": "stream failed: The read operation timed out"
+  },
+  {
+    "accession": "SRR19432492",
+    "library": "SRR19432492: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human oral metagenome)",
+    "compatible": true,
+    "sample": "human oral metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 77837803->6147888 kept | contigs=24680 total=4572438bp N50=151 max=6495 circular=0",
+    "n_circular": 22,
+    "n_structured": 0,
+    "circular": [
+      {
+        "contig": "contig_1024",
+        "length": 355,
+        "unit_length": 315,
+        "n_copies": 1.13,
+        "coverage": 30.5,
+        "gc": 0.33,
+        "struct_z": 2.22,
+        "orphan": 0.65,
+        "longest_orf_nt": 36
+      },
+      {
+        "contig": "contig_188",
+        "length": 649,
+        "unit_length": 624,
+        "n_copies": 1.04,
+        "coverage": 57.7,
+        "gc": 0.447,
+        "struct_z": 2.2,
+        "orphan": 0.6,
+        "longest_orf_nt": 81
+      },
+      {
+        "contig": "contig_779",
+        "length": 392,
+        "unit_length": 294,
+        "n_copies": 1.33,
+        "coverage": 37.0,
+        "gc": 0.327,
+        "struct_z": 1.8,
+        "orphan": 0.69,
+        "longest_orf_nt": 45
+      },
+      {
+        "contig": "contig_272",
+        "length": 563,
+        "unit_length": 445,
+        "n_copies": 1.27,
+        "coverage": 17.2,
+        "gc": 0.663,
+        "struct_z": 1.76,
+        "orphan": 0.6,
+        "longest_orf_nt": 51
+      },
+      {
+        "contig": "contig_3966",
+        "length": 218,
+        "unit_length": 180,
+        "n_copies": 1.21,
+        "coverage": 15.7,
+        "gc": 0.444,
+        "struct_z": 1.32,
+        "orphan": 0.7,
+        "longest_orf_nt": 51
+      },
+      {
+        "contig": "contig_670",
+        "length": 412,
+        "unit_length": 164,
+        "n_copies": 2.51,
+        "coverage": 20.7,
+        "gc": 0.36,
+        "struct_z": 1.02,
+        "orphan": 0.74,
+        "longest_orf_nt": 18
+      },
+      {
+        "contig": "contig_2173",
+        "length": 267,
+        "unit_length": 189,
+        "n_copies": 1.41,
+        "coverage": 23.4,
+        "gc": 0.444,
+        "struct_z": 0.85,
+        "orphan": 0.44,
+        "longest_orf_nt": 138
+      },
+      {
+        "contig": "contig_3258",
+        "length": 235,
+        "unit_length": 210,
+        "n_copies": 1.12,
+        "coverage": 6.4,
+        "gc": 0.352,
+        "struct_z": 0.67,
+        "orphan": 0.65,
+        "longest_orf_nt": 54
+      },
+      {
+        "contig": "contig_2582",
+        "length": 253,
+        "unit_length": 228,
+        "n_copies": 1.11,
+        "coverage": 30.5,
+        "gc": 0.535,
+        "struct_z": 0.39,
+        "orphan": 0.67,
+        "longest_orf_nt": 57
+      },
+      {
+        "contig": "contig_1349",
+        "length": 319,
+        "unit_length": 294,
+        "n_copies": 1.09,
+        "coverage": 27.1,
+        "gc": 0.456,
+        "struct_z": 0.17,
+        "orphan": 0.65,
+        "longest_orf_nt": 48
+      },
+      {
+        "contig": "contig_603",
+        "length": 426,
+        "unit_length": 345,
+        "n_copies": 1.23,
+        "coverage": 25.2,
+        "gc": 0.348,
+        "struct_z": 0.09,
+        "orphan": 0.65,
+        "longest_orf_nt": 75
+      },
+      {
+        "contig": "contig_2385",
+        "length": 259,
+        "unit_length": 234,
+        "n_copies": 1.11,
+        "coverage": 1197.5,
+        "gc": 0.637,
+        "struct_z": -0.19,
+        "orphan": 0.51,
+        "longest_orf_nt": 108
+      },
+      {
+        "contig": "contig_1385",
+        "length": 316,
+        "unit_length": 246,
+        "n_copies": 1.28,
+        "coverage": 14.8,
+        "gc": 0.419,
+        "struct_z": -0.24,
+        "orphan": 0.72,
+        "longest_orf_nt": 45
+      },
+      {
+        "contig": "contig_1868",
+        "length": 281,
+        "unit_length": 267,
+        "n_copies": 1.05,
+        "coverage": 29.4,
+        "gc": 0.296,
+        "struct_z": -0.29,
+        "orphan": 0.69,
+        "longest_orf_nt": 48
+      },
+      {
+        "contig": "contig_1840",
+        "length": 283,
+        "unit_length": 258,
+        "n_copies": 1.1,
+        "coverage": 76.0,
+        "gc": 0.434,
+        "struct_z": -0.43,
+        "orphan": 0.66,
+        "longest_orf_nt": 57
+      },
+      {
+        "contig": "contig_80",
+        "length": 852,
+        "unit_length": 156,
+        "n_copies": 5.46,
+        "coverage": 26.9,
+        "gc": 0.397,
+        "struct_z": -0.52,
+        "orphan": 0.71,
+        "longest_orf_nt": 21
+      },
+      {
+        "contig": "contig_4242",
+        "length": 212,
+        "unit_length": 189,
+        "n_copies": 1.12,
+        "coverage": 12.6,
+        "gc": 0.429,
+        "struct_z": -0.54,
+        "orphan": 0.63,
+        "longest_orf_nt": 54
+      },
+      {
+        "contig": "contig_646",
+        "length": 418,
+        "unit_length": 396,
+        "n_copies": 1.06,
+        "coverage": 22.1,
+        "gc": 0.331,
+        "struct_z": -0.67,
+        "orphan": 0.53,
+        "longest_orf_nt": 111
+      },
+      {
+        "contig": "contig_234",
+        "length": 598,
+        "unit_length": 573,
+        "n_copies": 1.04,
+        "coverage": 366.1,
+        "gc": 0.459,
+        "struct_z": -0.79,
+        "orphan": 0.51,
+        "longest_orf_nt": 183
+      },
+      {
+        "contig": "contig_3086",
+        "length": 239,
+        "unit_length": 165,
+        "n_copies": 1.45,
+        "coverage": 17.6,
+        "gc": 0.679,
+        "struct_z": -1.7,
+        "orphan": 0.78,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_2289",
+        "length": 263,
+        "unit_length": 157,
+        "n_copies": 1.68,
+        "coverage": 12.3,
+        "gc": 0.299,
+        "struct_z": -1.74,
+        "orphan": 0.68,
+        "longest_orf_nt": 48
+      },
+      {
+        "contig": "contig_6120",
+        "length": 178,
+        "unit_length": 153,
+        "n_copies": 1.16,
+        "coverage": 17.7,
+        "gc": 0.582,
+        "struct_z": -1.98,
+        "orphan": 0.77,
+        "longest_orf_nt": 0
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 848
+    }
+  },
+  {
+    "accession": "SRR19432483",
+    "library": "SRR19432483: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human oral metagenome)",
+    "compatible": true,
+    "sample": "human oral metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 70473517->6478918 kept | contigs=24713 total=4841386bp N50=162 max=2433 circular=0",
+    "n_circular": 40,
+    "n_structured": 3,
+    "circular": [
+      {
+        "contig": "contig_6954",
+        "length": 184,
+        "unit_length": 159,
+        "n_copies": 1.16,
+        "coverage": 8.5,
+        "gc": 0.553,
+        "struct_z": 5.14,
+        "orphan": 0.8,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_2030",
+        "length": 307,
+        "unit_length": 258,
+        "n_copies": 1.19,
+        "coverage": 36.9,
+        "gc": 0.469,
+        "struct_z": 3.24,
+        "orphan": 0.63,
+        "longest_orf_nt": 57
+      },
+      {
+        "contig": "contig_1567",
+        "length": 343,
+        "unit_length": 174,
+        "n_copies": 1.97,
+        "coverage": 15.3,
+        "gc": 0.448,
+        "struct_z": 3.01,
+        "orphan": 0.6,
+        "longest_orf_nt": 54
+      },
+      {
+        "contig": "contig_1644",
+        "length": 337,
+        "unit_length": 228,
+        "n_copies": 1.48,
+        "coverage": 434.7,
+        "gc": 0.461,
+        "struct_z": 2.77,
+        "orphan": 0.52,
+        "longest_orf_nt": 99
+      },
+      {
+        "contig": "contig_541",
+        "length": 524,
+        "unit_length": 264,
+        "n_copies": 1.98,
+        "coverage": 91.4,
+        "gc": 0.481,
+        "struct_z": 2.63,
+        "orphan": 0.5,
+        "longest_orf_nt": 138
+      },
+      {
+        "contig": "contig_598",
+        "length": 507,
+        "unit_length": 342,
+        "n_copies": 1.48,
+        "coverage": 64.4,
+        "gc": 0.412,
+        "struct_z": 2.55,
+        "orphan": 0.59,
+        "longest_orf_nt": 87
+      },
+      {
+        "contig": "contig_403",
+        "length": 584,
+        "unit_length": 558,
+        "n_copies": 1.05,
+        "coverage": 31.0,
+        "gc": 0.335,
+        "struct_z": 2.38,
+        "orphan": 0.54,
+        "longest_orf_nt": 105
+      },
+      {
+        "contig": "contig_1447",
+        "length": 355,
+        "unit_length": 330,
+        "n_copies": 1.08,
+        "coverage": 89.9,
+        "gc": 0.315,
+        "struct_z": 2.38,
+        "orphan": 0.61,
+        "longest_orf_nt": 42
+      },
+      {
+        "contig": "contig_4058",
+        "length": 235,
+        "unit_length": 210,
+        "n_copies": 1.12,
+        "coverage": 21.5,
+        "gc": 0.352,
+        "struct_z": 2.36,
+        "orphan": 0.63,
+        "longest_orf_nt": 57
+      },
+      {
+        "contig": "contig_22",
+        "length": 1417,
+        "unit_length": 915,
+        "n_copies": 1.55,
+        "coverage": 42.1,
+        "gc": 0.521,
+        "struct_z": 2.28,
+        "orphan": 0.35,
+        "longest_orf_nt": 450
+      },
+      {
+        "contig": "contig_1379",
+        "length": 361,
+        "unit_length": 336,
+        "n_copies": 1.07,
+        "coverage": 46.1,
+        "gc": 0.449,
+        "struct_z": 2.07,
+        "orphan": 0.59,
+        "longest_orf_nt": 81
+      },
+      {
+        "contig": "contig_2268",
+        "length": 293,
+        "unit_length": 273,
+        "n_copies": 1.07,
+        "coverage": 18.0,
+        "gc": 0.319,
+        "struct_z": 1.99,
+        "orphan": 0.48,
+        "longest_orf_nt": 117
+      },
+      {
+        "contig": "contig_338",
+        "length": 622,
+        "unit_length": 437,
+        "n_copies": 1.42,
+        "coverage": 50.8,
+        "gc": 0.405,
+        "struct_z": 1.9,
+        "orphan": 0.3,
+        "longest_orf_nt": 387
+      },
+      {
+        "contig": "contig_1409",
+        "length": 358,
+        "unit_length": 333,
+        "n_copies": 1.08,
+        "coverage": 37.2,
+        "gc": 0.42,
+        "struct_z": 1.34,
+        "orphan": 0.58,
+        "longest_orf_nt": 81
+      },
+      {
+        "contig": "contig_875",
+        "length": 429,
+        "unit_length": 330,
+        "n_copies": 1.3,
+        "coverage": 42.1,
+        "gc": 0.424,
+        "struct_z": 1.33,
+        "orphan": 0.64,
+        "longest_orf_nt": 36
+      },
+      {
+        "contig": "contig_6203",
+        "length": 195,
+        "unit_length": 183,
+        "n_copies": 1.07,
+        "coverage": 11.4,
+        "gc": 0.399,
+        "struct_z": 1.19,
+        "orphan": 0.63,
+        "longest_orf_nt": 51
+      },
+      {
+        "contig": "contig_7513",
+        "length": 175,
+        "unit_length": 150,
+        "n_copies": 1.17,
+        "coverage": 161.3,
+        "gc": 0.453,
+        "struct_z": 0.96,
+        "orphan": 0.43,
+        "longest_orf_nt": 111
+      },
+      {
+        "contig": "contig_1319",
+        "length": 367,
+        "unit_length": 342,
+        "n_copies": 1.07,
+        "coverage": 153.8,
+        "gc": 0.462,
+        "struct_z": 0.95,
+        "orphan": 0.55,
+        "longest_orf_nt": 117
+      },
+      {
+        "contig": "contig_5892",
+        "length": 199,
+        "unit_length": 170,
+        "n_copies": 1.17,
+        "coverage": 363.4,
+        "gc": 0.482,
+        "struct_z": 0.9,
+        "orphan": 0.61,
+        "longest_orf_nt": 69
+      },
+      {
+        "contig": "contig_3162",
+        "length": 259,
+        "unit_length": 224,
+        "n_copies": 1.16,
+        "coverage": 24.1,
+        "gc": 0.567,
+        "struct_z": 0.61,
+        "orphan": 0.52,
+        "longest_orf_nt": 120
+      },
+      {
+        "contig": "contig_3696",
+        "length": 244,
+        "unit_length": 150,
+        "n_copies": 1.63,
+        "coverage": 14.3,
+        "gc": 0.393,
+        "struct_z": 0.61,
+        "orphan": 0.67,
+        "longest_orf_nt": 33
+      },
+      {
+        "contig": "contig_141",
+        "length": 834,
+        "unit_length": 784,
+        "n_copies": 1.06,
+        "coverage": 29.1,
+        "gc": 0.401,
+        "struct_z": 0.52,
+        "orphan": 0.39,
+        "longest_orf_nt": 414
+      },
+      {
+        "contig": "contig_2663",
+        "length": 274,
+        "unit_length": 222,
+        "n_copies": 1.23,
+        "coverage": 18.7,
+        "gc": 0.428,
+        "struct_z": 0.47,
+        "orphan": 0.68,
+        "longest_orf_nt": 45
+      },
+      {
+        "contig": "contig_3847",
+        "length": 240,
+        "unit_length": 216,
+        "n_copies": 1.11,
+        "coverage": 17.3,
+        "gc": 0.551,
+        "struct_z": 0.4,
+        "orphan": 0.59,
+        "longest_orf_nt": 81
+      },
+      {
+        "contig": "contig_5567",
+        "length": 205,
+        "unit_length": 165,
+        "n_copies": 1.24,
+        "coverage": 22.3,
+        "gc": 0.442,
+        "struct_z": 0.38,
+        "orphan": 0.65,
+        "longest_orf_nt": 54
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 740
+    }
+  },
+  {
+    "accession": "SRR19432522",
+    "library": "SRR19432522: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (human oral metagenome)",
+    "compatible": true,
+    "sample": "human oral metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 71251582->3709140 kept | contigs=9825 total=2094507bp N50=202 max=2962 circular=0",
+    "n_circular": 19,
+    "n_structured": 2,
+    "circular": [
+      {
+        "contig": "contig_1572",
+        "length": 269,
+        "unit_length": 252,
+        "n_copies": 1.07,
+        "coverage": 11.6,
+        "gc": 0.619,
+        "struct_z": 5.22,
+        "orphan": 0.68,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_1002",
+        "length": 319,
+        "unit_length": 294,
+        "n_copies": 1.09,
+        "coverage": 10.6,
+        "gc": 0.463,
+        "struct_z": 4.05,
+        "orphan": 0.71,
+        "longest_orf_nt": 24
+      },
+      {
+        "contig": "contig_4200",
+        "length": 181,
+        "unit_length": 161,
+        "n_copies": 1.12,
+        "coverage": 8.6,
+        "gc": 0.565,
+        "struct_z": 1.63,
+        "orphan": 0.69,
+        "longest_orf_nt": 33
+      },
+      {
+        "contig": "contig_877",
+        "length": 334,
+        "unit_length": 150,
+        "n_copies": 2.23,
+        "coverage": 12.1,
+        "gc": 0.413,
+        "struct_z": 1.2,
+        "orphan": 0.72,
+        "longest_orf_nt": 15
+      },
+      {
+        "contig": "contig_1267",
+        "length": 290,
+        "unit_length": 189,
+        "n_copies": 1.53,
+        "coverage": 13.6,
+        "gc": 0.45,
+        "struct_z": 1.15,
+        "orphan": 0.42,
+        "longest_orf_nt": 138
+      },
+      {
+        "contig": "contig_972",
+        "length": 322,
+        "unit_length": 297,
+        "n_copies": 1.08,
+        "coverage": 13.5,
+        "gc": 0.434,
+        "struct_z": 1.1,
+        "orphan": 0.51,
+        "longest_orf_nt": 123
+      },
+      {
+        "contig": "contig_3219",
+        "length": 204,
+        "unit_length": 150,
+        "n_copies": 1.36,
+        "coverage": 15.5,
+        "gc": 0.44,
+        "struct_z": 0.93,
+        "orphan": 0.75,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_3315",
+        "length": 202,
+        "unit_length": 165,
+        "n_copies": 1.22,
+        "coverage": 9.7,
+        "gc": 0.691,
+        "struct_z": 0.87,
+        "orphan": 0.53,
+        "longest_orf_nt": 72
+      },
+      {
+        "contig": "contig_1675",
+        "length": 262,
+        "unit_length": 222,
+        "n_copies": 1.18,
+        "coverage": 40.8,
+        "gc": 0.396,
+        "struct_z": 0.71,
+        "orphan": 0.65,
+        "longest_orf_nt": 60
+      },
+      {
+        "contig": "contig_3116",
+        "length": 207,
+        "unit_length": 186,
+        "n_copies": 1.11,
+        "coverage": 11.3,
+        "gc": 0.312,
+        "struct_z": 0.63,
+        "orphan": 0.69,
+        "longest_orf_nt": 54
+      },
+      {
+        "contig": "contig_771",
+        "length": 351,
+        "unit_length": 294,
+        "n_copies": 1.19,
+        "coverage": 13.2,
+        "gc": 0.452,
+        "struct_z": 0.55,
+        "orphan": 0.47,
+        "longest_orf_nt": 162
+      },
+      {
+        "contig": "contig_208",
+        "length": 554,
+        "unit_length": 356,
+        "n_copies": 1.56,
+        "coverage": 39.2,
+        "gc": 0.34,
+        "struct_z": 0.45,
+        "orphan": 0.56,
+        "longest_orf_nt": 96
+      },
+      {
+        "contig": "contig_285",
+        "length": 501,
+        "unit_length": 225,
+        "n_copies": 2.23,
+        "coverage": 26.5,
+        "gc": 0.458,
+        "struct_z": 0.08,
+        "orphan": 0.76,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_381",
+        "length": 461,
+        "unit_length": 406,
+        "n_copies": 1.14,
+        "coverage": 15.6,
+        "gc": 0.724,
+        "struct_z": -0.1,
+        "orphan": 0.67,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_2082",
+        "length": 243,
+        "unit_length": 225,
+        "n_copies": 1.08,
+        "coverage": 6.0,
+        "gc": 0.676,
+        "struct_z": -0.15,
+        "orphan": 0.49,
+        "longest_orf_nt": 99
+      },
+      {
+        "contig": "contig_537",
+        "length": 402,
+        "unit_length": 257,
+        "n_copies": 1.56,
+        "coverage": 54.5,
+        "gc": 0.576,
+        "struct_z": -0.32,
+        "orphan": 0.5,
+        "longest_orf_nt": 129
+      },
+      {
+        "contig": "contig_1673",
+        "length": 262,
+        "unit_length": 237,
+        "n_copies": 1.11,
+        "coverage": 212.9,
+        "gc": 0.629,
+        "struct_z": -0.35,
+        "orphan": 0.5,
+        "longest_orf_nt": 108
+      },
+      {
+        "contig": "contig_253",
+        "length": 522,
+        "unit_length": 321,
+        "n_copies": 1.63,
+        "coverage": 20.0,
+        "gc": 0.717,
+        "struct_z": -0.36,
+        "orphan": 0.71,
+        "longest_orf_nt": 0
+      },
+      {
+        "contig": "contig_1018",
+        "length": 316,
+        "unit_length": 291,
+        "n_copies": 1.09,
+        "coverage": 27.8,
+        "gc": 0.491,
+        "struct_z": -0.6,
+        "orphan": 0.56,
+        "longest_orf_nt": 69
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 773
+    }
+  },
+  {
+    "accession": "SRR33824155",
+    "library": "SRR33824155: strategy=RNA-Seq selection=RANDOM source=METATRANSCRIPTOMIC (oral metagenome)",
+    "compatible": true,
+    "sample": "oral metagenome",
+    "stats": "reads=2000000 k=25 min_count=4 kmers 6324985->267562 kept | contigs=273 total=63542bp N50=224 max=1018 circular=0",
+    "n_circular": 0,
+    "n_structured": 0,
+    "circular": [],
+    "timing": {
+      "stream_and_assemble_s": 102
+    }
+  }
+]

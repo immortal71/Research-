@@ -1,0 +1,587 @@
+[
+  {
+    "accession": "SRR14585135",
+    "library": "SRR14585135: strategy=RNA-Seq selection=cDNA source=TRANSCRIPTOMIC (Streptococcus sanguinis)",
+    "compatible": true,
+    "sample": "Streptococcus sanguinis",
+    "stats": "reads=1775920 k=25 min_count=5 kmers 4919184->1342518 kept | contigs=2155 total=1130108bp N50=906 max=7964 circular=0",
+    "n_circular": 26,
+    "n_structured": 1,
+    "circular": [
+      {
+        "contig": "contig_379",
+        "length": 697,
+        "unit_length": 672,
+        "n_copies": 1.04,
+        "coverage": 143.5,
+        "gc": 0.449,
+        "struct_z": 3.83,
+        "orphan": 0.58,
+        "longest_orf_nt": 111
+      },
+      {
+        "contig": "contig_1618",
+        "length": 191,
+        "unit_length": 176,
+        "n_copies": 1.09,
+        "coverage": 10.5,
+        "gc": 0.403,
+        "struct_z": 2.38,
+        "orphan": 0.47,
+        "longest_orf_nt": 129
+      },
+      {
+        "contig": "contig_304",
+        "length": 883,
+        "unit_length": 252,
+        "n_copies": 3.5,
+        "coverage": 45.2,
+        "gc": 0.413,
+        "struct_z": 1.92,
+        "orphan": 0.48,
+        "longest_orf_nt": 162
+      },
+      {
+        "contig": "contig_45",
+        "length": 2867,
+        "unit_length": 909,
+        "n_copies": 3.15,
+        "coverage": 55.8,
+        "gc": 0.501,
+        "struct_z": 1.79,
+        "orphan": 0.3,
+        "longest_orf_nt": 633
+      },
+      {
+        "contig": "contig_976",
+        "length": 292,
+        "unit_length": 270,
+        "n_copies": 1.08,
+        "coverage": 66.8,
+        "gc": 0.463,
+        "struct_z": 1.73,
+        "orphan": 0.72,
+        "longest_orf_nt": 24
+      },
+      {
+        "contig": "contig_181",
+        "length": 1322,
+        "unit_length": 317,
+        "n_copies": 4.17,
+        "coverage": 23.2,
+        "gc": 0.489,
+        "struct_z": 1.53,
+        "orphan": 0.54,
+        "longest_orf_nt": 162
+      },
+      {
+        "contig": "contig_831",
+        "length": 334,
+        "unit_length": 309,
+        "n_copies": 1.08,
+        "coverage": 131.6,
+        "gc": 0.46,
+        "struct_z": 0.95,
+        "orphan": 0.5,
+        "longest_orf_nt": 165
+      },
+      {
+        "contig": "contig_991",
+        "length": 289,
+        "unit_length": 264,
+        "n_copies": 1.09,
+        "coverage": 82.5,
+        "gc": 0.462,
+        "struct_z": 0.82,
+        "orphan": 0.45,
+        "longest_orf_nt": 174
+      },
+      {
+        "contig": "contig_1103",
+        "length": 266,
+        "unit_length": 252,
+        "n_copies": 1.06,
+        "coverage": 47.9,
+        "gc": 0.504,
+        "struct_z": 0.82,
+        "orphan": 0.7,
+        "longest_orf_nt": 33
+      },
+      {
+        "contig": "contig_241",
+        "length": 1058,
+        "unit_length": 1033,
+        "n_copies": 1.02,
+        "coverage": 138.9,
+        "gc": 0.466,
+        "struct_z": 0.77,
+        "orphan": 0.3,
+        "longest_orf_nt": 789
+      },
+      {
+        "contig": "contig_504",
+        "length": 529,
+        "unit_length": 327,
+        "n_copies": 1.62,
+        "coverage": 100.4,
+        "gc": 0.416,
+        "struct_z": 0.71,
+        "orphan": 0.65,
+        "longest_orf_nt": 63
+      },
+      {
+        "contig": "contig_55",
+        "length": 2716,
+        "unit_length": 694,
+        "n_copies": 3.91,
+        "coverage": 26.7,
+        "gc": 0.487,
+        "struct_z": 0.51,
+        "orphan": 0.47,
+        "longest_orf_nt": 372
+      },
+      {
+        "contig": "contig_382",
+        "length": 694,
+        "unit_length": 669,
+        "n_copies": 1.04,
+        "coverage": 134.7,
+        "gc": 0.457,
+        "struct_z": 0.47,
+        "orphan": 0.38,
+        "longest_orf_nt": 486
+      },
+      {
+        "contig": "contig_191",
+        "length": 1269,
+        "unit_length": 360,
+        "n_copies": 3.52,
+        "coverage": 72.1,
+        "gc": 0.45,
+        "struct_z": 0.45,
+        "orphan": 0.74,
+        "longest_orf_nt": 66
+      },
+      {
+        "contig": "contig_744",
+        "length": 367,
+        "unit_length": 342,
+        "n_copies": 1.07,
+        "coverage": 210.7,
+        "gc": 0.45,
+        "struct_z": 0.41,
+        "orphan": 0.51,
+        "longest_orf_nt": 156
+      },
+      {
+        "contig": "contig_216",
+        "length": 1177,
+        "unit_length": 396,
+        "n_copies": 2.97,
+        "coverage": 19.5,
+        "gc": 0.47,
+        "struct_z": 0.33,
+        "orphan": 0.54,
+        "longest_orf_nt": 156
+      },
+      {
+        "contig": "contig_498",
+        "length": 534,
+        "unit_length": 309,
+        "n_copies": 1.73,
+        "coverage": 116.8,
+        "gc": 0.453,
+        "struct_z": 0.2,
+        "orphan": 0.67,
+        "longest_orf_nt": 63
+      },
+      {
+        "contig": "contig_1215",
+        "length": 245,
+        "unit_length": 192,
+        "n_copies": 1.28,
+        "coverage": 22.2,
+        "gc": 0.495,
+        "struct_z": 0.15,
+        "orphan": 0.54,
+        "longest_orf_nt": 111
+      },
+      {
+        "contig": "contig_526",
+        "length": 511,
+        "unit_length": 486,
+        "n_copies": 1.05,
+        "coverage": 35.2,
+        "gc": 0.451,
+        "struct_z": 0.05,
+        "orphan": 0.56,
+        "longest_orf_nt": 114
+      },
+      {
+        "contig": "contig_455",
+        "length": 582,
+        "unit_length": 156,
+        "n_copies": 3.73,
+        "coverage": 56.5,
+        "gc": 0.506,
+        "struct_z": -0.05,
+        "orphan": 0.72,
+        "longest_orf_nt": 27
+      },
+      {
+        "contig": "contig_832",
+        "length": 334,
+        "unit_length": 309,
+        "n_copies": 1.08,
+        "coverage": 42.0,
+        "gc": 0.489,
+        "struct_z": -0.36,
+        "orphan": 0.52,
+        "longest_orf_nt": 150
+      },
+      {
+        "contig": "contig_958",
+        "length": 296,
+        "unit_length": 192,
+        "n_copies": 1.54,
+        "coverage": 22.7,
+        "gc": 0.469,
+        "struct_z": -0.62,
+        "orphan": 0.57,
+        "longest_orf_nt": 90
+      },
+      {
+        "contig": "contig_652",
+        "length": 414,
+        "unit_length": 351,
+        "n_copies": 1.18,
+        "coverage": 11.9,
+        "gc": 0.416,
+        "struct_z": -0.92,
+        "orphan": 0.68,
+        "longest_orf_nt": 66
+      },
+      {
+        "contig": "contig_1585",
+        "length": 195,
+        "unit_length": 180,
+        "n_copies": 1.08,
+        "coverage": 46.6,
+        "gc": 0.561,
+        "struct_z": -1.37,
+        "orphan": 0.52,
+        "longest_orf_nt": 69
+      },
+      {
+        "contig": "contig_125",
+        "length": 1759,
+        "unit_length": 1077,
+        "n_copies": 1.63,
+        "coverage": 17.5,
+        "gc": 0.481,
+        "struct_z": -1.38,
+        "orphan": 0.3,
+        "longest_orf_nt": 864
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 230
+    }
+  },
+  {
+    "accession": "SRR11790910",
+    "library": "SRR11790910: strategy=RNA-Seq selection=cDNA source=TRANSCRIPTOMIC (Streptococcus sanguinis)",
+    "compatible": true,
+    "sample": "Streptococcus sanguinis",
+    "stats": "reads=1966882 k=25 min_count=5 kmers 7748013->1964695 kept | contigs=1720 total=1904139bp N50=2327 max=17569 circular=0",
+    "n_circular": 30,
+    "n_structured": 1,
+    "circular": [
+      {
+        "contig": "contig_644",
+        "length": 824,
+        "unit_length": 549,
+        "n_copies": 1.5,
+        "coverage": 63.5,
+        "gc": 0.466,
+        "struct_z": 3.8,
+        "orphan": 0.51,
+        "longest_orf_nt": 276
+      },
+      {
+        "contig": "contig_528",
+        "length": 1111,
+        "unit_length": 714,
+        "n_copies": 1.56,
+        "coverage": 25.1,
+        "gc": 0.461,
+        "struct_z": 2.46,
+        "orphan": 0.61,
+        "longest_orf_nt": 168
+      },
+      {
+        "contig": "contig_689",
+        "length": 745,
+        "unit_length": 192,
+        "n_copies": 3.88,
+        "coverage": 74.6,
+        "gc": 0.396,
+        "struct_z": 1.66,
+        "orphan": 0.68,
+        "longest_orf_nt": 66
+      },
+      {
+        "contig": "contig_68",
+        "length": 4477,
+        "unit_length": 337,
+        "n_copies": 13.28,
+        "coverage": 26.6,
+        "gc": 0.454,
+        "struct_z": 1.52,
+        "orphan": 0.48,
+        "longest_orf_nt": 216
+      },
+      {
+        "contig": "contig_1137",
+        "length": 289,
+        "unit_length": 264,
+        "n_copies": 1.09,
+        "coverage": 317.2,
+        "gc": 0.458,
+        "struct_z": 1.33,
+        "orphan": 0.45,
+        "longest_orf_nt": 174
+      },
+      {
+        "contig": "contig_47",
+        "length": 5087,
+        "unit_length": 288,
+        "n_copies": 17.66,
+        "coverage": 33.1,
+        "gc": 0.417,
+        "struct_z": 1.24,
+        "orphan": 0.52,
+        "longest_orf_nt": 162
+      },
+      {
+        "contig": "contig_1155",
+        "length": 277,
+        "unit_length": 252,
+        "n_copies": 1.1,
+        "coverage": 170.5,
+        "gc": 0.52,
+        "struct_z": 1.23,
+        "orphan": 0.73,
+        "longest_orf_nt": 24
+      },
+      {
+        "contig": "contig_91",
+        "length": 4028,
+        "unit_length": 1914,
+        "n_copies": 2.1,
+        "coverage": 28.6,
+        "gc": 0.404,
+        "struct_z": 1.06,
+        "orphan": 0.29,
+        "longest_orf_nt": 1461
+      },
+      {
+        "contig": "contig_8",
+        "length": 8842,
+        "unit_length": 1691,
+        "n_copies": 5.23,
+        "coverage": 176.1,
+        "gc": 0.451,
+        "struct_z": 0.84,
+        "orphan": 0.17,
+        "longest_orf_nt": 1464
+      },
+      {
+        "contig": "contig_1125",
+        "length": 295,
+        "unit_length": 270,
+        "n_copies": 1.09,
+        "coverage": 210.6,
+        "gc": 0.426,
+        "struct_z": 0.8,
+        "orphan": 0.6,
+        "longest_orf_nt": 75
+      },
+      {
+        "contig": "contig_319",
+        "length": 1885,
+        "unit_length": 156,
+        "n_copies": 12.08,
+        "coverage": 138.2,
+        "gc": 0.41,
+        "struct_z": 0.77,
+        "orphan": 0.79,
+        "longest_orf_nt": 9
+      },
+      {
+        "contig": "contig_327",
+        "length": 1843,
+        "unit_length": 176,
+        "n_copies": 10.47,
+        "coverage": 331.9,
+        "gc": 0.415,
+        "struct_z": 0.72,
+        "orphan": 0.56,
+        "longest_orf_nt": 90
+      },
+      {
+        "contig": "contig_1012",
+        "length": 367,
+        "unit_length": 342,
+        "n_copies": 1.07,
+        "coverage": 625.9,
+        "gc": 0.45,
+        "struct_z": 0.65,
+        "orphan": 0.51,
+        "longest_orf_nt": 156
+      },
+      {
+        "contig": "contig_543",
+        "length": 1058,
+        "unit_length": 1033,
+        "n_copies": 1.02,
+        "coverage": 372.4,
+        "gc": 0.466,
+        "struct_z": 0.62,
+        "orphan": 0.39,
+        "longest_orf_nt": 618
+      },
+      {
+        "contig": "contig_105",
+        "length": 3674,
+        "unit_length": 1497,
+        "n_copies": 2.45,
+        "coverage": 26.1,
+        "gc": 0.384,
+        "struct_z": 0.47,
+        "orphan": 0.41,
+        "longest_orf_nt": 888
+      },
+      {
+        "contig": "contig_844",
+        "length": 529,
+        "unit_length": 327,
+        "n_copies": 1.62,
+        "coverage": 235.9,
+        "gc": 0.416,
+        "struct_z": 0.38,
+        "orphan": 0.65,
+        "longest_orf_nt": 63
+      },
+      {
+        "contig": "contig_430",
+        "length": 1383,
+        "unit_length": 839,
+        "n_copies": 1.65,
+        "coverage": 41.5,
+        "gc": 0.365,
+        "struct_z": 0.27,
+        "orphan": 0.52,
+        "longest_orf_nt": 432
+      },
+      {
+        "contig": "contig_837",
+        "length": 534,
+        "unit_length": 442,
+        "n_copies": 1.21,
+        "coverage": 48.7,
+        "gc": 0.468,
+        "struct_z": 0.26,
+        "orphan": 0.61,
+        "longest_orf_nt": 189
+      },
+      {
+        "contig": "contig_794",
+        "length": 585,
+        "unit_length": 562,
+        "n_copies": 1.04,
+        "coverage": 10.7,
+        "gc": 0.39,
+        "struct_z": -0.07,
+        "orphan": 0.42,
+        "longest_orf_nt": 375
+      },
+      {
+        "contig": "contig_1127",
+        "length": 295,
+        "unit_length": 195,
+        "n_copies": 1.51,
+        "coverage": 7.8,
+        "gc": 0.415,
+        "struct_z": -0.14,
+        "orphan": 0.69,
+        "longest_orf_nt": 39
+      },
+      {
+        "contig": "contig_515",
+        "length": 1124,
+        "unit_length": 270,
+        "n_copies": 4.16,
+        "coverage": 203.4,
+        "gc": 0.426,
+        "struct_z": -0.17,
+        "orphan": 0.71,
+        "longest_orf_nt": 48
+      },
+      {
+        "contig": "contig_267",
+        "length": 2158,
+        "unit_length": 1009,
+        "n_copies": 2.14,
+        "coverage": 61.3,
+        "gc": 0.407,
+        "struct_z": -0.26,
+        "orphan": 0.27,
+        "longest_orf_nt": 837
+      },
+      {
+        "contig": "contig_388",
+        "length": 1563,
+        "unit_length": 491,
+        "n_copies": 3.18,
+        "coverage": 17.6,
+        "gc": 0.301,
+        "struct_z": -0.31,
+        "orphan": 0.73,
+        "longest_orf_nt": 57
+      },
+      {
+        "contig": "contig_243",
+        "length": 2271,
+        "unit_length": 630,
+        "n_copies": 3.6,
+        "coverage": 111.3,
+        "gc": 0.403,
+        "struct_z": -0.33,
+        "orphan": 0.65,
+        "longest_orf_nt": 132
+      },
+      {
+        "contig": "contig_1432",
+        "length": 181,
+        "unit_length": 156,
+        "n_copies": 1.16,
+        "coverage": 224.6,
+        "gc": 0.5,
+        "struct_z": -0.93,
+        "orphan": 0.73,
+        "longest_orf_nt": 12
+      }
+    ],
+    "timing": {
+      "stream_and_assemble_s": 479
+    }
+  },
+  {
+    "accession": "SRR14585136",
+    "library": "SRR14585136: strategy=RNA-Seq selection=cDNA source=TRANSCRIPTOMIC (Streptococcus sanguinis)",
+    "compatible": true,
+    "sample": "Streptococcus sanguinis",
+    "error": "stream failed: Compressed file ended before the end-of-stream marker was reached"
+  }
+]

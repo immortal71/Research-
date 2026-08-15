@@ -43,6 +43,8 @@ sys.path.insert(0, str(ROOT / "src"))
 from rnasig.assemble import assemble
 from rnasig.circularity import find_circularity
 from rnasig.orphan import orphan_score
+from rnasig.rodlike import rod_profile
+from rnasig.rrna_kmer import build_reference_kmers, fetch_reference, rrna_kmer_fraction
 from rnasig.seqio import Record, gc_content, write_fasta
 from rnasig.srameta import assess_library, fetch_run_metadata
 from rnasig.structure import structure_zscore
@@ -65,6 +67,20 @@ MAX_UNIT = 2500
 # pipeline has recovered from real data, scores z=17.13. A candidate has to
 # clear this bar before it is worth a database lookup.
 MIN_STRUCT_Z = 3.0
+
+# Structure alone was still not enough. Two further filters, both added
+# after real candidates exposed the gap:
+#
+#   Rod-likeness. SRR5949183_contig_204 scored z=5.05 on one 17 bp hairpin
+#   with 44% of its bases paired. Viroids are rods; PLMVd is 68% paired at
+#   -0.473 kcal/mol/nt. See rnasig.rodlike.
+#
+#   rRNA. SRR19432462 yielded a 342 nt contig at 6752x coverage that passed
+#   structure and rod-likeness and is 28S rRNA at 100% identity. Ribosomal
+#   RNA is structured, abundant, and assembles with terminal repeats, so it
+#   clears every axis of this signature at once. See rnasig.rrna_kmer.
+MAX_RRNA_FRACTION = 0.10
+RRNA_CACHE = str(ROOT / "data" / "reference" / "rrna" / "rrna_reference.fasta")
 
 
 def fastq_urls(accession: str, timeout: float = 30.0) -> list[str]:
@@ -122,6 +138,7 @@ def hunt_one(
     outdir: Path,
     max_table: int,
     n_shuffles: int = 200,
+    rrna_ref: set[str] | None = None,
 ) -> dict:
     record: dict = {"accession": accession}
     meta = fetch_run_metadata(accession)
@@ -168,6 +185,8 @@ def hunt_one(
         monomer = circ.monomer or contig.seq
         stability = structure_zscore(monomer, n_shuffles=n_shuffles)
         orphan = orphan_score(monomer)
+        rod = rod_profile(monomer)
+        rrna = rrna_kmer_fraction(monomer, rrna_ref) if rrna_ref else 0.0
         cov = float(contig.id.split("multi=")[1].split()[0])
         hits.append(
             {
@@ -179,13 +198,18 @@ def hunt_one(
                 "gc": round(gc_content(monomer), 3),
                 "struct_z": round(stability.z_score, 2),
                 "orphan": round(orphan.orphan_score, 2),
+                "paired_fraction": round(rod.paired_fraction, 3),
+                "mfe_per_nt": round(rod.mfe_per_nt, 3),
+                "rodlike": rod.is_rodlike,
+                "rrna_fraction": round(rrna, 3),
                 "longest_orf_nt": orphan.longest_orf_nt,
                 "monomer": monomer,
             }
         )
 
     hits.sort(key=lambda h: -h["struct_z"])
-    shortlist = [h for h in hits if h["struct_z"] >= MIN_STRUCT_Z]
+    shortlist = [h for h in hits if h["struct_z"] >= MIN_STRUCT_Z
+                 and h["rodlike"] and h["rrna_fraction"] < MAX_RRNA_FRACTION]
     record["n_circular"] = len(hits)
     record["n_structured"] = len(shortlist)
     record["circular"] = [{kk: v for kk, v in h.items() if kk != "monomer"} for h in hits[:25]]
@@ -198,10 +222,18 @@ def hunt_one(
         f"({t_asm:.0f}s stream+asm)"
     )
     for h in hits[:5]:
-        mark = "  <== SHORTLIST" if h["struct_z"] >= MIN_STRUCT_Z else ""
+        if h["rrna_fraction"] >= MAX_RRNA_FRACTION:
+            mark = "  (rRNA)"
+        elif not h["rodlike"]:
+            mark = "  (not rod-like)"
+        elif h["struct_z"] < MIN_STRUCT_Z:
+            mark = ""
+        else:
+            mark = "  <== SHORTLIST"
         print(
             f"      unit={h['unit_length']:5d} cov={h['coverage']:8.1f} GC={h['gc']:.2f} "
-            f"z={h['struct_z']:6.2f} orphan={h['orphan']:.2f}{mark}"
+            f"z={h['struct_z']:6.2f} paired={h['paired_fraction']:.0%} "
+            f"rRNA={h['rrna_fraction']:.2f}{mark}"
         )
 
     if shortlist:
@@ -236,12 +268,16 @@ def main() -> int:
     outdir.mkdir(parents=True, exist_ok=True)
     print(f"hunting {len(accessions)} run(s), {args.reads} reads each, k={args.k} min_count={args.min_count}\n")
 
+    rrna_ref = build_reference_kmers(fetch_reference(RRNA_CACHE) or "")
+    print(f"rRNA reference: {len(rrna_ref)} k-mers"
+          if rrna_ref else "rRNA reference unavailable; that filter is off")
+
     results = []
     for i, acc in enumerate(accessions, 1):
         print(f"[{i}/{len(accessions)}]")
         try:
             results.append(hunt_one(acc, args.reads, args.k, args.min_count, outdir,
-                                    args.max_table, args.shuffles))
+                                    args.max_table, args.shuffles, rrna_ref))
         except KeyboardInterrupt:
             raise
         except Exception as exc:  # a bad run must not end the sweep
