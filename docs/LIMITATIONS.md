@@ -140,13 +140,21 @@ available. Concretely, from an environment with SRA/ENA access:
   proxy**, not a validated gene predictor. It is calibrated only against our
   own synthetic decoys (Phase 2), which is real evidence of what it does on
   those decoys and not a general-purpose coding-potential classifier.
-  It has now met real sequence once, and it got all three cases wrong:
-  k141_3, k141_10 and k141_25 scored 0.58, 0.55 and 0.52 (above 0.5 reads
-  as non-coding) and all three encode proteins, the worst miss being the
-  one at 97% amino-acid identity. Nucleotide identity for that contig is
-  only 78%, because synonymous substitution hides conservation at the
-  nucleotide level and not at the protein level. Treat a `dbcheck` blastx
-  pass as required before believing an S2 score, not optional.
+  It has now met real sequence four times and got all four wrong. k141_3,
+  k141_10 and k141_25 scored 0.58, 0.55 and 0.52; SRR19432446_264nt from
+  the oral sweep scored 0.65, its worst miss yet. Above 0.5 reads as
+  non-coding, and all four encode proteins, at 73%, 88%, 97% and 89%
+  amino-acid identity respectively.
+
+  The failure mode is structural, not a threshold problem. S2 looks for a
+  clean ATG-to-stop ORF and in-frame codon bias, and an assembled contig
+  that is an internal fragment of a gene has neither, so genuine coding
+  sequence scores as orphan. Nucleotide search does not rescue it:
+  k141_25 is 78% by blastn and 97% by blastx, SRR19432446 is 75% and
+  non-significant by blastn and 89% by blastx, because synonymous
+  substitution hides conservation at the nucleotide level and not at the
+  protein level. Treat a blastx pass as required before believing an S2
+  score, never optional.
 - **The motif library used for calibration positives is synthetic by
   construction** (`simulate.make_rod`, `make_stem_loop`,
   `make_cloverleaf_like`) — guaranteed to fold with real thermodynamic

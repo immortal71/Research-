@@ -1,0 +1,192 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTX 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 815CW4UX014
+
+
+Database: All non-redundant GenBank CDS
+translations+PDB+SwissProt+PIR+PRF excluding environmental samples
+from WGS projects
+           1,129,065,306 sequences; 426,441,214,199 total letters
+Query= SRR19432446_264nt_oral_circular
+
+Length=264
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+RSJ65533.1 hypothetical protein D8802_09545 [Streptococcus ora...  97.1    1e-20  89%       
+RSJ65529.1 hypothetical protein D8802_09550 [Streptococcus ora...  90.5    7e-19  88%       
+RSJ65530.1 hypothetical protein D8802_09555 [Streptococcus ora...  71.2    1e-13  88%       
+RSJ65539.1 hypothetical protein D8802_09530 [Streptococcus ora...  73.9    2e-12  56%       
+
+ALIGNMENTS
+>RSJ65533.1 hypothetical protein D8802_09545 [Streptococcus oralis]
+Length=591
+
+ Score = 97.1 bits (240),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 71/80 (89%), Positives = 76/80 (95%), Gaps = 0/80 (0%)
+ Frame = +1
+
+Query  25   PSSDALLLAESDLDVLSLALTDSEADLLAEALSEADLDKLSDSELDLLVDVDLEASSREV  204
+            PS DALLL ESDL+ LSLALTDS+ADLLAEALSEADLDKLSDSELDLLVDVDL+ASSREV
+Sbjct  83   PSRDALLLTESDLEALSLALTDSDADLLAEALSEADLDKLSDSELDLLVDVDLDASSREV  142
+
+Query  205  LLLTDSDLEALSDWLSDSDL  264
+            LLL +SD+EALSDWLSDSDL
+Sbjct  143  LLLAESDVEALSDWLSDSDL  162
+
+
+ Score = 63.5 bits (153),  Expect = 8e-09, Method: Compositional matrix adjust.
+ Identities = 53/64 (83%), Positives = 58/64 (91%), Gaps = 0/64 (0%)
+ Frame = +1
+
+Query  43   LLAESDLDVLSLALTDSEADLLAEALSEADLDKLSDSELDLLVDVDLEASSREVLLLTDS  222
+            +L ESDL+ LSLALTDS ADLLAEALS ADLDKLSDSELDLLVDVDL+ASS EVLLL +S
+Sbjct  1    MLTESDLEALSLALTDSXADLLAEALSXADLDKLSDSELDLLVDVDLDASSXEVLLLAES  60
+
+Query  223  DLEA  234
+            D+EA
+Sbjct  61   DVEA  64
+
+
+ Score = 44.3 bits (103),  Expect = 0.044, Method: Compositional matrix adjust.
+ Identities = 51/98 (52%), Positives = 61/98 (62%), Gaps = 20/98 (20%)
+ Frame = +1
+
+Query  1    DLLVDTDSPSSDALLLAESDLD-----VLSLALTDSEADLLAEAL-SEADLDK-------  141
+            DLL DTDSPSSDALLL +SDL+     VL L  +D EA  +   L  ++DL+        
+Sbjct  163  DLLADTDSPSSDALLLVDSDLEASTSEVLLLVDSDLEASTIEVLLLVDSDLEASTIEVLL  222
+
+Query  142  LSDSELD-------LLVDVDLEASSREVLLLTDSDLEA  234
+            L DS+L+       LLVD DLEAS+ EVLLL DSDLEA
+Sbjct  223  LVDSDLEASTIEVLLLVDSDLEASTIEVLLLVDSDLEA  260
+
+
+ Score = 44.3 bits (103),  Expect = 0.051, Method: Compositional matrix adjust.
+ Identities = 43/80 (54%), Positives = 55/80 (69%), Gaps = 10/80 (13%)
+ Frame = +1
+
+Query  22   SPSSDALLLAESDLDVLSLALTDSEADLLAEA---------LSEADLDKLSDSELDLLVD  174
+            + S + LLLAESD++ LS  L+DS+ DLLA+          L ++DL+  S SE+ LLVD
+Sbjct  137  ASSREVLLLAESDVEALSDWLSDSDLDLLADTDSPSSDALLLVDSDLEA-STSEVLLLVD  195
+
+Query  175  VDLEASSREVLLLTDSDLEA  234
+             DLEAS+ EVLLL DSDLEA
+Sbjct  196  SDLEASTIEVLLLVDSDLEA  215
+
+
+ Score = 41.2 bits (95),  Expect = 0.60, Method: Compositional matrix adjust.
+ Identities = 27/33 (82%), Positives = 30/33 (91%), Gaps = 0/33 (0%)
+ Frame = +1
+
+Query  166  LVDVDLEASSREVLLLTDSDLEALSDWLSDSDL  264
+            LVDVDLEAS+ EVLLL+DSDLEALS  LSDS+L
+Sbjct  535  LVDVDLEASTIEVLLLSDSDLEALSFALSDSEL  567
+
+
+ Score = 40.8 bits (94),  Expect = 0.70, Method: Compositional matrix adjust.
+ Identities = 34/73 (47%), Positives = 44/73 (60%), Gaps = 20/73 (27%)
+ Frame = +1
+
+Query  10   VDTDSPSSDALLLAESDLDVLSLALTDSEADLLAEALSEADLDKLSDSELDLLVDVDLEA  189
+            VD ++ + + LLL++SDL+ LS AL                    SDSELDLL DVDLEA
+Sbjct  538  VDLEASTIEVLLLSDSDLEALSFAL--------------------SDSELDLLADVDLEA  577
+
+Query  190  SSREVLLLTDSDL  228
+            S+ +VLLL+DSD 
+Sbjct  578  SAIDVLLLSDSDF  590
+
+
+>RSJ65529.1 hypothetical protein D8802_09550 [Streptococcus oralis]
+Length=315
+
+ Score = 90.5 bits (223),  Expect = 7e-19, Method: Compositional matrix adjust.
+ Identities = 68/77 (88%), Positives = 74/77 (96%), Gaps = 0/77 (0%)
+ Frame = +1
+
+Query  1    DLLVDTDSPSSDALLLAESDLDVLSLALTDSEADLLAEALSEADLDKLSDSELDLLVDVD  180
+            DLLVDTDSPS +ALLL ESDLDVLSLALTDS+ADLLAEALSEADLDKLSDSELDLLVDVD
+Sbjct  170  DLLVDTDSPSREALLLTESDLDVLSLALTDSDADLLAEALSEADLDKLSDSELDLLVDVD  229
+
+Query  181  LEASSREVLLLTDSDLE  231
+            L+ASSREVLLL ++D+E
+Sbjct  230  LDASSREVLLLAEADVE  246
+
+
+ Score = 60.5 bits (145),  Expect = 9e-08, Method: Compositional matrix adjust.
+ Identities = 37/42 (88%), Positives = 40/42 (95%), Gaps = 0/42 (0%)
+ Frame = +1
+
+Query  25   PSSDALLLAESDLDVLSLALTDSEADLLAEALSEADLDKLSD  150
+            PSS+ LLL ESDLDVLSLALTDS+ADLLAEALS+ADLDKLSD
+Sbjct  266  PSSEPLLLTESDLDVLSLALTDSDADLLAEALSDADLDKLSD  307
+
+
+>RSJ65530.1 hypothetical protein D8802_09555 [Streptococcus oralis]
+Length=75
+
+ Score = 71.2 bits (173),  Expect = 1e-13, Method: Compositional matrix adjust.
+ Identities = 44/50 (88%), Positives = 45/50 (90%), Gaps = 0/50 (0%)
+ Frame = +1
+
+Query  13   DTDSPSSDALLLAESDLDVLSLALTDSEADLLAEALSEADLDKLSDSELD  162
+            DTDSPSS+ L L ESDLD LSLALTDSEADLLAEALSEADLDKLSDSE D
+Sbjct  26   DTDSPSSEPLXLTESDLDALSLALTDSEADLLAEALSEADLDKLSDSEAD  75
+
+
+  Database: All non-redundant GenBank CDS translations+PDB+SwissProt+PIR+PRF
+excluding environmental samples from WGS projects
+    Posted date:  Aug 13, 2026  4:57 AM
+  Number of letters in database: 426,441,214,199
+  Number of sequences in database:  1,129,065,306
+
+Lambda      K        H
+   0.306    0.127    0.319 
+Gapped
+Lambda      K        H
+   0.267   0.0410    0.140 
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Number of Sequences: 1129065306
+Number of Hits to DB: 31161559
+Number of extensions: 25603
+Number of successful extensions: 12649
+Number of sequences better than 10: 1565
+Number of HSP's better than 10 without gapping: 0
+Number of HSP's gapped: 10350
+Number of HSP's successfully gapped: 7115
+Length of query: 264
+Length of database: 426441214199
+Length adjustment: 59
+Effective length of query: 205
+Effective length of database: 359826361145
+Effective search space: 10434964473205
+Effective search space used: 10434964473205
+T: 20
+A: 40
+X1: 19 (8.4 bits)
+X2: 38 (14.6 bits)
+X3: 64 (24.7 bits)
+S1: 41 (20.4 bits)
+S2: 92 (40.0 bits)
+ka-blk-alpha gapped: 1.9
+ka-blk-alpha ungapped: 0.7916
+ka-blk-alpha_v gapped: 42.6028
+ka-blk-alpha_v ungapped: 4.96466
+ka-blk-sigma gapped: 43.6362
+
+

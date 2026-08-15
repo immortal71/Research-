@@ -1,0 +1,200 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 813KJSPF014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= SRR19432462_342nt
+
+Length=342
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+XR_014070215.1 PREDICTED: Giraffa tippelskirchi 28S ribosomal ...  618     3e-172  100%      
+XR_013552308.2 PREDICTED: Panthera onca 28S ribosomal RNA (LOC...  618     3e-172  100%      
+XR_014070232.1 PREDICTED: Giraffa tippelskirchi 28S ribosomal ...  618     3e-172  100%      
+XR_013342743.1 PREDICTED: Urocitellus parryii 28S ribosomal RN...  618     3e-172  100%      
+XR_013552288.2 PREDICTED: Panthera onca 28S ribosomal RNA (LOC...  618     3e-172  100%      
+XR_013342991.1 PREDICTED: Urocitellus parryii 28S ribosomal RN...  618     3e-172  100%      
+XR_014075247.1 PREDICTED: Giraffa tippelskirchi 28S ribosomal ...  618     3e-172  100%      
+XR_014136137.1 PREDICTED: Panthera onca 28S ribosomal RNA (LOC...  618     3e-172  100%      
+
+ALIGNMENTS
+>XR_014070215.1 PREDICTED: Giraffa tippelskirchi 28S ribosomal RNA (LOC145528145), 
+rRNA
+Length=4812
+
+ Score = 618 bits (684),  Expect = 3e-172
+ Identities = 342/342 (100%), Gaps = 0/342 (0%)
+ Strand=Plus/Plus
+
+Query  1     AGCCGACTTAGAACTGGTGCGGACCAGGGGAATCCGACTGTTTAATTAAAACAAAGCATC  60
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3352  AGCCGACTTAGAACTGGTGCGGACCAGGGGAATCCGACTGTTTAATTAAAACAAAGCATC  3411
+
+Query  61    GCGAAGGCCCGCGGCGGGTGTTGACGCGATGTGATTTCTGCCCAGTGCTCTGAATGTCAA  120
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3412  GCGAAGGCCCGCGGCGGGTGTTGACGCGATGTGATTTCTGCCCAGTGCTCTGAATGTCAA  3471
+
+Query  121   AGTGAAGAAATTCAATGAAGCGCGGGTAAACGGCGGGAGTAACTATGACTCTCTTAAGGT  180
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3472  AGTGAAGAAATTCAATGAAGCGCGGGTAAACGGCGGGAGTAACTATGACTCTCTTAAGGT  3531
+
+Query  181   AGCCAAATGCCTCGTCATCTAATTAGTGACGCGCATGAATGGATGAACGAGATTCCCACT  240
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3532  AGCCAAATGCCTCGTCATCTAATTAGTGACGCGCATGAATGGATGAACGAGATTCCCACT  3591
+
+Query  241   GTCCCTACCTACTATCCAGCGAAACCACAGCCAAGGGAACGGGCTTGGCGGAATCAGCGG  300
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3592  GTCCCTACCTACTATCCAGCGAAACCACAGCCAAGGGAACGGGCTTGGCGGAATCAGCGG  3651
+
+Query  301   GGAAAGAAGACCCTGTTGAGCTTGACTCTAGTCTGGCACGGT  342
+             ||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3652  GGAAAGAAGACCCTGTTGAGCTTGACTCTAGTCTGGCACGGT  3693
+
+
+>XR_013552308.2 PREDICTED: Panthera onca 28S ribosomal RNA (LOC144614508), rRNA
+Length=4643
+
+ Score = 618 bits (684),  Expect = 3e-172
+ Identities = 342/342 (100%), Gaps = 0/342 (0%)
+ Strand=Plus/Plus
+
+Query  1     AGCCGACTTAGAACTGGTGCGGACCAGGGGAATCCGACTGTTTAATTAAAACAAAGCATC  60
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3194  AGCCGACTTAGAACTGGTGCGGACCAGGGGAATCCGACTGTTTAATTAAAACAAAGCATC  3253
+
+Query  61    GCGAAGGCCCGCGGCGGGTGTTGACGCGATGTGATTTCTGCCCAGTGCTCTGAATGTCAA  120
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3254  GCGAAGGCCCGCGGCGGGTGTTGACGCGATGTGATTTCTGCCCAGTGCTCTGAATGTCAA  3313
+
+Query  121   AGTGAAGAAATTCAATGAAGCGCGGGTAAACGGCGGGAGTAACTATGACTCTCTTAAGGT  180
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3314  AGTGAAGAAATTCAATGAAGCGCGGGTAAACGGCGGGAGTAACTATGACTCTCTTAAGGT  3373
+
+Query  181   AGCCAAATGCCTCGTCATCTAATTAGTGACGCGCATGAATGGATGAACGAGATTCCCACT  240
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3374  AGCCAAATGCCTCGTCATCTAATTAGTGACGCGCATGAATGGATGAACGAGATTCCCACT  3433
+
+Query  241   GTCCCTACCTACTATCCAGCGAAACCACAGCCAAGGGAACGGGCTTGGCGGAATCAGCGG  300
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3434  GTCCCTACCTACTATCCAGCGAAACCACAGCCAAGGGAACGGGCTTGGCGGAATCAGCGG  3493
+
+Query  301   GGAAAGAAGACCCTGTTGAGCTTGACTCTAGTCTGGCACGGT  342
+             ||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3494  GGAAAGAAGACCCTGTTGAGCTTGACTCTAGTCTGGCACGGT  3535
+
+
+Query= SRR19432446_264nt
+
+Length=264
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+FR873482.1 Streptococcus salivarius JIM8777 complete genome        57.2    0.001  75%       
+CP094808.1 Staphylococcus agnetis strain IVB6212 chromosome, c...  56.3    0.005  73%       
+CP018187.1 Streptococcus salivarius strain ICDC2, complete genome  56.3    0.005  84%       
+CP094814.1 Staphylococcus agnetis strain IVB6175 chromosome, c...  56.3    0.005  75%       
+CP094813.1 Staphylococcus agnetis strain IVB6177 chromosome, c...  56.3    0.005  75%       
+AP028322.1 Staphylococcus epidermidis KSE124-2 DNA, complete g...  55.4    0.005  68%       
+CP081015.1 Staphylococcus agnetis strain G4 chromosome             54.5    0.016  85%       
+CP094811.1 Staphylococcus agnetis strain IVB6187 chromosome, c...  54.5    0.016  85%       
+
+ALIGNMENTS
+>FR873482.1 Streptococcus salivarius JIM8777 complete genome
+Length=2210574
+
+ Score = 57.2 bits (62),  Expect = 0.001
+ Identities = 62/83 (75%), Gaps = 6/83 (7%)
+ Strand=Plus/Plus
+
+Query  105      GCTTGCTGAAGCACTGTCTGAGGCTGAT------TTAGACAAGCTTTCTGATTCAGAGTT  158
+                |||| |||| ||||| ||||||||||||      |||||||    || |||||| ||| |
+Sbjct  1540619  GCTTACTGATGCACTCTCTGAGGCTGATTCTGAGTTAGACACTGATTGTGATTCTGAGAT  1540678
+
+Query  159      AGATTTACTTGTTGATGTTGACT  181
+                 |||| ||||  ||||| |||||
+Sbjct  1540679  TGATTCACTTACTGATGCTGACT  1540701
+
+
+ Score = 45.5 bits (49),  Expect = 8.1
+ Identities = 96/140 (69%), Gaps = 14/140 (10%)
+ Strand=Plus/Plus
+
+Query  46       CTTGCTGAGTCTGACTTAGATGTGCTGTCGCT--TGCGCTAACTGATTCTGAAGCGGACT  103
+                |||||||| |||||   |||||  ||| | |   ||| || ||||||||||| || ||  
+Sbjct  1548005  CTTGCTGATTCTGATGCAGATG--CTGACTCAGATGCACTTACTGATTCTGATGCAGA--  1548060
+
+Query  104      TGCTTGCT--GAAGCACTGTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGA  161
+                ||||  ||  || |||||  ||||  |||||  |||      | ||||  | || | |||
+Sbjct  1548061  TGCTGACTCAGATGCACTTGCTGATTCTGATGCAGA------TGCTGAAGCTGACTCAGA  1548114
+
+Query  162      TTTACTTGTTGATGTTGACT  181
+                |  ||||||||||  |||||
+Sbjct  1548115  TGCACTTGTTGATTCTGACT  1548134
+
+
+ Score = 45.5 bits (49),  Expect = 8.1
+ Identities = 99/145 (68%), Gaps = 14/145 (10%)
+ Strand=Plus/Plus
+
+Query  46       CTTGCTGAGTCTGACTTAGATGTGCTGTCGCT--TGCGCTAACTGATTCTGAAGCGGACT  103
+                |||||||| |||||   |||||  ||| | |   ||| || ||||||||||| || ||  
+Sbjct  1548371  CTTGCTGATTCTGATGCAGATG--CTGACTCAGATGCACTTACTGATTCTGATGCAGA--  1548426
+
+Query  104      TGCTTGCT--GAAGCACTGTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGA  161
+                ||||  ||  || |||||  ||||  |||||  |||      | ||||  | || | |||
+Sbjct  1548427  TGCTGACTCAGATGCACTTGCTGATTCTGATGCAGA------TGCTGAAGCTGACTCAGA  1548480
+
+Query  162      TTTACTTGTTGATGTTGACTTAGAG  186
+                |  ||||||||||  ||||  ||||
+Sbjct  1548481  TGCACTTGTTGATTCTGACGCAGAG  1548505
+
+
+ Score = 44.6 bits (48),  Expect = 8.1
+ Identities = 30/34 (88%), Gaps = 0/34 (0%)
+ Strand=Plus/Plus
+
+Query  100      GACTTGCTTGCTGAAGCACTGTCTGAGGCTGATT  133
+                |||| |||| |||| ||||| |||||||||||||
+Sbjct  1549337  GACTCGCTTACTGATGCACTTTCTGAGGCTGATT  1549370
+
+
+>CP094808.1 Staphylococcus agnetis strain IVB6212 chromosome, complete genome
+Length=2432232
+
+ Score = 56.3 bits (61),  Expect = 0.005
+ Identities = 74/102 (73%), Gaps = 12/102 (12%)
+ Strand=Plus/Minus
+
+Query  78      TGCGCTAACTGATTCTGAAGCGGACTTGCTTGCTGA---AG---CACTGTCTGAGGCTGA  131
+               || |||  ||||||||||  | ||| |||||| |||   ||   ||||  |||| | |||
+Sbjct  243981  TGTGCTTTCTGATTCTGATACTGACGTGCTTGTTGACTCAGACTCACTCACTGACGTTGA  243922
+
+Query  132     TTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTTGA  173
+               | |      |||||||||||||||| | ||| ||||||||||
+Sbjct  243921  TGT------GCTTTCTGATTCAGAGATTGATGTACTTGTTGA  243886
+
+
+ Score = 55.4 bits (60),  Expect = 0.005
+ Identities = 72/98 (73%), Gaps = 4/98 (4%)
+ Strand=Plus/Minus
+

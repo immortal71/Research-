@@ -1,0 +1,200 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 815CYV7F014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= SRR19432446_264nt_oral_circular
+
+Length=264
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+CP135051.1 Staphylococcus warneri strain TWSL_1 chromosome, co...  60.8    1e-04  69%       
+CP134830.1 Staphylococcus capitis strain ADJWO plasmid unnamed...  58.1    0.001  72%       
+CP118793.1 Staphylococcus warneri strain 7068 plasmid pML7068-...  58.1    0.001  71%       
+CP118791.1 Staphylococcus warneri strain 7068 plasmid pML7068-...  58.1    0.001  71%       
+FR873482.1 Streptococcus salivarius JIM8777 complete genome        57.2    0.001  75%       
+CP170247.1 Staphylococcus epidermidis strain Q10 chromosome, c...  57.2    0.001  70%       
+CP094808.1 Staphylococcus agnetis strain IVB6212 chromosome, c...  56.3    0.005  73%       
+CP193665.1 Streptococcus sp. KHUD_015 chromosome, complete genome  56.3    0.005  78%       
+CP018187.1 Streptococcus salivarius strain ICDC2, complete genome  56.3    0.005  84%       
+CP094814.1 Staphylococcus agnetis strain IVB6175 chromosome, c...  56.3    0.005  75%       
+
+ALIGNMENTS
+>CP135051.1 Staphylococcus warneri strain TWSL_1 chromosome, complete genome
+Length=2661318
+
+ Score = 60.8 bits (66),  Expect = 1e-04
+ Identities = 117/169 (69%), Gaps = 13/169 (8%)
+ Strand=Plus/Minus
+
+Query  86       CTGATTCTGAAGCGGACTTGCT--TGCTGAA------GCACTGTCTGAGGCTGATTTAGA  137
+                |||| || || ||  |||||||  |||||||      |||||  |||| ||||| | |||
+Sbjct  2659007  CTGAGTCAGATGC--ACTTGCTGATGCTGAATCAGATGCACTTACTGACGCTGAGTCAGA  2658950
+
+Query  138      CAAGCTTTCTGATTCAGAGTTAGATTTACTTGTTGATGTTGACTTAGAGGCA--TCATCA  195
+                    ||| |||||  ||||| ||||  ||||||||| | ||| | |   |||  |  | |
+Sbjct  2658949  TGCACTTACTGATGTAGAGTCAGATGCACTTGTTGACGCTGAGTCACTTGCACTTACTGA  2658890
+
+Query  196      AG-GGAAGTGCTCTTACTTACTGACTCTGACTTAGAAGCACTTTCTGAT  243
+                 |  |||  ||||  |||||||||| |||| | ||| |||||| |||||
+Sbjct  2658889  TGCTGAATCGCTCGCACTTACTGACGCTGAATCAGATGCACTTACTGAT  2658841
+
+
+ Score = 53.6 bits (58),  Expect = 0.016
+ Identities = 94/135 (70%), Gaps = 3/135 (2%)
+ Strand=Plus/Minus
+
+Query  112      GAAGCACTGTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTT  171
+                || |||||  |||| ||||| | |||    ||| |||||  ||||| ||||  |||||||
+Sbjct  2644554  GATGCACTTACTGATGCTGAATCAGATGCACTTACTGATGTAGAGTCAGATGCACTTGTT  2644495
+
+Query  172      GATGTTGACTTAGA--GGCATCATCAAGGGAAGT-GCTCTTACTTACTGACTCTGACTTA  228
+                || | ||| | |||   || |  | | |   ||| |||    ||||||||| |||| | |
+Sbjct  2644494  GACGCTGAGTCAGACGCGCTTACTGACGCTGAGTCGCTTGCGCTTACTGACGCTGAATCA  2644435
+
+Query  229      GAAGCACTTTCTGAT  243
+                || |||||| |||||
+Sbjct  2644434  GATGCACTTACTGAT  2644420
+
+
+ Score = 52.7 bits (57),  Expect = 0.055
+ Identities = 90/130 (69%), Gaps = 12/130 (9%)
+ Strand=Plus/Minus
+
+Query  72       GTCGCTTGCGCTAACTGATTCTGAAGC----GGACTTGCT--TG------CTGAAGCACT  119
+                |||||||||||| |||||  ||||| |    | |||| ||  ||      | || |||||
+Sbjct  2658403  GTCGCTTGCGCTTACTGACGCTGAATCAGATGCACTTACTGATGTAGAGTCAGATGCACT  2658344
+
+Query  120      GTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTTGATGTTGA  179
+                  |||| ||||| | |||    ||| |||||  ||||| ||||  ||||| ||||| |||
+Sbjct  2658343  TACTGATGCTGAGTCAGATGCACTTACTGATGTAGAGTCAGATGCACTTGCTGATGCTGA  2658284
+
+Query  180      CTTAGAGGCA  189
+                 | ||| |||
+Sbjct  2658283  ATCAGATGCA  2658274
+
+
+ Score = 48.2 bits (52),  Expect = 0.67
+ Identities = 89/130 (68%), Gaps = 12/130 (9%)
+ Strand=Plus/Minus
+
+Query  72       GTCGCTTGCGCTAACTGATTCTGAAGCGGA----CTTGCTT--GCTGAAGCA------CT  119
+                |||||||||||| |||||  ||||  | ||    |||| |   |||||  ||      ||
+Sbjct  2644918  GTCGCTTGCGCTTACTGACGCTGAGTCAGATGCACTTGTTGACGCTGAGTCAGATGCGCT  2644859
+
+Query  120      GTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTTGATGTTGA  179
+                  |||| ||||| | ||||  |||| |||||   |||| ||||  ||||||||| | |||
+Sbjct  2644858  TACTGATGCTGAGTCAGACGCGCTTACTGATGTTGAGTCAGATGCACTTGTTGACGCTGA  2644799
+
+Query  180      CTTAGAGGCA  189
+                 | ||| |||
+Sbjct  2644798  ATCAGATGCA  2644789
+
+
+ Score = 44.6 bits (48),  Expect = 8.1
+ Identities = 92/135 (68%), Gaps = 3/135 (2%)
+ Strand=Plus/Minus
+
+Query  112      GAAGCACTGTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTT  171
+                || |||||  |||| ||||| | |||    ||| ||||  | |||| ||||  |||||||
+Sbjct  2644242  GATGCACTTGCTGATGCTGAATCAGATGCACTTACTGACGCTGAGTCAGATGCACTTGTT  2644183
+
+Query  172      GATGTTGACTTAGAGGCA--TCATCAAGGGAAGTGCTCT-TACTTACTGACTCTGACTTA  228
+                || | ||| | ||| |||  |  | | |   |||    |  |||||||||  |||| | |
+Sbjct  2644182  GACGCTGAATCAGATGCACTTACTGATGCTGAGTCAGATGCACTTACTGATGCTGAATCA  2644123
+
+Query  229      GAAGCACTTTCTGAT  243
+                || |||||| |||||
+Sbjct  2644122  GATGCACTTACTGAT  2644108
+
+
+ Score = 43.7 bits (47),  Expect = 28
+ Identities = 37/46 (80%), Gaps = 0/46 (0%)
+ Strand=Plus/Minus
+
+Query  34       GATGCGCTCTTGCTTGCTGAGTCTGACTTAGATGTGCTGTCGCTTG  79
+                ||||||||| ||||   |||    |||| |||||||||||||||||
+Sbjct  1500496  GATGCGCTCATGCTATGTGACATAGACTGAGATGTGCTGTCGCTTG  1500451
+
+
+ Score = 43.7 bits (47),  Expect = 28
+ Identities = 88/130 (68%), Gaps = 12/130 (9%)
+ Strand=Plus/Minus
+
+Query  72       GTCGCTTGCGCTAACTGATTCTGAAGC----GGACTTGCT--TG------CTGAAGCACT  119
+                |||||||||||| |||||  ||||| |    | |||| ||  ||      | || |||||
+Sbjct  2644630  GTCGCTTGCGCTTACTGACGCTGAATCAGATGCACTTACTGATGTAGAGTCAGATGCACT  2644571
+
+Query  120      GTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTTGATGTTGA  179
+                  |||| ||||| | |||    ||| ||||| | || | ||||  ||||  |||||| ||
+Sbjct  2644570  TACTGATGCTGAGTCAGATGCACTTACTGATGCTGAATCAGATGCACTTACTGATGTAGA  2644511
+
+Query  180      CTTAGAGGCA  189
+                 | ||| |||
+Sbjct  2644510  GTCAGATGCA  2644501
+
+
+ Score = 42.8 bits (46),  Expect = 28
+ Identities = 50/68 (74%), Gaps = 0/68 (0%)
+ Strand=Plus/Minus
+
+Query  112      GAAGCACTGTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTT  171
+                || |||||  |||| ||||| | |||    ||| ||||| | |||| ||||  |||||||
+Sbjct  2658471  GATGCACTTACTGACGCTGAATCAGATGCACTTGCTGATGCTGAGTCAGATGCACTTGTT  2658412
+
+Query  172      GATGTTGA  179
+                || | |||
+Sbjct  2658411  GACGCTGA  2658404
+
+
+ Score = 42.8 bits (46),  Expect = 28
+ Identities = 79/117 (68%), Gaps = 12/117 (10%)
+ Strand=Plus/Minus
+
+Query  72       GTCGCTTGCGCTAACTGATTCTGAAGCGGACTTGCTTGCTGAAGCACTGTCTGAGGCTGA  131
+                |||||||||||| |||||  ||||  | |||  |||| |||| |      ||||| | ||
+Sbjct  2659243  GTCGCTTGCGCTTACTGACGCTGAGTCAGACGCGCTTACTGACG------CTGAGTCAGA  2659190
+
+Query  132      TTTAGACAAGCTTTCTGATTCAGAGTTAGATTTACTTGTTGATGTTGACTTAGAGGC  188
+                |  |      ||| ||||| | |||| ||||  ||||  ||||| ||| | ||| ||
+Sbjct  2659189  TGCA------CTTACTGATGCTGAGTCAGATGCACTTACTGATGCTGAATCAGATGC  2659139
+
+
+>CP134830.1 Staphylococcus capitis strain ADJWO plasmid unnamed2, complete 
+sequence
+Length=43339
+
+ Score = 58.1 bits (63),  Expect = 0.001
+ Identities = 75/104 (72%), Gaps = 0/104 (0%)
+ Strand=Plus/Minus
+
+Query  86     CTGATTCTGAAGCGGACTTGCTTGCTGAAGCACTGTCTGAGGCTGATTTAGACAAGCTTT  145
+              |||| ||||| |||    |||||  ||| ||||| ||||| ||||| | |||    ||| 
+Sbjct  18661  CTGAATCTGATGCGCTTGTGCTTAGTGACGCACTATCTGATGCTGAGTCAGATGCACTTA  18602
+
+Query  146    CTGATTCAGAGTTAGATTTACTTGTTGATGTTGACTTAGAGGCA  189
+              |||||   |||| ||||  ||||  ||||||||| | ||| |||
+Sbjct  18601  CTGATGTTGAGTCAGATGCACTTACTGATGTTGAGTCAGATGCA  18558
+
+
+ Score = 52.7 bits (57),  Expect = 0.055
+ Identities = 63/86 (73%), Gaps = 0/86 (0%)
+ Strand=Plus/Minus

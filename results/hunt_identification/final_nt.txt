@@ -1,0 +1,200 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 815KNX48016
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= SRR19432446_264nt
+
+Length=264
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+FR873482.1 Streptococcus salivarius JIM8777 complete genome        57.2    0.001  75%       
+CP094808.1 Staphylococcus agnetis strain IVB6212 chromosome, c...  56.3    0.005  73%       
+CP018187.1 Streptococcus salivarius strain ICDC2, complete genome  56.3    0.005  84%       
+CP094814.1 Staphylococcus agnetis strain IVB6175 chromosome, c...  56.3    0.005  75%       
+
+ALIGNMENTS
+>FR873482.1 Streptococcus salivarius JIM8777 complete genome
+Length=2210574
+
+ Score = 57.2 bits (62),  Expect = 0.001
+ Identities = 62/83 (75%), Gaps = 6/83 (7%)
+ Strand=Plus/Plus
+
+Query  105      GCTTGCTGAAGCACTGTCTGAGGCTGAT------TTAGACAAGCTTTCTGATTCAGAGTT  158
+                |||| |||| ||||| ||||||||||||      |||||||    || |||||| ||| |
+Sbjct  1540619  GCTTACTGATGCACTCTCTGAGGCTGATTCTGAGTTAGACACTGATTGTGATTCTGAGAT  1540678
+
+Query  159      AGATTTACTTGTTGATGTTGACT  181
+                 |||| ||||  ||||| |||||
+Sbjct  1540679  TGATTCACTTACTGATGCTGACT  1540701
+
+
+ Score = 45.5 bits (49),  Expect = 8.1
+ Identities = 96/140 (69%), Gaps = 14/140 (10%)
+ Strand=Plus/Plus
+
+Query  46       CTTGCTGAGTCTGACTTAGATGTGCTGTCGCT--TGCGCTAACTGATTCTGAAGCGGACT  103
+                |||||||| |||||   |||||  ||| | |   ||| || ||||||||||| || ||  
+Sbjct  1548005  CTTGCTGATTCTGATGCAGATG--CTGACTCAGATGCACTTACTGATTCTGATGCAGA--  1548060
+
+Query  104      TGCTTGCT--GAAGCACTGTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGA  161
+                ||||  ||  || |||||  ||||  |||||  |||      | ||||  | || | |||
+Sbjct  1548061  TGCTGACTCAGATGCACTTGCTGATTCTGATGCAGA------TGCTGAAGCTGACTCAGA  1548114
+
+Query  162      TTTACTTGTTGATGTTGACT  181
+                |  ||||||||||  |||||
+Sbjct  1548115  TGCACTTGTTGATTCTGACT  1548134
+
+
+ Score = 45.5 bits (49),  Expect = 8.1
+ Identities = 99/145 (68%), Gaps = 14/145 (10%)
+ Strand=Plus/Plus
+
+Query  46       CTTGCTGAGTCTGACTTAGATGTGCTGTCGCT--TGCGCTAACTGATTCTGAAGCGGACT  103
+                |||||||| |||||   |||||  ||| | |   ||| || ||||||||||| || ||  
+Sbjct  1548371  CTTGCTGATTCTGATGCAGATG--CTGACTCAGATGCACTTACTGATTCTGATGCAGA--  1548426
+
+Query  104      TGCTTGCT--GAAGCACTGTCTGAGGCTGATTTAGACAAGCTTTCTGATTCAGAGTTAGA  161
+                ||||  ||  || |||||  ||||  |||||  |||      | ||||  | || | |||
+Sbjct  1548427  TGCTGACTCAGATGCACTTGCTGATTCTGATGCAGA------TGCTGAAGCTGACTCAGA  1548480
+
+Query  162      TTTACTTGTTGATGTTGACTTAGAG  186
+                |  ||||||||||  ||||  ||||
+Sbjct  1548481  TGCACTTGTTGATTCTGACGCAGAG  1548505
+
+
+ Score = 44.6 bits (48),  Expect = 8.1
+ Identities = 30/34 (88%), Gaps = 0/34 (0%)
+ Strand=Plus/Plus
+
+Query  100      GACTTGCTTGCTGAAGCACTGTCTGAGGCTGATT  133
+                |||| |||| |||| ||||| |||||||||||||
+Sbjct  1549337  GACTCGCTTACTGATGCACTTTCTGAGGCTGATT  1549370
+
+
+Query= SRR19432553_228nt
+
+Length=228
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+CP079818.1 Neisseria perflava strain LPB0400 chromosome, compl...  370     1e-97  97%       
+CP079820.1 Neisseria sicca ATCC 29256 chromosome, complete genome  370     1e-97  97%       
+CP123625.1 Neisseria subflava strain Mock chromosome, complete...  365     2e-96  96%       
+CP128381.1 Neisseria subflava strain Mock-cell chromosome, com...  365     2e-96  96%       
+
+ALIGNMENTS
+>CP079818.1 Neisseria perflava strain LPB0400 chromosome, complete genome
+Length=2284668
+
+ Score = 370 bits (409),  Expect = 1e-97
+ Identities = 221/228 (97%), Gaps = 3/228 (1%)
+ Strand=Plus/Minus
+
+Query  1        TGGTGGGTGATGACGGAGTCGAACCGCCGACATTCTGCTTGTAAGGCAGACGCTCTACCA  60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2202820  TGGTGGGTGATGACGGAGTCGAACCGCCGACATTCTGCTTGTAAGGCAGACGCTCTACCA  2202761
+
+Query  61       ACTGAGCTAATCACCCGAAAAAGGGAGATACTGAAGAGTCAGTATTTTTAAATAATGGCG  120
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2202760  ACTGAGCTAATCACCCGAAAAAGGGAGATACTGAAGAGTCAGTATTTTTAAATAATGGCG  2202701
+
+Query  121      CGGCGGACGGGGCTCGAACCCGCGACCCCCGGCGTGACAGGCCGGTACTCTAACCAACTG  180
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2202700  CGGCGGACGGGGCTCGAACCCGCGACCCCCGGCGTGACAGGCCGGTACTCTAACCAACTG  2202641
+
+Query  181      AGCTACCACCGCGCATCCATTGTTCAACCAACAATGAAAGGAGAAACT  228
+                ||||||||||||||||||| || ||||   |||||||||  |||||||
+Sbjct  2202640  AGCTACCACCGCGCATCCACTG-TCAA-AGACAATGAAA-AAGAAACT  2202596
+
+
+ Score = 185 bits (204),  Expect = 3e-42
+ Identities = 125/135 (93%), Gaps = 4/135 (3%)
+ Strand=Plus/Plus
+
+Query  90       ACTGA-AGAGTCAGTA-TTTTTAAATAATGGCGCGGCGGACGGGGCTCGAACCCGCGACC  147
+                ||||| | | |||||  |||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1912150  ACTGATATAATCAGTGCTTTTTAAATAATGGCGCGGCGGACGGGGCTCGAACCCGCGACC  1912209
+
+Query  148      CCCGGCGTGACAGGCCGGTACTCTAACCAACTGAGCTACCACCGCGCATCCATTGTTCAA  207
+                |||||||||||||||||||||||||||||||||||||||||||||||||||| || ||||
+Sbjct  1912210  CCCGGCGTGACAGGCCGGTACTCTAACCAACTGAGCTACCACCGCGCATCCACTG-TCAA  1912268
+
+Query  208      CCAACAATGAAAGGA  222
+                   ||||||||||||
+Sbjct  1912269  -AGACAATGAAAGGA  1912282
+
+
+ Score = 168 bits (185),  Expect = 8e-37
+ Identities = 99/102 (97%), Gaps = 1/102 (1%)
+ Strand=Plus/Minus
+
+Query  103      TATTTTTAAATA-ATGGCGCGGCGGACGGGGCTCGAACCCGCGACCCCCGGCGTGACAGG  161
+                ||||||||| |  |||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2202943  TATTTTTAACTTGATGGCGCGGCGGACGGGGCTCGAACCCGCGACCCCCGGCGTGACAGG  2202884
+
+Query  162      CCGGTACTCTAACCAACTGAGCTACCACCGCGCATCCATTGT  203
+                ||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2202883  CCGGTACTCTAACCAACTGAGCTACCACCGCGCATCCATTGT  2202842
+
+
+ Score = 142 bits (157),  Expect = 3e-29
+ Identities = 80/81 (99%), Gaps = 0/81 (0%)
+ Strand=Plus/Plus
+
+Query  1        TGGTGGGTGATGACGGAGTCGAACCGCCGACATTCTGCTTGTAAGGCAGACGCTCTACCA  60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1912287  TGGTGGGTGATGACGGAGTCGAACCGCCGACATTCTGCTTGTAAGGCAGACGCTCTACCA  1912346
+
+Query  61       ACTGAGCTAATCACCCGAAAA  81
+                |||||||||||||||||| ||
+Sbjct  1912347  ACTGAGCTAATCACCCGATAA  1912367
+
+
+ Score = 138 bits (152),  Expect = 4e-28
+ Identities = 76/76 (100%), Gaps = 0/76 (0%)
+ Strand=Plus/Minus
+
+Query  1        TGGTGGGTGATGACGGAGTCGAACCGCCGACATTCTGCTTGTAAGGCAGACGCTCTACCA  60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2202595  TGGTGGGTGATGACGGAGTCGAACCGCCGACATTCTGCTTGTAAGGCAGACGCTCTACCA  2202536
+
+Query  61       ACTGAGCTAATCACCC  76
+                ||||||||||||||||
+Sbjct  2202535  ACTGAGCTAATCACCC  2202520
+
+
+ Score = 55.4 bits (60),  Expect = 0.004
+ Identities = 51/65 (78%), Gaps = 0/65 (0%)
+ Strand=Plus/Plus
+
+Query  13     ACGGAGTCGAACCGCCGACATTCTGCTTGTAAGGCAGACGCTCTACCAACTGAGCTAATC  72
+              ||||  ||||||||  |||   ||||||| || ||||  ||||||||||||||||||  |
+Sbjct  85845  ACGGGATCGAACCGATGACCCCCTGCTTGCAAAGCAGGTGCTCTACCAACTGAGCTATGC  85904
+
+Query  73     ACCCG  77
+               ||||
+Sbjct  85905  CCCCG  85909
+
+
