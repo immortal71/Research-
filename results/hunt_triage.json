@@ -1,0 +1,245 @@
+[
+ {
+  "run": "SRR19432446",
+  "len": 264,
+  "cov": 70.6,
+  "z": 3.36,
+  "paired": 0.659,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR19432455",
+  "len": 336,
+  "cov": 96.3,
+  "z": 2.9,
+  "paired": 0.589,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432462",
+  "len": 342,
+  "cov": 6752.6,
+  "z": 3.16,
+  "paired": 0.649,
+  "rrna": 1.0,
+  "verdict": "rRNA"
+ },
+ {
+  "run": "SRR19432462",
+  "len": 1119,
+  "cov": 25.5,
+  "z": 3.22,
+  "paired": 0.509,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432464",
+  "len": 810,
+  "cov": 44.1,
+  "z": 2.84,
+  "paired": 0.635,
+  "rrna": 0.0,
+  "verdict": "z too low"
+ },
+ {
+  "run": "SRR19432464",
+  "len": 171,
+  "cov": 39.2,
+  "z": 2.21,
+  "paired": 0.515,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432465",
+  "len": 162,
+  "cov": 12.7,
+  "z": 4.95,
+  "paired": 0.58,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432465",
+  "len": 873,
+  "cov": 65.1,
+  "z": 4.15,
+  "paired": 0.589,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432484",
+  "len": 336,
+  "cov": 20.1,
+  "z": 3.54,
+  "paired": 0.625,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432484",
+  "len": 395,
+  "cov": 85.0,
+  "z": 3.76,
+  "paired": 0.577,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432494",
+  "len": 150,
+  "cov": 21.1,
+  "z": 2.7,
+  "paired": 0.627,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432494",
+  "len": 425,
+  "cov": 25.5,
+  "z": 2.52,
+  "paired": 0.607,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432549",
+  "len": 210,
+  "cov": 34.8,
+  "z": 4.35,
+  "paired": 0.543,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432549",
+  "len": 1155,
+  "cov": 90.8,
+  "z": 3.8,
+  "paired": 0.547,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432553",
+  "len": 228,
+  "cov": 14.1,
+  "z": 3.69,
+  "paired": 0.596,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR19432483",
+  "len": 159,
+  "cov": 8.5,
+  "z": 5.6,
+  "paired": 0.629,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR19432483",
+  "len": 258,
+  "cov": 36.9,
+  "z": 2.89,
+  "paired": 0.667,
+  "rrna": 0.0,
+  "verdict": "z too low"
+ },
+ {
+  "run": "SRR19432483",
+  "len": 174,
+  "cov": 15.3,
+  "z": 2.38,
+  "paired": 0.54,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR19432522",
+  "len": 252,
+  "cov": 11.6,
+  "z": 4.21,
+  "paired": 0.675,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR19432522",
+  "len": 294,
+  "cov": 10.6,
+  "z": 3.45,
+  "paired": 0.687,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR5949183",
+  "len": 306,
+  "cov": 19.1,
+  "z": 4.77,
+  "paired": 0.444,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ },
+ {
+  "run": "SRR5949183",
+  "len": 453,
+  "cov": 15.6,
+  "z": 2.63,
+  "paired": 0.662,
+  "rrna": 0.0,
+  "verdict": "z too low"
+ },
+ {
+  "run": "SRR8204361",
+  "len": 929,
+  "cov": 22.8,
+  "z": 4.58,
+  "paired": 0.62,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR8204361",
+  "len": 1481,
+  "cov": 37.5,
+  "z": 3.96,
+  "paired": 0.727,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR11060618",
+  "len": 337,
+  "cov": 161.3,
+  "z": 8.04,
+  "paired": 0.677,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR11790910",
+  "len": 549,
+  "cov": 63.5,
+  "z": 4.04,
+  "paired": 0.638,
+  "rrna": 0.0,
+  "verdict": "*** CANDIDATE ***"
+ },
+ {
+  "run": "SRR14585135",
+  "len": 672,
+  "cov": 143.5,
+  "z": 3.07,
+  "paired": 0.592,
+  "rrna": 0.0,
+  "verdict": "not rod-like"
+ }
+]

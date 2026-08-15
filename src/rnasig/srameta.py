@@ -71,12 +71,22 @@ class RunMetadata:
                 f"({self.scientific_name or 'unknown sample'})")
 
 
+# Strategies that size-select the RNA before sequencing. They are still
+# shotgun RNA and still worth sweeping, but they deplete anything outside
+# their target size band, so a null result on them is not evidence of
+# absence for a molecule of the wrong length. Noticed while preflighting
+# runs for the Obelisk-S.s control: SRR1713039 is miRNA-Seq and the target
+# is 1137 nt, which such a library would largely throw away.
+_SIZE_SELECTED_STRATEGY = {"MIRNA-SEQ", "NCRNA-SEQ", "SSRNA-SEQ"}
+
+
 @dataclass
 class LibraryVerdict:
     accession: str
     compatible: bool
     unknown: bool = False
     reasons: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
 
     def __bool__(self) -> bool:
         return self.compatible
@@ -124,7 +134,19 @@ def assess_library(meta: RunMetadata) -> LibraryVerdict:
     elif source and source not in _ALLOWED_SOURCE:
         reasons.append(f"library_source={meta.library_source}: not an RNA source")
 
-    return LibraryVerdict(accession=meta.accession, compatible=not reasons, reasons=reasons)
+    warnings: list[str] = []
+    if strategy in _SIZE_SELECTED_STRATEGY:
+        warnings.append(
+            f"library_strategy={meta.library_strategy}: size-selected, so molecules outside "
+            "its target length are depleted. Finding nothing here is not evidence of absence."
+        )
+
+    return LibraryVerdict(
+        accession=meta.accession,
+        compatible=not reasons,
+        reasons=reasons,
+        warnings=warnings,
+    )
 
 
 def fetch_run_metadata(accession: str, timeout: float = 30.0, attempts: int = 3) -> RunMetadata:
@@ -202,6 +224,7 @@ def to_json(meta: RunMetadata, verdict: LibraryVerdict) -> str:
             "compatible": verdict.compatible,
             "unknown": verdict.unknown,
             "reasons": verdict.reasons,
+            "warnings": verdict.warnings,
         },
         indent=2,
     )

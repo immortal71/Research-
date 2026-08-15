@@ -56,6 +56,8 @@ def run_preflight(accession: str, reads: list[str] | None, outdir: Path | None) 
 
     if verdict.compatible:
         print("  VERDICT: compatible with the SOS signature")
+        for warning in verdict.warnings:
+            print(f"    ! {warning}")
     else:
         label = "UNKNOWN" if verdict.unknown else "INCOMPATIBLE"
         print(f"  VERDICT: {label} -- do not sweep this run")

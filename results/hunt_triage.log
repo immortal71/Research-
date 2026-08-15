@@ -1,1 +1,39 @@
 rRNA reference 21-mers: 46426
+SRR19432446     264      70.6 z=  3.36 paired= 66% rRNA= 0.00  *** CANDIDATE ***
+SRR19432455     336      96.3 z=  2.90 paired= 59% rRNA= 0.00  not rod-like
+SRR19432462     342    6752.6 z=  3.16 paired= 65% rRNA= 1.00  rRNA
+SRR19432462    1119      25.5 z=  3.22 paired= 51% rRNA= 0.00  not rod-like
+SRR19432464     810      44.1 z=  2.84 paired= 63% rRNA= 0.00  z too low
+SRR19432464     171      39.2 z=  2.21 paired= 51% rRNA= 0.00  not rod-like
+SRR19432465     162      12.7 z=  4.95 paired= 58% rRNA= 0.00  not rod-like
+SRR19432465     873      65.1 z=  4.15 paired= 59% rRNA= 0.00  not rod-like
+SRR19432484     336      20.1 z=  3.54 paired= 62% rRNA= 0.00  not rod-like
+SRR19432484     395      85.0 z=  3.76 paired= 58% rRNA= 0.00  not rod-like
+SRR19432494     150      21.1 z=  2.70 paired= 63% rRNA= 0.00  not rod-like
+SRR19432494     425      25.5 z=  2.52 paired= 61% rRNA= 0.00  not rod-like
+SRR19432549     210      34.8 z=  4.35 paired= 54% rRNA= 0.00  not rod-like
+SRR19432549    1155      90.8 z=  3.80 paired= 55% rRNA= 0.00  not rod-like
+SRR19432553     228      14.1 z=  3.69 paired= 60% rRNA= 0.00  *** CANDIDATE ***
+SRR19432483     159       8.5 z=  5.60 paired= 63% rRNA= 0.00  *** CANDIDATE ***
+SRR19432483     258      36.9 z=  2.89 paired= 67% rRNA= 0.00  z too low
+SRR19432483     174      15.3 z=  2.38 paired= 54% rRNA= 0.00  not rod-like
+SRR19432522     252      11.6 z=  4.21 paired= 67% rRNA= 0.00  *** CANDIDATE ***
+SRR19432522     294      10.6 z=  3.45 paired= 69% rRNA= 0.00  *** CANDIDATE ***
+SRR5949183      306      19.1 z=  4.77 paired= 44% rRNA= 0.00  not rod-like
+SRR5949183      453      15.6 z=  2.63 paired= 66% rRNA= 0.00  z too low
+SRR8204361      929      22.8 z=  4.58 paired= 62% rRNA= 0.00  *** CANDIDATE ***
+SRR8204361     1481      37.5 z=  3.96 paired= 73% rRNA= 0.00  *** CANDIDATE ***
+SRR11060618     337     161.3 z=  8.04 paired= 68% rRNA= 0.00  *** CANDIDATE ***
+SRR11790910     549      63.5 z=  4.04 paired= 64% rRNA= 0.00  *** CANDIDATE ***
+SRR14585135     672     143.5 z=  3.07 paired= 59% rRNA= 0.00  not rod-like
+
+SURVIVORS of all four filters: 9
+    SRR19432446_264nt cov=70.6 z=3.36 paired=66%
+    SRR19432553_228nt cov=14.1 z=3.69 paired=60%
+    SRR19432483_159nt cov=8.5 z=5.60 paired=63%
+    SRR19432522_252nt cov=11.6 z=4.21 paired=67%
+    SRR19432522_294nt cov=10.6 z=3.45 paired=69%
+    SRR8204361_929nt cov=22.8 z=4.58 paired=62%
+    SRR8204361_1481nt cov=37.5 z=3.96 paired=73%
+    SRR11060618_337nt cov=161.3 z=8.04 paired=68%
+    SRR11790910_549nt cov=63.5 z=4.04 paired=64%

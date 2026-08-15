@@ -90,3 +90,21 @@ def test_case_and_whitespace_are_normalised():
     )
     assert not verdict.compatible
     assert len(verdict.reasons) == 3
+
+
+def test_size_selected_library_passes_but_warns():
+    """miRNA-Seq is shotgun RNA, but it throws away anything ~1 kb.
+
+    Obelisk-S.s is 1137 nt and one of the runs the paper analysed is
+    miRNA-Seq, so this run is worth sweeping and a null result on it is
+    not evidence of absence.
+    """
+    verdict = assess_library(_rnaseq(library_strategy="miRNA-Seq"))
+    assert verdict.compatible
+    assert verdict.reasons == []
+    assert verdict.warnings
+    assert "size-selected" in verdict.warnings[0]
+
+
+def test_ordinary_rnaseq_carries_no_warning():
+    assert assess_library(_rnaseq()).warnings == []
