@@ -1,0 +1,150 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 817YSDUY014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= top_cov77317_len210
+
+Length=210
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+CP076618.1 Streptococcus sanguinis strain BCA3R chromosome, co...  379     7e-101  100%      
+CP076617.1 Streptococcus sanguinis strain BCC04R chromosome, c...  379     7e-101  100%      
+CP076612.1 Streptococcus sanguinis strain BCC20R chromosome, c...  379     7e-101  100%      
+
+ALIGNMENTS
+>CP076618.1 Streptococcus sanguinis strain BCA3R chromosome, complete genome
+Length=2352112
+
+ Score = 379 bits (420),  Expect = 7e-101
+ Identities = 210/210 (100%), Gaps = 0/210 (0%)
+ Strand=Plus/Minus
+
+Query  1      CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  60
+              ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  18455  CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  18396
+
+Query  61     CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  120
+              ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  18395  CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  18336
+
+Query  121    CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  180
+              ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  18335  CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  18276
+
+Query  181    AACCCCGAAGAGTAAACTCTTCGGTTTGCC  210
+              ||||||||||||||||||||||||||||||
+Sbjct  18275  AACCCCGAAGAGTAAACTCTTCGGTTTGCC  18246
+
+
+ Score = 379 bits (420),  Expect = 7e-101
+ Identities = 210/210 (100%), Gaps = 0/210 (0%)
+ Strand=Plus/Minus
+
+Query  1       CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  60
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  419294  CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  419235
+
+Query  61      CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  120
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  419234  CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  419175
+
+Query  121     CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  180
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  419174  CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  419115
+
+Query  181     AACCCCGAAGAGTAAACTCTTCGGTTTGCC  210
+               ||||||||||||||||||||||||||||||
+Sbjct  419114  AACCCCGAAGAGTAAACTCTTCGGTTTGCC  419085
+
+
+ Score = 379 bits (420),  Expect = 7e-101
+ Identities = 210/210 (100%), Gaps = 0/210 (0%)
+ Strand=Plus/Plus
+
+Query  1        CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1807255  CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  1807314
+
+Query  61       CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  120
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1807315  CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  1807374
+
+Query  121      CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  180
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  1807375  CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  1807434
+
+Query  181      AACCCCGAAGAGTAAACTCTTCGGTTTGCC  210
+                ||||||||||||||||||||||||||||||
+Sbjct  1807435  AACCCCGAAGAGTAAACTCTTCGGTTTGCC  1807464
+
+
+ Score = 379 bits (420),  Expect = 7e-101
+ Identities = 210/210 (100%), Gaps = 0/210 (0%)
+ Strand=Plus/Plus
+
+Query  1        CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  60
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2199959  CTAGGGAGTATTTAGGGTTGGGAGATGGTCCTCCCAGATTCCGACGGGATTTCACGTGTC  2200018
+
+Query  61       CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  120
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2200019  CCGCCGTACTCAGGATACTGCTAGGTACAGAATCTATTTAAAATACGAGGCTCTTACTCT  2200078
+
+Query  121      CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  180
+                ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  2200079  CTTTGGCTGACTTTCCCAAGTCATTCTTCTATAAATTCTGAGTCCACATTGCAGTCCTAC  2200138
+
+Query  181      AACCCCGAAGAGTAAACTCTTCGGTTTGCC  210
+                ||||||||||||||||||||||||||||||
+Sbjct  2200139  AACCCCGAAGAGTAAACTCTTCGGTTTGCC  2200168
+
+
+Query= top_cov44177_len325
+
+Length=325
+
+
+                                                                   Score     E      Max
+Sequences producing significant alignments:                       (Bits)  Value   Ident
+
+CP071435.1 Streptococcus sanguinis strain SK36R chromosome, co...  587     4e-163  100%      
+CP076610.1 Streptococcus sanguinis strain SK72R chromosome, co...  587     4e-163  100%      
+CP071434.1 Streptococcus sanguinis strain SK49R chromosome, co...  587     4e-163  100%      
+
+ALIGNMENTS
+>CP071435.1 Streptococcus sanguinis strain SK36R chromosome, complete genome
+Length=2397480
+
+ Score = 587 bits (650),  Expect = 4e-163
+ Identities = 325/325 (100%), Gaps = 0/325 (0%)
+ Strand=Plus/Minus
+
+Query  1      CCTGTGTCGGTTTGCGGTACGGGTAGAGTATGATACAACGCTAGAAGCTTTTCTTGGCAG  60
+              ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  19624  CCTGTGTCGGTTTGCGGTACGGGTAGAGTATGATACAACGCTAGAAGCTTTTCTTGGCAG  19565
+
+Query  61     TGTGACATCACTCACTCGCTACTAAACTTCGCTCCCCATCACAGCTCAACGTTAGAGGTA  120
+              ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  19564  TGTGACATCACTCACTCGCTACTAAACTTCGCTCCCCATCACAGCTCAACGTTAGAGGTA  19505
+
+Query  121    TAAGCATTTGACTCATACCACGCCTCACTGCTTAGACGTACATCCAATCGTACGCACGAG  180
+              ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

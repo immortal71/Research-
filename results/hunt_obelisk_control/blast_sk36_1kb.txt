@@ -1,0 +1,150 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 816VXAPE014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= SRR20627698_909nt_cov204
+
+Length=909
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+CP071435.1 Streptococcus sanguinis strain SK36R chromosome, co...  1640    0.0    100%      
+CP000387.1 Streptococcus sanguinis SK36, complete genome           1640    0.0    100%      
+LR134002.1 Streptococcus sanguinis strain NCTC10904 genome ass...  1622    0.0    100%      
+CP076611.1 Streptococcus sanguinis strain BCC39R chromosome, c...  1622    0.0    100%      
+CP040556.1 Streptococcus sanguinis strain CGMH010 chromosome, ...  1618    0.0    99%       
+
+ALIGNMENTS
+>CP071435.1 Streptococcus sanguinis strain SK36R chromosome, complete genome
+Length=2397480
+
+ Score = 1640 bits (1818),  Expect = 0.0
+ Identities = 909/909 (100%), Gaps = 0/909 (0%)
+ Strand=Plus/Minus
+
+Query  1       GTTGTATTTAGCAATACGGTCTGTACGTGAAAGTGAACCAGTCTTGATTTGACCTGCGTT  60
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882940  GTTGTATTTAGCAATACGGTCTGTACGTGAAAGTGAACCAGTCTTGATTTGACCTGCGTT  882881
+
+Query  61      AGTTGCAACTGCGATGTCAGCGATTGTTGAATCTTCAGTTTCACCTGAACGGTGTGATAC  120
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882880  AGTTGCAACTGCGATGTCAGCGATTGTTGAATCTTCAGTTTCACCTGAACGGTGTGATAC  882821
+
+Query  121     AACTGCAGTGTAACCAGCTTCTTTAGCCATTTCAATAGCTTCAAAAGTTTCAGTAAGAGT  180
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882820  AACTGCAGTGTAACCAGCTTCTTTAGCCATTTCAATAGCTTCAAAAGTTTCAGTAAGAGT  882761
+
+Query  181     ACCGATTTGGTTAACTTTGATAAGGATTGAGTTAGCAGCACCTTCTTTGATACCACGTGC  240
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882760  ACCGATTTGGTTAACTTTGATAAGGATTGAGTTAGCAGCACCTTCTTTGATACCACGTGC  882701
+
+Query  241     AAGGTAGTCAGTGTTTGTTACGAAGAAGTCGTCACCAACAAGTTGTACTTTCTTACCAAG  300
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882700  AAGGTAGTCAGTGTTTGTTACGAAGAAGTCGTCACCAACAAGTTGTACTTTCTTACCAAG  882641
+
+Query  301     ACGTTCAGTAAGAGCTTTCCAACCATCCCAGTCATTTTCATCCATACCATCTTCGATAGT  360
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882640  ACGTTCAGTAAGAGCTTTCCAACCATCCCAGTCATTTTCATCCATACCATCTTCGATAGT  882581
+
+Query  361     GATGATTGGGTATTTGTTAACCAACTCTTCAAGGTAGTCAATTTGTTCTGCAGATGTACG  420
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882580  GATGATTGGGTATTTGTTAACCAACTCTTCAAGGTAGTCAATTTGTTCTGCAGATGTACG  882521
+
+Query  421     AACAGCAGCGCCTTCACCTTCAAATTTAGTGTAGTCGTATACTTTACGTTCTTTATCGTA  480
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882520  AACAGCAGCGCCTTCACCTTCAAATTTAGTGTAGTCGTATACTTTACGTTCTTTATCGTA  882461
+
+Query  481     GAATTCTGATGATGCACAGTCAAATCCGATAAATACATCTTTACCTGGAACATAACCAGC  540
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882460  GAATTCTGATGATGCACAGTCAAATCCGATAAATACATCTTTACCTGGAACATAACCAGC  882401
+
+Query  541     AGCTTCGATAGCAGCGATGATAGTTTCTACACCATCTTCAGTTCCTTCAAAACGAGGAGC  600
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882400  AGCTTCGATAGCAGCGATGATAGTTTCTACACCATCTTCAGTTCCTTCAAAACGAGGAGC  882341
+
+Query  601     GAATCCACCTTCGTCACCAACGGCAGTTTCCAAACCACGAGATTTAAGGATTTTCTTAAG  660
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882340  GAATCCACCTTCGTCACCAACGGCAGTTTCCAAACCACGAGATTTAAGGATTTTCTTAAG  882281
+
+Query  661     AGCGTGGAAGATTTCAGCACCGTAACGAAGAGCTTCTTTGAATGTTGGAGCACCAACTGG  720
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882280  AGCGTGGAAGATTTCAGCACCGTAACGAAGAGCTTCTTTGAATGTTGGAGCACCAACTGG  882221
+
+Query  721     CAAGATCATGAACTCTTGGAATGCGATTGGAGCATCTGAGTGAGATCCACCGTTGATGAT  780
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882220  CAAGATCATGAACTCTTGGAATGCGATTGGAGCATCTGAGTGAGATCCACCGTTGATGAT  882161
+
+Query  781     GTTCATCATTGGAGTCGGAAGAACTTTAGTGTTGAATCCGCCAAGGTAGCTGTAAAGTGG  840
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882160  GTTCATCATTGGAGTCGGAAGAACTTTAGTGTTGAATCCGCCAAGGTAGCTGTAAAGTGG  882101
+
+Query  841     CACTTCAAGGTAGTCAGCAGCAGCACGAGCTACAGCGATAGACACACCAAGGATTGCGTT  900
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  882100  CACTTCAAGGTAGTCAGCAGCAGCACGAGCTACAGCGATAGACACACCAAGGATTGCGTT  882041
+
+Query  901     CGCACCCAA  909
+               |||||||||
+Sbjct  882040  CGCACCCAA  882032
+
+
+Query= SRR20627698_1067nt_cov157
+
+Length=1067
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+CP071417.1 Streptococcus sanguinis strain BCC23R chromosome, c...  1925    0.0    100%      
+CP071435.1 Streptococcus sanguinis strain SK36R chromosome, co...  1925    0.0    100%      
+CP000387.1 Streptococcus sanguinis SK36, complete genome           1925    0.0    100%      
+CP076613.1 Streptococcus sanguinis strain KLC04R chromosome, c...  1794    0.0    97%       
+CP040556.1 Streptococcus sanguinis strain CGMH010 chromosome, ...  1772    0.0    97%       
+
+ALIGNMENTS
+>CP071417.1 Streptococcus sanguinis strain BCC23R chromosome, complete genome
+Length=2396799
+
+ Score = 1925 bits (2134),  Expect = 0.0
+ Identities = 1067/1067 (100%), Gaps = 0/1067 (0%)
+ Strand=Plus/Minus
+
+Query  1       GCCAAAGAATTCCCAGAGGTTTCTACTTCTTGACCATGAAAAAGGAAAGTCTGCTTATTT  60
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  545208  GCCAAAGAATTCCCAGAGGTTTCTACTTCTTGACCATGAAAAAGGAAAGTCTGCTTATTT  545149
+
+Query  61      TGTGCTGCGTAGACAGCGTTAAACATAACACCCAAATTTCCAGAAGTTGGATTTTTCATG  120
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  545148  TGTGCTGCGTAGACAGCGTTAAACATAACACCCAAATTTCCAGAAGTTGGATTTTTCATG  545089
+
+Query  121     CCGACCGGAGCGCCAATACCTGACGCCACAAAACGGTGCTCTTGGTCTTCGACTGAGCGG  180
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  545088  CCGACCGGAGCGCCAATACCTGACGCCACAAAACGGTGCTCTTGGTCTTCGACTGAGCGG  545029
+
+Query  181     GCACCCACAGCATGATAGCTAACCAAGTCATCTACCAGCACAAGATTGGATGGATAGAGC  240
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  545028  GCACCCACAGCATGATAGCTAACCAAGTCATCTACCAGCACAAGATTGGATGGATAGAGC  544969
+
+Query  241     ATCTCATCAGCCGTCGTCAGACCAGTCTCTGTAATGACGCGGTAGTGGAGCTGACGAACT  300
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  544968  ATCTCATCAGCCGTCGTCAGACCAGTCTCTGTAATGACGCGGTAGTGGAGCTGACGAACT  544909
+
+Query  301     GCCTGCAAACCATTGATAAGGCTAGGTGCTTTAGAAGTATCCGGCTGATGAACCAAGCCC  360

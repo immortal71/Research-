@@ -128,6 +128,43 @@ highly abundant circular RNA" is closer to what was actually tested.
 The candidate identifications are unaffected. Every contig that was found
 and identified really is what blastn and blastx say it is.
 
+## The bug was real. Fixing it did not recover the obelisk.
+
+The truncation described above is a genuine defect and it is fixed.
+`greedy_contigs` no longer filters extension through the global `visited`
+set; a path may cross claimed nodes for a bounded run of 2k before it
+stops, which keeps the walk linear. Unblocking crossings outright also
+works and is unusable, because every seed then re-traverses the graph and
+a 1.5M-read assembly does not finish. The dedup this required was
+quadratic at first and is now a single k-mer-coverage pass.
+
+On synthetic data the fix does exactly what it should. A 1137 nt circle,
+the obelisk's own length, carrying variants in 30% of reads and sitting in
+300 background transcripts, assembles in 3.9 s and returns unit=1137
+exactly. Before the fix that case fragmented.
+
+On the real SK36 run it changes nothing. The same three circular contigs
+come back, 1033, 1212 and 1180 nt, all previously identified as
+*S. sanguinis* chromosome. Obelisk-S.s is still absent.
+
+The PLMVd control was re-run to confirm nothing was broken in the process:
+733 contigs, 8 circular, exactly one shortlisted at unit=337, z=8.13, 68%
+paired, with the other seven correctly rejected. Unchanged.
+
+One observation argues against the reading offered above, and it belongs
+here rather than in a footnote. The three unidentified high-coverage
+fragments sit at 38,911x, 21,390x and 15,228x, a 2.5-fold spread.
+Fragments of one circular molecule should have broadly similar coverage.
+That is more consistent with several distinct abundant RNAs than with one
+shattered obelisk. Without the reference sequence, which is not deposited
+in GenBank under any searchable name, this cannot be settled either way,
+and the favourable reading should not be assumed.
+
+So: a real bug was found and fixed, and it was not the reason the control
+fails. Three hypotheses have now been tested and rejected (error clouds,
+strandedness, visited-set truncation), and the molecule still does not
+come out.
+
 ## What would fix it
 
 The assembler is the bottleneck and it is the newest, least tested
