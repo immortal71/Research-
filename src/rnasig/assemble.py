@@ -25,6 +25,19 @@ Assembly is strand-specific: k-mers are not canonicalised. That is
 deliberate. The signature this pipeline hunts includes sense/antisense
 co-occurrence, so collapsing the two strands into one node would destroy the
 evidence the sweep is looking for.
+
+Known limitation, measured rather than suspected. On a Streptococcus
+sanguinis SK36 transcriptome this assembler reaches an N50 near 200 nt at
+every k and min_count tried, and it fails to recover Obelisk-S.s, a 1137 nt
+circular RNA documented as highly abundant in that strain. It does recover
+Peach latent mosaic viroid, 337 nt at 17,349x, which is close to the easiest
+possible case: short enough for a greedy walk to close and abundant enough
+to dominate every branch point.
+
+Treat this as usable for short, high-copy elements and unreliable much past
+a few hundred nucleotides. Where rnaSPAdes or MEGAHIT will run, use those
+and feed the FASTA to the sweep instead. See
+results/phase6_obelisk_control_report.md.
 """
 from __future__ import annotations
 
