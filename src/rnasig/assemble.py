@@ -337,14 +337,23 @@ def greedy_contigs(
         visited.update(path)
         contigs.append(path[0] + "".join(n[-1] for n in path[1:]))
 
-    # Extension no longer avoids claimed nodes, so two seeds on the same
-    # molecule can emit the same sequence or one contained in the other.
-    # Keep the longest of each such group.
+    # Extension may now cross claimed nodes, so two seeds on the same molecule
+    # can emit the same sequence or one nearly contained in the other. Compare
+    # k-mer content against what has already been kept rather than doing
+    # pairwise substring search, which is quadratic and was slower than the
+    # assembly itself on a real run.
     contigs.sort(key=len, reverse=True)
+    covered: set[str] = set()
     kept: list[str] = []
     for contig in contigs:
-        if not any(contig in longer for longer in kept):
-            kept.append(contig)
+        kmers = {contig[i : i + k] for i in range(len(contig) - k + 1)}
+        if not kmers:
+            continue
+        novel = sum(1 for km in kmers if km not in covered)
+        if novel / len(kmers) < 0.05:
+            continue  # essentially a re-trace of something already emitted
+        covered |= kmers
+        kept.append(contig)
     return kept
 
 

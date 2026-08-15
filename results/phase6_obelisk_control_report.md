@@ -19,9 +19,15 @@ each, which is 24% of the smallest run.
 
 ## The result
 
-`SRR20627698`, 2M reads: 1489 contigs, 4 circular, **none in the obelisk
-size range** and none clearing z >= 3. The circular contigs were 327, 297,
-252 and 486 nt.
+All four runs, 2M reads each: **57 circular contigs, none clearing z >= 3,
+and no obelisk**. `SRR20627698` alone gave 1489 contigs and 4 circular ones
+at 327, 297, 252 and 486 nt.
+
+Obelisk-S.s cannot have been missed for lack of depth. The follow-up paper
+measures it at **1-13.3% of total mapped reads**, present in all 17 datasets
+it examined and more abundant than any mRNA in 11 of them. At 2M reads that
+is tens of thousands of reads for a 1137 nt molecule. Whatever went wrong
+was not sampling.
 
 Since a null result is uninformative without knowing whether the molecule
 could have been assembled at all, the assembly was inspected directly for
@@ -33,6 +39,43 @@ anything near 1137 nt. Two contigs fell in the 900-1600 nt window:
 | 909 nt | 204x | no | *S. sanguinis* SK36 chromosome, 100% nt |
 
 Both are host transcripts. Obelisk-S.s is not in the assembly.
+
+## It was not missed, it was shattered
+
+Since the molecule is far too abundant to have been sampled away, the
+assembly was searched for it directly. Three of the highest-coverage
+contigs in the run have no significant nucleotide hit at all:
+
+| length | coverage | best nt hit |
+|---|---|---|
+| 194 nt | 38,911x | none, E=5.6 |
+| 566 nt | 21,390x | none, E=0.45 |
+| 282 nt | 15,228x | none, E=0.72 |
+
+Unidentified sequence at that abundance in a monoculture is what an
+obelisk looks like, since obelisk sequences are not deposited in GenBank
+under any searchable name. The molecule was in the assembly as fragments
+and never as a circle, so the circularity test could not fire and nothing
+downstream ever saw it.
+
+The mechanism was then read straight off the graph. Every one of those
+fragments still had successors available, meaning extension had stopped
+with somewhere left to go rather than running out of sequence.
+`greedy_contigs` filtered its extension options through the global
+`visited` set, so a molecule whose path crossed nodes an earlier,
+higher-coverage contig had already claimed was cut dead at the crossing.
+Abundant molecules cross claimed nodes constantly, and a quasispecies does
+it at every shared variant.
+
+Two other explanations were tested first and rejected rather than assumed:
+
+- **Strandedness.** `assemble` deliberately does not canonicalise k-mers,
+  which would fragment an unstranded library. Only 1% of k-mers in this run
+  have their reverse complement present, so the library is stranded and the
+  choice is right. Collapsing to canonical k-mers gives zero contigs.
+- **Error clouds.** At 10,000x-plus coverage, sequencing errors sit far above
+  a `min_count` of 5. Raising it to 50, 200, 500 and 1000 made the assembly
+  strictly worse at every step, so the extra k-mers were real, not noise.
 
 ## Why: the assembler, not the filters
 
