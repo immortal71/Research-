@@ -8,6 +8,8 @@ handle.
 """
 import random
 
+import pytest
+
 from rnasig.assemble import (
     assemble,
     build_unitigs,
@@ -139,3 +141,46 @@ def test_contig_headers_carry_coverage_the_sweep_can_read():
     header = result.contigs[0].id
     assert "multi=" in header and "len=" in header
     assert float(header.split("multi=")[1].split()[0]) > 100
+
+
+@pytest.mark.xfail(
+    reason="known limitation: greedy extension cannot resolve shared sequence. "
+           "At a node two molecules share, the deeper one wins and the shallower "
+           "path is hijacked into it. Fixing this needs paired-end links or "
+           "coverage-consistency checks, neither of which this assembler has.",
+    strict=True,
+)
+def test_two_molecules_sharing_a_repeat_both_assemble():
+    """Documents what is still broken, not what was fixed.
+
+    Removing the global `visited` set from extension stopped truncation at
+    already-claimed nodes, which is a real bug and is fixed. It does not
+    solve the harder case below: two circles sharing a stretch, where greedy
+    follows whichever branch is deeper and the shallow molecule is lost.
+
+    Kept as a strict xfail so that if a future change does resolve shared
+    sequence, this fails loudly and gets promoted to a passing test.
+    """
+    shared = _random_seq(60, seed=41)
+    a = _random_seq(420, seed=42) + shared
+    b = _random_seq(400, seed=43) + shared
+
+    reads = _circular_reads(a, n=6000, seed=44) + _circular_reads(b, n=1200, seed=45)
+    result = assemble(reads, k=31, min_count=5, min_contig_len=200)
+
+    circs = [find_circularity(c.seq, k=12, max_mismatch=1) for c in result.contigs]
+    units = {c.unit_length for c in circs if c.is_circular}
+    assert len(a) in units, f"deep molecule lost; units={units}"
+    assert len(b) in units, f"shallow molecule truncated by the deep one; units={units}"
+
+
+def test_contained_duplicates_are_collapsed():
+    """Unblocking extension lets seeds re-trace a molecule; dedup handles it."""
+    monomer = _random_seq(500, seed=46)
+    result = assemble(_circular_reads(monomer, n=4000, seed=47), k=31, min_count=5,
+                      min_contig_len=200)
+    seqs = [c.seq for c in result.contigs]
+    for i, s in enumerate(seqs):
+        for j, t in enumerate(seqs):
+            if i != j:
+                assert s not in t, "a contig is contained in another; dedup failed"

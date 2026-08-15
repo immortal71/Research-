@@ -273,9 +273,8 @@ def greedy_contigs(
     visited: set[str] = set()
     contigs: list[str] = []
 
-    def best_next(node: str, seen: set[str], mean: float, forward: bool) -> str | None:
+    def best_next(node: str, mean: float, forward: bool) -> str | None:
         options = _successors(node, graph) if forward else _predecessors(node, graph)
-        options = [o for o in options if o not in visited]
         if not options:
             return None
         nxt = max(options, key=lambda o: graph[o])
@@ -290,23 +289,45 @@ def greedy_contigs(
         seen = {seed}
         total = graph[seed]
 
+        # Crossing a stretch another contig already claimed is legitimate:
+        # molecules share short repeats, and a quasispecies shares far more.
+        # Re-tracing an entire existing contig is not, and blocking claimed
+        # nodes outright truncated any molecule that crossed one. Obelisk-S.s
+        # is 1-13% of reads in S. sanguinis SK36 and came out as fragments of
+        # 194, 282 and 566 nt at 10,000-58,000x instead of one 1137 nt circle;
+        # every fragment still had successors in the graph, so extension had
+        # stopped with somewhere to go.
+        #
+        # So allow crossing, but only for a bounded run of claimed nodes.
+        # That keeps the walk linear in graph size instead of letting every
+        # seed re-traverse everything.
+        max_revisit = 2 * k
+        run = 0
+
         node = seed
         while True:
-            nxt = best_next(node, seen, total / len(path), forward=True)
+            nxt = best_next(node, total / len(path), forward=True)
             if nxt is None:
                 break
             if nxt in seen:
                 path.append(nxt)  # closed a cycle: keep the wrap as a terminal repeat
+                break
+            run = run + 1 if nxt in visited else 0
+            if run > max_revisit:
                 break
             path.append(nxt)
             seen.add(nxt)
             total += graph[nxt]
             node = nxt
 
+        run = 0
         node = seed
         while True:
-            prv = best_next(node, seen, total / len(path), forward=False)
+            prv = best_next(node, total / len(path), forward=False)
             if prv is None or prv in seen:
+                break
+            run = run + 1 if prv in visited else 0
+            if run > max_revisit:
                 break
             path.insert(0, prv)
             seen.add(prv)
@@ -316,7 +337,15 @@ def greedy_contigs(
         visited.update(path)
         contigs.append(path[0] + "".join(n[-1] for n in path[1:]))
 
-    return contigs
+    # Extension no longer avoids claimed nodes, so two seeds on the same
+    # molecule can emit the same sequence or one contained in the other.
+    # Keep the longest of each such group.
+    contigs.sort(key=len, reverse=True)
+    kept: list[str] = []
+    for contig in contigs:
+        if not any(contig in longer for longer in kept):
+            kept.append(contig)
+    return kept
 
 
 def _n50(lengths: list[int]) -> int:
