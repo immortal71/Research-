@@ -1,0 +1,60 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTX 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 823AWY81014
+
+
+Database: All non-redundant GenBank CDS
+translations+PDB+SwissProt+PIR+PRF excluding environmental samples
+from WGS projects
+           1,129,065,306 sequences; 426,441,214,199 total letters
+
+Query= SK36_contig198_1011nt_SAS
+
+Length=1011
+
+
+<b>No significant similarity found.</b> For reasons why, <A HREF = "Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=FAQ"><b>click here</A>.</b><br><br>
+  Database: All non-redundant GenBank CDS translations+PDB+SwissProt+PIR+PRF
+excluding environmental samples from WGS projects
+    Posted date:  Aug 13, 2026  4:57 AM
+  Number of letters in database: 426,441,214,199
+  Number of sequences in database:  1,129,065,306
+
+Lambda      K        H
+   0.318    0.134    0.401 
+Gapped
+Lambda      K        H
+   0.267   0.0410    0.140 
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Number of Sequences: 1129065306
+Number of Hits to DB: 216593608
+Number of extensions: 184731
+Number of successful extensions: 15968
+Number of sequences better than 10: 0
+Number of HSP's better than 10 without gapping: 0
+Number of HSP's gapped: 15968
+Number of HSP's successfully gapped: 0
+Length of query: 1011
+Length of database: 426441214199
+Length adjustment: 169
+Effective length of query: 842
+Effective length of database: 235629177485
+Effective search space: 39585701817480
+Effective search space used: 39585701817480
+T: 20
+A: 40
+X1: 16 (7.3 bits)

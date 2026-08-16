@@ -45,6 +45,7 @@ from rnasig.circularity import find_circularity
 from rnasig.orphan import orphan_score
 from rnasig.rodlike import rod_profile
 from rnasig.rrna_kmer import build_reference_kmers, fetch_reference, rrna_kmer_fraction
+from rnasig.sasfind import find_sas_pairs
 from rnasig.seqio import Record, gc_content, write_fasta
 from rnasig.srameta import assess_library, fetch_run_metadata
 from rnasig.structure import structure_zscore
@@ -201,14 +202,31 @@ def hunt_one(
     t_asm = time.time() - t0
     record["stats"] = asm.stats.summary()
 
+    # Sense/antisense co-occurrence, the other half of the signature. It was
+    # missing here entirely, and it is the half that works when the assembler
+    # cannot close a circle. On S. sanguinis SK36 circularity found nothing
+    # while SAS surfaced a 1011 nt rod with no nt or protein hit whose
+    # antisense strand sits at 29,165x, reproducible across three runs.
+    sas = find_sas_pairs(asm.contigs, min_length=MIN_UNIT)
+    sas_ids = {p.sense_id for p in sas.pairs} | {p.antisense_id for p in sas.pairs}
+    record["n_sas_pairs"] = len(sas.pairs)
+    record["sas"] = [vars(p) for p in sas.pairs[:25]]
+
     hits = []
     for contig in asm.contigs:
         circ = find_circularity(contig.seq, k=CIRC_K, max_mismatch=CIRC_MISMATCH)
-        if not circ.is_circular or circ.unit_length is None:
+        name = contig.id.split()[0]
+        has_sas = name in sas_ids
+        circular_ok = (
+            circ.is_circular
+            and circ.unit_length is not None
+            and MIN_UNIT <= circ.unit_length <= MAX_UNIT
+        )
+        # Either axis qualifies a contig for scoring. Requiring circularity
+        # was what hid the obelisk.
+        if not circular_ok and not (has_sas and MIN_UNIT <= len(contig.seq) <= MAX_UNIT):
             continue
-        if not (MIN_UNIT <= circ.unit_length <= MAX_UNIT):
-            continue
-        monomer = circ.monomer or contig.seq
+        monomer = circ.monomer if circular_ok else contig.seq
         stability = structure_zscore(monomer, n_shuffles=n_shuffles)
         orphan = orphan_score(monomer)
         rod = rod_profile(monomer)
@@ -216,9 +234,11 @@ def hunt_one(
         cov = float(contig.id.split("multi=")[1].split()[0])
         hits.append(
             {
-                "contig": contig.id.split()[0],
+                "contig": name,
                 "length": len(contig.seq),
                 "unit_length": circ.unit_length,
+                "circular": circular_ok,
+                "sas": has_sas,
                 "n_copies": round(circ.n_copies or 0, 2),
                 "coverage": round(cov, 1),
                 "gc": round(gc_content(monomer), 3),
@@ -244,7 +264,7 @@ def hunt_one(
 
     print(
         f"  {accession} [{meta.scientific_name}] {asm.stats.n_reads} reads "
-        f"-> {asm.stats.n_contigs} contigs, {len(hits)} circular, "
+        f"-> {asm.stats.n_contigs} contigs, {len(sas.pairs)} SAS pairs, {len(hits)} circular-or-SAS, "
         f"{len(shortlist)} rod-like non-rRNA "
         f"({t_asm:.0f}s stream+asm)"
     )
@@ -257,6 +277,7 @@ def hunt_one(
             mark = "  <== SHORTLIST"
         print(
             f"      unit={h['unit_length']:5d} cov={h['coverage']:8.1f} GC={h['gc']:.2f} "
+            f"{'circ' if h['circular'] else '    '}{'/sas' if h['sas'] else '    '} "
             f"z={h['struct_z']:6.2f} paired={h['paired_fraction']:.0%} "
             f"cplx={h.get('complexity',0):.2f} "
             f"rRNA={h['rrna_fraction']:.2f}{mark}"
