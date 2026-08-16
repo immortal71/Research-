@@ -53,9 +53,25 @@ Across all sweeps, every candidate reaching blastn or blastx:
 | SRR5105111 165 nt | *Syzygium* mRNA (both Myrtaceae) | 88% nt |
 | SRR19432483 159 nt | *Neisseria mucosa* | 98% nt |
 | DRR047292 159 nt | *Eragrostis tef* chromosome (both grasses) | 87% nt |
+| SRR8241343 869 nt | *Ptilidium ciliare* mitochondrion | 100% nt |
+| SRR2106924 811 nt | *Silene latifolia* RuBisCO mRNA | 100% nt |
+| SRR5504337 159 nt | *Cucurbita moschata* extensin-like mRNA | 100% nt |
 
 Nothing unexplained. The single molecule that is what the pipeline was
 built to find is the one that was put there on purpose.
+
+The plant sweeps deserve their own line, because they were the best-aimed
+part of the search. 28 species, chosen half at random across Viridiplantae
+and half from families with described viroids, at depths where a 2M-read
+subset is 17-99% of the run. They produced 187 circular contigs in batch 2
+alone and six that cleared the corrected filter. All six are host mRNA,
+host chromosome, or host mitochondrion.
+
+Worth noting against the temptation to read anything into that: DRR059987
+is *Prunus persica*, the host of the one viroid this pipeline is known to
+recover, and it produced nothing. Not every peach carries PLMVd, so this is
+uninformative rather than contradictory, but it is a reminder that a single
+host-species sweep says very little either way.
 
 ## The four defects
 
@@ -101,6 +117,24 @@ halves the rate.
 Defects 3 and 4 were found within an hour of each other and share a cause:
 both parameters had been calibrated against synthetic nulls instead of
 against real molecules of the class being hunted.
+
+## A fifth source, not a defect: organellar RNA
+
+The plant sweeps turned up an 869 nt circular rod from *Ptilidium
+pulcherrimum*, a liverwort, at 73x coverage. It is the *Ptilidium ciliare*
+mitochondrion at 100% identity.
+
+That is not a detector error. Mitochondrial and chloroplast genomes are
+genuinely circular, so their transcripts legitimately carry the terminal
+repeat this pipeline looks for, and they are abundant. Every plant carries
+two such genomes and every eukaryote at least one, which makes organellar
+RNA a standing false positive for exactly the hosts most worth searching
+for viroids.
+
+`rrna_kmer` already handles ribosomal RNA the same way. The equivalent
+organellar screen, against mitochondrial and plastid references, is the
+obvious next filter and does not exist yet. Until it does, any circular
+candidate from a eukaryote needs an organellar check before anything else.
 
 ## What the pipeline can and cannot do
 

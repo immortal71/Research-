@@ -1,0 +1,140 @@
+<p><!--
+QBlastInfoBegin
+	Status=READY
+QBlastInfoEnd
+--><p>
+<PRE>
+
+BLASTN 2.17.0+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+RID: 82073FW4014
+
+
+Database: Core nucleotide BLAST database
+           128,547,243 sequences; 948,086,538,397 total letters
+Query= SRR5504337_159nt
+
+Length=159
+
+
+                                                                   Score     E     Max
+Sequences producing significant alignments:                       (Bits)  Value  Ident
+
+XM_023080603.1 PREDICTED: Cucurbita moschata extensin-like (LO...  288     2e-73  100%      
+XM_023080601.1 PREDICTED: Cucurbita moschata extensin-like (LO...  288     2e-73  100%      
+XM_023080604.1 PREDICTED: Cucurbita moschata extensin-like (LO...  288     2e-73  100%      
+XM_023080602.1 PREDICTED: Cucurbita moschata extensin-like (LO...  288     2e-73  100%      
+
+ALIGNMENTS
+>XM_023080603.1 PREDICTED: Cucurbita moschata extensin-like (LOC111443009), transcript 
+variant X1, mRNA
+Length=733
+
+ Score = 288 bits (318),  Expect = 2e-73
+ Identities = 159/159 (100%), Gaps = 0/159 (0%)
+ Strand=Plus/Minus
+
+Query  1    GTGGAGGAGACTTCTTTGGCGATGGCGGTGGAGGGGACTTCTTTCGTGGTGGCGGTGGAG  60
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  429  GTGGAGGAGACTTCTTTGGCGATGGCGGTGGAGGGGACTTCTTTCGTGGTGGCGGTGGAG  370
+
+Query  61   GAGGCGATTTCTTCGGTGCTGGTGGAGGGGGTGGCTTCTTTCGTGGAGGTGGTGGCGGAG  120
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  369  GAGGCGATTTCTTCGGTGCTGGTGGAGGGGGTGGCTTCTTTCGTGGAGGTGGTGGCGGAG  310
+
+Query  121  GAGACTTCTTTACCTCTGGTGGAGGGGGTGTCTTTTTTG  159
+            |||||||||||||||||||||||||||||||||||||||
+Sbjct  309  GAGACTTCTTTACCTCTGGTGGAGGGGGTGTCTTTTTTG  271
+
+
+ Score = 130 bits (143),  Expect = 1e-25
+ Identities = 123/156 (79%), Gaps = 6/156 (4%)
+ Strand=Plus/Minus
+
+Query  3    GGAGGAGACTTCTTTGGCGATGGCGGTGGAGGGGACTTCTTTCGTGGTGGCGGTGGAGGA  62
+            || || ||||||||||||| |||   |||||| ||||||||| | |||||||||||||||
+Sbjct  478  GGTGGCGACTTCTTTGGCGGTGG---TGGAGGAGACTTCTTTGGCGGTGGCGGTGGAGGA  422
+
+Query  63   GGCGATTTCTTCGGTGCTGGTGGAGGGGGTGGCTTCTTTCGTGGAGGTGGTGGCGGAGGA  122
+            | |   ||||| || | ||| || || || | |||||||||||| || ||||| ||||| 
+Sbjct  421  GAC---TTCTTTGGCGATGGCGGTGGAGGGGACTTCTTTCGTGGTGGCGGTGGAGGAGGC  365
+
+Query  123  GACTTCTTTACCTCTGGTGGAGGGGGTGTCTTTTTT  158
+            || |||||     ||||||||||||||| ||| |||
+Sbjct  364  GATTTCTTCGGTGCTGGTGGAGGGGGTGGCTTCTTT  329
+
+
+ Score = 90.6 bits (99),  Expect = 1e-13
+ Identities = 84/107 (79%), Gaps = 0/107 (0%)
+ Strand=Plus/Minus
+
+Query  3    GGAGGAGACTTCTTTGGCGATGGCGGTGGAGGGGACTTCTTTCGTGGTGGCGGTGGAGGA  62
+            ||||| || ||||| || | ||| || || || | |||||||||||| || ||||| |||
+Sbjct  370  GGAGGCGATTTCTTCGGTGCTGGTGGAGGGGGTGGCTTCTTTCGTGGAGGTGGTGGCGGA  311
+
+Query  63   GGCGATTTCTTCGGTGCTGGTGGAGGGGGTGGCTTCTTTCGTGGAGG  109
+            || || |||||     ||||||||||||||| ||| ||| |||||||
+Sbjct  310  GGAGACTTCTTTACCTCTGGTGGAGGGGGTGTCTTTTTTGGTGGAGG  264
+
+
+ Score = 83.3 bits (91),  Expect = 2e-11
+ Identities = 105/141 (74%), Gaps = 9/141 (6%)
+ Strand=Plus/Minus
+
+Query  18   GGCGATGGCGGTGGAGGGGACTTCTTTCGTGGTGGCGGTGGAGGAGGCGATTTCTTCGGT  77
+            ||||| || |||||||| ||||||||| ||  |||   ||| || ||||| ||||| || 
+Sbjct  517  GGCGACGGTGGTGGAGGAGACTTCTTTGGTTCTGGT--TGG-GGTGGCGACTTCTTTGGC  461
+
+Query  78   GCTGGTGGAGGGGGTGGCTTCTTTCGTGGAGGTGGTGGCGGAGGAGACTTCTTTACCTCT  137
+            | ||||||||| |    |||||||   || ||||| || |||||||||||||||  |  |
+Sbjct  460  GGTGGTGGAGGAGA---CTTCTTT---GGCGGTGGCGGTGGAGGAGACTTCTTTGGCGAT  407
+
+Query  138  GGTGGAGGGGGTGTCTTTTTT  158
+            || || || || | ||| |||
+Sbjct  406  GGCGGTGGAGGGGACTTCTTT  386
+
+
+ Score = 73.4 bits (80),  Expect = 9e-09
+ Identities = 98/137 (72%), Gaps = 6/137 (4%)
+ Strand=Plus/Minus
+
+Query  23   TGGCGGTGGAGGGGACTTCTTTCGTGGTGGCGGTGGAGGAGGCGATTTCTTCGGTGCTGG  82
+            ||| || ||||| ||||| |     || | |||||| ||||| || ||||| ||| ||||
+Sbjct  542  TGGGGGAGGAGGCGACTTGTACACGGGCGACGGTGGTGGAGGAGACTTCTTTGGTTCTGG  483
+
+Query  83   TGGAGGGGGTGGCTTCTTTCGTGGAGGTGGTGGCGGAGGAGACTTCTTTACCTCTGGTGG  142
+            | | || || | |||||||      || ||||| |||||||||||||||  |  ||| ||
+Sbjct  482  TTGGGGTGGCGACTTCTTT------GGCGGTGGTGGAGGAGACTTCTTTGGCGGTGGCGG  429
+
+Query  143  AGGGGGTGTCTTTTTTG  159
+             || || | ||| ||||
+Sbjct  428  TGGAGGAGACTTCTTTG  412
+
+
+ Score = 58.1 bits (63),  Expect = 7e-04
+ Identities = 44/51 (86%), Gaps = 1/51 (2%)
+ Strand=Plus/Minus
+
+Query  1    GTGGAGGAGACTTCTTTGGCGATGGCGGTGGAGGGGACTTCT-TTCGTGGT  50
+            |||||||||||||||||||||| || |||||||| || || | ||||| ||
+Sbjct  270  GTGGAGGAGACTTCTTTGGCGACGGTGGTGGAGGAGATTTGTATTCGTCGT  220
+
+
+ Score = 44.6 bits (48),  Expect = 4.4
+ Identities = 39/49 (80%), Gaps = 0/49 (0%)
+ Strand=Plus/Minus
+
+Query  111  GGTGGCGGAGGAGACTTCTTTACCTCTGGTGGAGGGGGTGTCTTTTTTG  159
+            ||||| |||||||||||||||   |||||| | || || | ||| ||||
+Sbjct  511  GGTGGTGGAGGAGACTTCTTTGGTTCTGGTTGGGGTGGCGACTTCTTTG  463
+
+
+Query= SRR2106924_811nt
+
+Length=811
